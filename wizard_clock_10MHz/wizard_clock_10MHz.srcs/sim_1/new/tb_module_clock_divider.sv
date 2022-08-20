@@ -59,8 +59,8 @@ module tb_module_clock_divider;
             counter = 0;         
         end else begin
         
-            if(CLK_10MHZ != flanco) $display("Error");    
-        
+            if(CLK_10MHZ != flanco) 
+                $display ("ERROR!, el clock no esta sincronizado, time=%0t", $time);    
             if(counter == 4) begin       
                 counter = 0;
                 flanco = ~flanco;
