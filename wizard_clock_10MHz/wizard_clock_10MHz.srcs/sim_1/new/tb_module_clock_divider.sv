@@ -59,7 +59,7 @@ module tb_module_clock_divider;
             counter = 0;         
         end else begin
         
-            if(CLK_10MHZ != flanco) $display("hola");    
+            if(CLK_10MHZ != flanco) $display("Error");    
         
             if(counter == 4) begin       
                 counter = 0;
