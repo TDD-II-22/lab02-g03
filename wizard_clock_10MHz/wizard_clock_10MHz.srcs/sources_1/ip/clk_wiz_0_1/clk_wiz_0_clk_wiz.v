@@ -71,7 +71,7 @@ module clk_wiz_0_clk_wiz
   // Clock out ports
   output        CLK_10MHZ,
   // Status and control signals
-  input         resetn,
+  input         reset,
   input         CLK_100MHZ
  );
   // Input buffering
@@ -156,7 +156,7 @@ wire clk_in2_clk_wiz_0;
     .LOCKED              (locked_int),
     .PWRDWN              (1'b0),
     .RST                 (reset_high));
-  assign reset_high = ~resetn; 
+  assign reset_high = reset; 
 
 // Clock Monitor clock assigning
 //--------------------------------------

@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Thu Aug 18 15:32:14 2022
+// Date        : Sun Aug 21 19:15:16 2022
 // Host        : Andrey-PC running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Proyectos/Lab2/Lab2.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0_sim_netlist.v
+//               C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/wizard_clock_10MHz/wizard_clock_10MHz.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0_sim_netlist.v
 // Design      : clk_wiz_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,29 +15,29 @@
 (* NotValidForBitStream *)
 module clk_wiz_0
    (CLK_10MHZ,
-    resetn,
+    reset,
     CLK_100MHZ);
   output CLK_10MHZ;
-  input resetn;
+  input reset;
   input CLK_100MHZ;
 
   (* IBUF_LOW_PWR *) wire CLK_100MHZ;
   wire CLK_10MHZ;
-  wire resetn;
+  wire reset;
 
   clk_wiz_0_clk_wiz_0_clk_wiz inst
        (.CLK_100MHZ(CLK_100MHZ),
         .CLK_10MHZ(CLK_10MHZ),
-        .resetn(resetn));
+        .reset(reset));
 endmodule
 
 (* ORIG_REF_NAME = "clk_wiz_0_clk_wiz" *) 
 module clk_wiz_0_clk_wiz_0_clk_wiz
    (CLK_10MHZ,
-    resetn,
+    reset,
     CLK_100MHZ);
   output CLK_10MHZ;
-  input resetn;
+  input reset;
   input CLK_100MHZ;
 
   wire CLK_100MHZ;
@@ -46,8 +46,7 @@ module clk_wiz_0_clk_wiz_0_clk_wiz
   wire CLK_10MHZ_clk_wiz_0;
   wire clkfbout_buf_clk_wiz_0;
   wire clkfbout_clk_wiz_0;
-  wire reset_high;
-  wire resetn;
+  wire reset;
   wire NLW_plle2_adv_inst_CLKOUT1_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED;
@@ -128,12 +127,7 @@ module clk_wiz_0_clk_wiz_0_clk_wiz
         .DWE(1'b0),
         .LOCKED(NLW_plle2_adv_inst_LOCKED_UNCONNECTED),
         .PWRDWN(1'b0),
-        .RST(reset_high));
-  LUT1 #(
-    .INIT(2'h1)) 
-    plle2_adv_inst_i_1
-       (.I0(resetn),
-        .O(reset_high));
+        .RST(reset));
 endmodule
 `ifndef GLBL
 `define GLBL

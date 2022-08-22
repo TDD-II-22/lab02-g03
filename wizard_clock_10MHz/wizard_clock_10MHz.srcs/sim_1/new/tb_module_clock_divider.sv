@@ -34,7 +34,7 @@ module tb_module_clock_divider;
     // Clock out ports
     .CLK_10MHZ(CLK_10MHZ),     // output CLK_10MHZ
     // Status and control signals
-    .resetn(reset), // input reset
+    .reset(reset), // input reset
    // Clock in ports
     .CLK_100MHZ(CLK_100MHZ)
     ); 

@@ -73,7 +73,7 @@
     // Clock out ports
     .CLK_10MHZ(CLK_10MHZ),     // output CLK_10MHZ
     // Status and control signals
-    .resetn(resetn), // input resetn
+    .reset(reset), // input reset
    // Clock in ports
     .CLK_100MHZ(CLK_100MHZ));      // input CLK_100MHZ
 // INST_TAG_END ------ End INSTANTIATION Template ---------
