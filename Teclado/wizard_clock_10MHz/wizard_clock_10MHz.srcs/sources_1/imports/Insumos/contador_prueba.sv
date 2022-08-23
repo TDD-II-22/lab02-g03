@@ -7,8 +7,13 @@ module contador_prueba(
 //para detectar el flanco de la señal en_i
 logic [1:0] registro_en_r;
 
+    module_debouncer debouncer(              // se usa el full adder 1bit dentro del for
+        .clk       (clk),             // asignacion de datos
+        .bt1       (),
+        .signal    ()
+        );
 always_ff@(posedge clk) begin
-    registro_en_r <= {registro_en_r[0], en_i};
+    registro_en_r <= {registro_en_r[0], debouncer.signal};
 end
 
 always_ff@(posedge clk) begin
