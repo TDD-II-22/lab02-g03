@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Proyectos/Lab2/Lab2.runs/synth_1'
+HD_PWD='C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log module_register_pp.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source module_register_pp.tcl
+EAStep vivado -log module_debouncer.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source module_debouncer.tcl

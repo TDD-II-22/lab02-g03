@@ -27,32 +27,64 @@ module module_debouncer (
     output    logic    signal
 
     );
-    logic slow_clk_en;
-    clock_enable u1(clk,slow_clk_en);
     
-    module_DFF d1(              // se usa el full adder 1bit dentro del for
-        .D      (bt1),             // asignacion de datos
-        .clk    (clk),
-        .EN     (slow_clk_en),
-        .Q      ()
+    logic clk_out;
+    logic clk_10MHz;
+    logic Q1,Q1_neg, Q2, Q2_neg;
+    
+    clk_div_4Hz  u1(//clk, clk_out
+        .clk_10MHz(clk_10MHz), 
+        .clk_4Hz(clk_out)
+        );
+    
+    module_DFF ff1(clk_out,bt1,Q1
+        //.D (bt1),
+        //.clk (clk_out),
+        //.EN (1'b1),
+        //.Q (Q1),
+        //.Q_neg (Q1_neg)
         );
         
-    module_DFF d2(              // se usa el full adder 1bit dentro del for
-        .D      (d1.Q),             // asignacion de datos
-        .clk    (clk),
-        .EN     (slow_clk_en),
-        .Q      ()
+    module_DFF ff2(clk_out, Q1,Q2
+       // .D (Q1),
+       // .clk (clk_out),
+        //.EN (1'b1),
+       // .Q (Q2)
+       // .Q_neg (Q2_neg)
         );
-    assign signal = d1.Q & ~d2.Q;
+    
+    assign Q2_neg = ~Q2;    
+    assign signal = Q1 & Q2_neg; 
+        
+      
+  clk_wiz_10MHZ inst
+  (
+  // Clock out ports  
+  .clk_out10MHz(clk_10MHz),
+ // Clock in ports
+  .clk_in100MHz(clk)
+  );
     
     
 endmodule 
 
-module clock_enable(input Clk_100M,output slow_clk_en);
-    logic [26:0]counter=0;
-    always @(posedge Clk_100M)
+module clk_div_4Hz (input logic clk_10MHz, output logic clk_4Hz);
+    logic [25:0] count = 0;
+    
+    always @ (posedge clk_10MHz)
     begin
-       counter <= (counter>=249999)?0:counter+1;
+    count <= count +1;
+    if (count == 500000)
+    begin
+    count <=0;  
+    clk_4Hz = ~clk_4Hz;
     end
-    assign slow_clk_en = (counter == 249999)?1'b1:1'b0;
-endmodule
+    end
+endmodule 
+
+
+
+
+
+
+

@@ -21,17 +21,21 @@
 
 
 module module_DFF (
-    input     logic    D, // Data Input
-    input     logic    clk, // Clock Input
-    input     logic    EN, // Reset input 
-    output    logic    Q       // Q output
+    input     logic    clk, // Data Input
+    input     logic    D, // Clock Input
+    //input     logic    EN,
+    output    logic    Q,       // Q output
+    output    logic    Q_neg
     );
 //-------------Code Starts Here---------
     always_ff @ ( posedge clk)
-        if (~EN) begin
-        Q <= 1'b0;
-        end  else begin
+        //if (EN)
+        begin
         Q <= D;
-        end
+        Q_neg <= !Q;        
+        //end  else begin
+       // Q <= 1'b0;
+       // Q_neg <= !Q;
+       end
 
 endmodule 
