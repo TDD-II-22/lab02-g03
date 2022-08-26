@@ -575,3 +575,6 @@ INFO: [Common 17-83] Releasing license: Implementation
 write_bitstream completed successfully
 write_bitstream: Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2024.180 ; gain = 436.523
 INFO: [Common 17-206] Exiting Vivado at Fri Aug 26 09:12:45 2022...
+
+*** Halting run - EA reset detected ***
+
