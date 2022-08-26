@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri Aug 26 08:48:49 2022
+// Date        : Fri Aug 26 08:48:48 2022
 // Host        : Andrey-PC running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/xci/WCLK_1/WCLK_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top WCLK -prefix
+//               WCLK_ WCLK_stub.v
 // Design      : WCLK
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1

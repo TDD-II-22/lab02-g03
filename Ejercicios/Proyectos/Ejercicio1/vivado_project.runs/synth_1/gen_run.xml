@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1661526218">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1661526650">
   <File Type="PA-TCL" Name="top_module_contador_7seg.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_module_contador_7seg_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_module_contador_7seg_reports.tcl"/>
@@ -11,6 +11,13 @@
   <File Type="VDS-TIMING-PB" Name="top_module_contador_7seg_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../Compartido/xci/WCLK/WCLK.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../Ejercicio1/module_clock_catodo.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -67,5 +74,4 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="WCLK"/>
 </GenRun>

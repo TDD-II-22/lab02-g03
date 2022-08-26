@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri Aug 26 08:48:49 2022
+-- Date        : Fri Aug 26 08:48:48 2022
 -- Host        : Andrey-PC running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/xci/WCLK_1/WCLK_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top WCLK -prefix
+--               WCLK_ WCLK_sim_netlist.vhdl
 -- Design      : WCLK
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,8 +20,6 @@ entity WCLK_WCLK_clk_wiz is
     locked : out STD_LOGIC;
     CLK_100MHZ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of WCLK_WCLK_clk_wiz : entity is "WCLK_clk_wiz";
 end WCLK_WCLK_clk_wiz;
 
 architecture STRUCTURE of WCLK_WCLK_clk_wiz is
