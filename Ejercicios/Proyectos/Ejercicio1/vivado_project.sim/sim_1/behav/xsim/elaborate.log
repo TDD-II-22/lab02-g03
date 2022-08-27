@@ -1,22 +1,18 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0b0ea856c7804f4caffe204f6295e1dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_module_contador_7seg_behav xil_defaultlib.tb_module_contador_7seg xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0b0ea856c7804f4caffe204f6295e1dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_simulate_behav xil_defaultlib.tb_simulate xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling package xil_defaultlib.pkg_clk_divider_var
 Compiling module unisims_ver.BUFG
 Compiling module unisims_ver.IBUF
 Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=41,CLKIN...
 Compiling module xil_defaultlib.WCLK_WCLK_clk_wiz
 Compiling module xil_defaultlib.WCLK
-Compiling module xil_defaultlib.module_clock_catodo
-Compiling module xil_defaultlib.module_digitos
-Compiling module xil_defaultlib.module_seg7_control
-Compiling module xil_defaultlib.top_module_contador_7seg
-Compiling module xil_defaultlib.tb_module_contador_7seg
+Compiling module xil_defaultlib.top_simulate
+Compiling module xil_defaultlib.tb_simulate
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_module_contador_7seg_behav
+Built simulation snapshot tb_simulate_behav

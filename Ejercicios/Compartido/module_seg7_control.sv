@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module module_seg7_control(
+module module_seg7_control #(parameter FREC_ANODO = 1_000, BITS_ANODO = 14)(
     
     input   logic               clk_10Mhz_i,
                                 reset_i,
@@ -29,27 +29,12 @@ module module_seg7_control(
                     [7 : 0]     display_select_o
     
     );
-  
-    logic [2 : 0]   digit_select;   // 3 bits para seleccionar los 8 digitos
-    logic [13 : 0]  digit_timer;        // contador para refrescar los digitos
     
-     //Parametros para el patron de segmento
-    parameter CERO      = 7'b100_0000;
-    parameter UNO       = 7'b111_1001;
-    parameter DOS       = 7'b010_0100;
-    parameter TRES      = 7'b011_0000;
-    parameter CUATRO    = 7'b001_1001;
-    parameter CINCO     = 7'b001_0010;
-    parameter SEIS      = 7'b000_0010;
-    parameter SIETE     = 7'b111_1000;
-    parameter OCHO      = 7'b000_0000;
-    parameter NUEVE     = 7'b001_1000;
-    parameter A         = 7'b000_1000;
-    parameter B         = 7'b000_0011;
-    parameter C         = 7'b100_0110;
-    parameter D         = 7'b010_0001;
-    parameter E         = 7'b000_0110;       
-    parameter F         = 7'b000_1110;
+    
+    logic [2 : 0]   digit_select;   // 3 bits para seleccionar los 8 digitos
+    
+    logic [BITS_ANODO - 1 : 0]  digit_timer;        // contador para refrescar los digitos
+    
     
     //CLOCK DEL ANODO
     //logica para controlar la seleccion de digitos
@@ -63,13 +48,13 @@ module module_seg7_control(
                     1ms x 8 display = 8ms periodo de refrescamiento
                     
                 El periodo es de 1ms -> 1kHz
-                    entonces: 100MHz/1kHz = 100 000
-                        por lo que cada 100 000 hay un periodo
+                    entonces: 10MHz/1kHz = 10 000
+                        por lo que cada 10 000 hay un periodo
                             este sera entonces la tasa de refrescamiento
             */
             
             //logica para el periodo de refrescamiento
-            if(digit_timer == 9_999) begin
+            if(digit_timer == ((10_000_000 / FREC_ANODO) - 1)) begin
                 digit_timer <= 0;
                 digit_select <= digit_select + 1;
             end else
@@ -98,22 +83,22 @@ module module_seg7_control(
         logic [6 : 0] fun_display;
         
         case(display_i)
-                        4'h0: fun_display = CERO;
-                        4'h1: fun_display = UNO;
-                        4'h2: fun_display = DOS;
-                        4'h3: fun_display = TRES;
-                        4'h4: fun_display = CUATRO;
-                        4'h5: fun_display = CINCO;
-                        4'h6: fun_display = SEIS;
-                        4'h7: fun_display = SIETE;
-                        4'h8: fun_display = OCHO;
-                        4'h9: fun_display = NUEVE;
-                        4'ha: fun_display = A;
-                        4'hb: fun_display = B;
-                        4'hc: fun_display = C;
-                        4'hd: fun_display = D;
-                        4'he: fun_display = E;
-                        4'hf: fun_display = F;
+                        4'h0: fun_display = 7'b100_0000;    //CERO
+                        4'h1: fun_display = 7'b111_1001;    //UNO
+                        4'h2: fun_display = 7'b010_0100;    //DOS
+                        4'h3: fun_display = 7'b011_0000;    //TRES
+                        4'h4: fun_display = 7'b001_1001;    //CUATRO
+                        4'h5: fun_display = 7'b001_0010;    //CINCO
+                        4'h6: fun_display = 7'b000_0010;    //SEIS
+                        4'h7: fun_display = 7'b111_1000;    //SIETE
+                        4'h8: fun_display = 7'b000_0000;    //OCHO
+                        4'h9: fun_display = 7'b001_1000;    //NUEVE
+                        4'ha: fun_display = 7'b000_1000;    //A
+                        4'hb: fun_display = 7'b000_0011;    //B
+                        4'hc: fun_display = 7'b100_0110;    //C
+                        4'hd: fun_display = 7'b010_0001;    //D
+                        4'he: fun_display = 7'b000_0110;    //E
+                        4'hf: fun_display = 7'b000_1110;    //F
         endcase
         
         return fun_display;

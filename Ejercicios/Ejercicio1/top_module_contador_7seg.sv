@@ -33,8 +33,21 @@ module top_module_contador_7seg(
     logic   [2 : 0]     select_anodo;
     logic   [31 : 0]    digitos;
     
-
+    parameter           FREC_CATODO = 10;       //FRECUENCIA DEL CATODO DESEADA
+    parameter           BITS_CATODO = 20;       //BITS NECESARIOS PARA EL CONTADOR DE CATODO
     
+    parameter           FREC_ANODO  = 1000;     //FRECUENCIA DEL ANODO DESEADA
+    parameter           BITS_ANODO  = 14;       //BITS NECESARIOS PARA EL CONTADOR DE ANODO
+    
+    /*
+    
+        nota: BITS se obtiene iterando la operacion: 2^n - (10_000_000 / FREC)
+              aumentando n hasta obtener un valor positivo
+                    ->10_000_000 es el reloj a usar
+    
+    */
+    
+    //generar reloj
     WCLK generate_clock_10Mhz(
         // Clock out ports
         .CLK_10MHZ(clk_10Mhz),          // output CLK_10MHZ
@@ -65,9 +78,19 @@ module top_module_contador_7seg(
     );
     
     //controla y genera los segmentos del display
-    module_seg7_control seg7_control(
-              
-        .clk_10Mhz_i            (clk_10Mhz),        
+    
+    //modulo de la instancia
+    module_seg7_control #(
+                              
+        //parametrizacion
+        .FREC_ANODO             (FREC_ANODO),       
+        .BITS_ANODO             (BITS_ANODO))     
+    
+    //nombre de la instancia
+    seg7_control(                                   
+
+         //entradas / salidas 
+        .clk_10Mhz_i            (clk_10Mhz),         
         .reset_i                (reset_pi),           
         .display_i              (digitos),        
         .display_o              (display_po),         

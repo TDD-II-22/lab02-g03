@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1661586101">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1661622001">
   <File Type="PA-TCL" Name="top_module_contador_7seg.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_module_contador_7seg_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_module_contador_7seg_reports.tcl"/>
@@ -46,10 +46,17 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/top_simulate.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top_module_contador_7seg"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
