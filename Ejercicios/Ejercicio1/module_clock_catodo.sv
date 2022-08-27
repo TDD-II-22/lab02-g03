@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module module_clock_catodo(
+module module_clock_catodo #(parameter FREC_CATODO = 1_000, BITS_CATODO = 14)(
 
     input   logic       clk_10Mhz_i,
                         reset_i,
@@ -38,7 +38,7 @@ module module_clock_catodo(
        Counter debe tener un tamaño igual o superior a este valor.       
     */ 
     
-    logic [19 : 0] counter = 0;
+    logic [BITS_CATODO - 1 : 0] counter = 0;
     
     logic clk_out = 0;
     
@@ -48,7 +48,7 @@ module module_clock_catodo(
             counter <= 0;
             clk_out <= 0;        
         end else
-            if(counter == 999_999) begin //esto genera un flanco reloj, que se va a dar justo en el counter 50k
+            if(counter == ((10_000_000 / FREC_CATODO) - 1)) begin //esto genera un flanco reloj, que se va a dar justo en el counter 50k
                 counter <= 0;
                 clk_out <= 1; 
             end else begin
