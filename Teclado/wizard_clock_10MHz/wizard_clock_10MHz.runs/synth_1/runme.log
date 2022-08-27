@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log module_debouncer.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source module_debouncer.tcl
+    with args -log top_module_debouncer.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module_debouncer.tcl
 
 
 ****** Vivado v2019.1 (64-bit)
@@ -9,29 +9,33 @@
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 Sourcing tcl script 'C:/Users/USER/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
-source module_debouncer.tcl -notrace
-Command: synth_design -top module_debouncer -part xc7a100tcsg324-1
+source top_module_debouncer.tcl -notrace
+Command: synth_design -top top_module_debouncer -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2928 
+INFO: Helper process launched with PID 12716 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 702.230 ; gain = 178.078
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 700.500 ; gain = 177.359
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_module_debouncer' [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/top_module_debouncer.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'module_debouncer' [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'clk_div_4Hz' [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv:71]
-INFO: [Synth 8-6155] done synthesizing module 'clk_div_4Hz' (1#1) [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv:71]
+INFO: [Synth 8-6157] synthesizing module 'clk_div_4Hz' [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv:64]
+INFO: [Synth 8-6155] done synthesizing module 'clk_div_4Hz' (1#1) [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv:64]
 INFO: [Synth 8-6157] synthesizing module 'module_DFF' [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_DFF.sv:23]
 INFO: [Synth 8-6155] done synthesizing module 'module_DFF' (2#1) [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_DFF.sv:23]
-WARNING: [Synth 8-7023] instance 'ff1' of module 'module_DFF' has 4 connections declared, but only 3 given [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv:40]
-WARNING: [Synth 8-7023] instance 'ff2' of module 'module_DFF' has 4 connections declared, but only 3 given [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv:48]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_10MHZ' [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.runs/synth_1/.Xil/Vivado-5336-DESKTOP-LUJVCA8/realtime/clk_wiz_10MHZ_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_10MHZ' (3#1) [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.runs/synth_1/.Xil/Vivado-5336-DESKTOP-LUJVCA8/realtime/clk_wiz_10MHZ_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'module_debouncer' (4#1) [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv:23]
+WARNING: [Synth 8-7023] instance 'ff1' of module 'module_DFF' has 4 connections declared, but only 3 given [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv:39]
+WARNING: [Synth 8-7023] instance 'ff2' of module 'module_DFF' has 4 connections declared, but only 3 given [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv:47]
+INFO: [Synth 8-6155] done synthesizing module 'module_debouncer' (3#1) [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'contador_prueba' [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.srcs/sources_1/imports/Insumos/contador_prueba.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'contador_prueba' (4#1) [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.srcs/sources_1/imports/Insumos/contador_prueba.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_10MHZ' [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.runs/synth_1/.Xil/Vivado-12904-DESKTOP-LUJVCA8/realtime/clk_wiz_10MHZ_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_10MHZ' (5#1) [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.runs/synth_1/.Xil/Vivado-12904-DESKTOP-LUJVCA8/realtime/clk_wiz_10MHZ_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_debouncer' (6#1) [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/top_module_debouncer.sv:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 765.969 ; gain = 241.816
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 765.016 ; gain = 241.875
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -44,10 +48,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 765.969 ; gain = 241.816
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 765.016 ; gain = 241.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 765.969 ; gain = 241.816
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 765.016 ; gain = 241.875
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -57,24 +61,24 @@ Parsing XDC File [c:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz
 Finished Parsing XDC File [c:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.srcs/sources_1/ip/clk_wiz_10MHZ/clk_wiz_10MHZ/clk_wiz_10MHZ_in_context.xdc] for cell 'inst'
 Parsing XDC File [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.srcs/constrs_1/imports/Desktop/constraints_sbl.xdc]
 Finished Parsing XDC File [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.srcs/constrs_1/imports/Desktop/constraints_sbl.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.srcs/constrs_1/imports/Desktop/constraints_sbl.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/module_debouncer_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/module_debouncer_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.srcs/constrs_1/imports/Desktop/constraints_sbl.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_module_debouncer_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_module_debouncer_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 858.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 866.582 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 858.000 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 866.582 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 858.000 ; gain = 333.848
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 866.582 ; gain = 343.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 858.000 ; gain = 333.848
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 866.582 ; gain = 343.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -83,10 +87,10 @@ Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/TDD/lab
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.srcs/sources_1/ip/clk_wiz_10MHZ/clk_wiz_10MHZ/clk_wiz_10MHZ_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 858.000 ; gain = 333.848
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 866.582 ; gain = 343.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 858.000 ; gain = 333.848
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 866.582 ; gain = 343.441
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -100,11 +104,15 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     26 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
 	               26 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 5     
 +---Muxes : 
 	   2 Input     26 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -125,6 +133,15 @@ Module module_DFF
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 2     
+Module contador_prueba 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -142,7 +159,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 858.000 ; gain = 333.848
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 866.582 ; gain = 343.441
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -156,13 +173,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'inst/clk_out10MHz' to pin 'inst/bbstub_clk_out10MHz/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 863.648 ; gain = 339.496
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 866.582 ; gain = 343.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 884.520 ; gain = 360.367
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 872.320 ; gain = 349.180
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -174,7 +191,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 884.520 ; gain = 360.367
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 872.348 ; gain = 349.207
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -198,7 +215,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 892.070 ; gain = 367.918
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 888.137 ; gain = 364.996
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -211,7 +228,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 892.070 ; gain = 367.918
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 888.137 ; gain = 364.996
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -223,25 +240,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 892.070 ; gain = 367.918
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 888.137 ; gain = 364.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 892.070 ; gain = 367.918
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 888.137 ; gain = 364.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 892.070 ; gain = 367.918
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 888.137 ; gain = 364.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 892.070 ; gain = 367.918
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 888.137 ; gain = 364.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -259,48 +276,44 @@ Report Cell Usage:
 |      |Cell          |Count |
 +------+--------------+------+
 |1     |clk_wiz_10MHZ |     1|
-|2     |CARRY4        |     7|
+|2     |LUT1          |     2|
 |3     |LUT2          |     3|
-|4     |LUT3          |     1|
-|5     |LUT4          |     5|
+|4     |LUT3          |     2|
+|5     |LUT4          |     1|
 |6     |LUT5          |     1|
-|7     |LUT6          |     1|
-|8     |FDRE          |    29|
-|9     |IBUF          |     1|
-|10    |OBUF          |     1|
+|7     |LUT6          |     2|
+|8     |FDRE          |    10|
+|9     |IBUF          |     2|
+|10    |OBUF          |     8|
 +------+--------------+------+
 
 Report Instance Areas: 
-+------+---------+-------------+------+
-|      |Instance |Module       |Cells |
-+------+---------+-------------+------+
-|1     |top      |             |    50|
-|2     |  ff1    |module_DFF   |     2|
-|3     |  ff2    |module_DFF_0 |     1|
-|4     |  u1     |clk_div_4Hz  |    44|
-+------+---------+-------------+------+
++------+---------+----------------+------+
+|      |Instance |Module          |Cells |
++------+---------+----------------+------+
+|1     |top      |                |    32|
+|2     |  c1     |contador_prueba |    21|
++------+---------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 892.070 ; gain = 367.918
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 888.137 ; gain = 364.996
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 892.070 ; gain = 275.887
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 892.070 ; gain = 367.918
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 888.137 ; gain = 263.430
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 888.137 ; gain = 364.996
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 909.582 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 905.652 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-22 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+24 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 909.582 ; gain = 618.531
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 909.582 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 905.652 ; gain = 625.766
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 905.652 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.runs/synth_1/module_debouncer.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file module_debouncer_utilization_synth.rpt -pb module_debouncer_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Aug 24 10:16:52 2022...
+INFO: [Common 17-1381] The checkpoint 'C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.runs/synth_1/top_module_debouncer.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_module_debouncer_utilization_synth.rpt -pb top_module_debouncer_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 26 20:44:40 2022...

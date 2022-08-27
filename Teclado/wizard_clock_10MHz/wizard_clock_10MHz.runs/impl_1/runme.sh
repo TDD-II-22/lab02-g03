@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
-EAStep vivado -log module_debouncer.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source module_debouncer.tcl -notrace
+/bin/touch .write_bitstream.begin.rst
+EAStep vivado -log top_module_debouncer.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_module_debouncer.tcl -notrace
 
 

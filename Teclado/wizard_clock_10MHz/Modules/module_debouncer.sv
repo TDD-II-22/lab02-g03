@@ -22,14 +22,13 @@
 
 module module_debouncer ( 
 
-    input     logic    clk,
+    input     logic    clk_10MHz,
     input     logic    bt1,
     output    logic    signal
 
     );
     
     logic clk_out;
-    logic clk_10MHz;
     logic Q1,Q1_neg, Q2, Q2_neg;
     
     clk_div_4Hz  u1(//clk, clk_out
@@ -57,13 +56,7 @@ module module_debouncer (
     assign signal = Q1 & Q2_neg; 
         
       
-  clk_wiz_10MHZ inst
-  (
-  // Clock out ports  
-  .clk_out10MHz(clk_10MHz),
- // Clock in ports
-  .clk_in100MHz(clk)
-  );
+
     
     
 endmodule 
