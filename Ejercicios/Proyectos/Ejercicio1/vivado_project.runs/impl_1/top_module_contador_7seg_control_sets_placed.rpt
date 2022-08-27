@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sat Aug 27 12:08:33 2022
+| Date         : Sat Aug 27 12:19:32 2022
 | Host         : Andrey-PC running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_module_contador_7seg_control_sets_placed.rpt
 | Design       : top_module_contador_7seg
@@ -74,13 +74,13 @@ Table of Contents
 |             Clock Signal             |        Enable Signal        | Set/Reset Signal | Slice Load Count | Bel Load Count |
 +--------------------------------------+-----------------------------+------------------+------------------+----------------+
 |  generate_clock_10Mhz/inst/CLK_10MHZ | module_clock_catodo/E[0]    | reset_pi_IBUF    |                2 |              4 |
-|  generate_clock_10Mhz/inst/CLK_10MHZ | module_digitos/dec_millar   | reset_pi_IBUF    |                2 |              4 |
-|  generate_clock_10Mhz/inst/CLK_10MHZ | module_digitos/decenas      | reset_pi_IBUF    |                2 |              4 |
-|  generate_clock_10Mhz/inst/CLK_10MHZ | module_digitos/cen_millar   | reset_pi_IBUF    |                2 |              4 |
-|  generate_clock_10Mhz/inst/CLK_10MHZ | module_digitos/centenas     | reset_pi_IBUF    |                3 |              4 |
 |  generate_clock_10Mhz/inst/CLK_10MHZ | module_digitos/dec_millon_0 | reset_pi_IBUF    |                1 |              4 |
-|  generate_clock_10Mhz/inst/CLK_10MHZ | module_digitos/uni_millar   | reset_pi_IBUF    |                2 |              4 |
+|  generate_clock_10Mhz/inst/CLK_10MHZ | module_digitos/decenas      | reset_pi_IBUF    |                2 |              4 |
+|  generate_clock_10Mhz/inst/CLK_10MHZ | module_digitos/centenas     | reset_pi_IBUF    |                3 |              4 |
+|  generate_clock_10Mhz/inst/CLK_10MHZ | module_digitos/dec_millar   | reset_pi_IBUF    |                2 |              4 |
+|  generate_clock_10Mhz/inst/CLK_10MHZ | module_digitos/cen_millar   | reset_pi_IBUF    |                2 |              4 |
 |  generate_clock_10Mhz/inst/CLK_10MHZ | module_digitos/uni_millon   | reset_pi_IBUF    |                2 |              4 |
+|  generate_clock_10Mhz/inst/CLK_10MHZ | module_digitos/uni_millar   | reset_pi_IBUF    |                2 |              4 |
 |  generate_clock_10Mhz/inst/CLK_10MHZ |                             | reset_pi_IBUF    |               14 |             38 |
 +--------------------------------------+-----------------------------+------------------+------------------+----------------+
 
