@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sat Aug 27 01:34:55 2022
+| Date             : Sat Aug 27 01:43:16 2022
 | Host             : Andrey-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file top_module_contador_7seg_power_routed.rpt -pb top_module_contador_7seg_power_summary_routed.pb -rpx top_module_contador_7seg_power_routed.rpx
 | Design           : top_module_contador_7seg
@@ -59,9 +59,9 @@ Table of Contents
 |   Register     |    <0.001 |       70 |    126800 |            0.06 |
 |   F7/F8 Muxes  |    <0.001 |        7 |     63400 |            0.01 |
 |   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |      204 |       --- |             --- |
+| Signals        |    <0.001 |      202 |       --- |             --- |
 | PLL            |     0.097 |        1 |         6 |           16.67 |
-| I/O            |    <0.001 |       18 |       210 |            8.57 |
+| I/O            |    <0.001 |       17 |       210 |            8.10 |
 | Static Power   |     0.097 |          |           |                 |
 | Total          |     0.195 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
