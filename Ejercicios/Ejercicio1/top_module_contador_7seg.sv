@@ -59,8 +59,18 @@ module top_module_contador_7seg(
     
     
     //clock para control del catodo
-    module_clock_catodo module_clock_catodo(
     
+    //modulo de la instancia   
+    module_clock_catodo #(
+                              
+        //parametrizacion
+        .FREC_CATODO             (FREC_CATODO),       
+        .BITS_CATODO             (BITS_CATODO))     
+    
+    //nombre de la instancia
+    module_clock_catodo(  
+        
+        //entradas / salidas 
         .clk_10Mhz_i        (clk_10Mhz),
         .reset_i            (reset_pi),
         .clock_catodo_o     (clock_catodo_en) 
