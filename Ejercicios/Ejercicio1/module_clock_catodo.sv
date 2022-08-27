@@ -5,7 +5,7 @@
 // 
 // Create Date: 15.08.2022 02:59:44
 // Design Name: 
-// Module Name: top_module_contador_7seg
+// Module Name: module_clock_catodo
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 

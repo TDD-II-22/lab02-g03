@@ -24,8 +24,7 @@ module top_module_contador_7seg(
 
     input   logic               clk_100Mhz_pi,
                                 reset_pi,
-    output  logic               locked,
-                    [6 : 0]     display_po,
+    output  logic   [6 : 0]     display_po,
                     [7 : 0]     display_select_po
     );
     
@@ -42,14 +41,12 @@ module top_module_contador_7seg(
                     uni_millon,
                     dec_millon;
     
-    WCLK instance_name(
-    // Clock out ports
-    .CLK_10MHZ(clk_10Mhz),     // output CLK_10MHZ
-    // Status and control signals
-    .locked(locked),       // output locked
-   // Clock in ports
-    .CLK_100MHZ(clk_100Mhz_pi)
-    );
+     WCLK generate_clock_10Mhz(
+        // Clock out ports
+        .CLK_10MHZ      (clk_10Mhz),     // output CLK_10MHZ
+        // Clock in ports
+        .CLK_100MHZ     (clk_100Mhz_pi)
+    ); 
     
     
     //clock para control del catodo

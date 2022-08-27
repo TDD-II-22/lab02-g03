@@ -5,7 +5,7 @@
 // 
 // Create Date: 14.08.2022 21:07:38
 // Design Name: 
-// Module Name: module_generate_1khz
+// Module Name: module_digitos
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 

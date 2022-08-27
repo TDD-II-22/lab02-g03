@@ -5,7 +5,7 @@
 // 
 // Create Date: 18.08.2022 09:38:45
 // Design Name: 
-// Module Name: module_register_pp
+// Module Name: module_seg7_control
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -56,7 +56,7 @@ module module_seg7_control(
     always_ff @(posedge clk_10Mhz_i) begin
         if(reset_i) begin
             digit_select <= 0;
-            digit_timer  <= 0;
+            digit_timer <= 0;
         end else
             /*           
                 Son 8 display a un periodo de 1ms por perido, se tiene que:
@@ -70,10 +70,10 @@ module module_seg7_control(
             
             //logica para el periodo de refrescamiento
             if(digit_timer == 9_999) begin
-                digit_timer  <= 0;
+                digit_timer <= 0;
                 digit_select <= digit_select + 1;
             end else
-                digit_timer  <= digit_timer + 1;   
+                digit_timer <= digit_timer + 1;   
     end
     
     //logica para encender un adono determinado

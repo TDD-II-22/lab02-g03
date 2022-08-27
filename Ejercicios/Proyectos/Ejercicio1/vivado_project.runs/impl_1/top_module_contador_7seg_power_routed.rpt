@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Fri Aug 26 09:24:31 2022
+| Date             : Sat Aug 27 00:03:49 2022
 | Host             : Andrey-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file top_module_contador_7seg_power_routed.rpt -pb top_module_contador_7seg_power_summary_routed.pb -rpx top_module_contador_7seg_power_routed.rpx
 | Design           : top_module_contador_7seg
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        9 |       --- |             --- |
+| Clocks         |    <0.001 |        8 |       --- |             --- |
 | Slice Logic    |    <0.001 |      256 |       --- |             --- |
 |   LUT as Logic |    <0.001 |      125 |     63400 |            0.20 |
 |   CARRY4       |    <0.001 |        9 |     15850 |            0.06 |
 |   Register     |    <0.001 |       70 |    126800 |            0.06 |
 |   F7/F8 Muxes  |    <0.001 |        7 |     63400 |            0.01 |
 |   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |      200 |       --- |             --- |
+| Signals        |    <0.001 |      202 |       --- |             --- |
 | PLL            |     0.097 |        1 |         6 |           16.67 |
-| I/O            |    <0.001 |       18 |       210 |            8.57 |
+| I/O            |    <0.001 |       17 |       210 |            8.10 |
 | Static Power   |     0.097 |          |           |                 |
 | Total          |     0.195 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
@@ -126,18 +126,16 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+------------------+-----------------------------------+-----------------+
-| Clock            | Domain                            | Constraint (ns) |
-+------------------+-----------------------------------+-----------------+
-| CLK_10MHZ_WCLK   | instance_name/inst/CLK_10MHZ      |           100.0 |
-| CLK_10MHZ_WCLK   | instance_name/inst/CLK_10MHZ_WCLK |           100.0 |
-| CLK_10MHZ_WCLK_1 | instance_name/inst/CLK_10MHZ      |           100.0 |
-| CLK_10MHZ_WCLK_1 | instance_name/inst/CLK_10MHZ_WCLK |           100.0 |
-| clk_100Mhz_pi    | clk_100Mhz_pi                     |            10.0 |
-| clkfbout_WCLK    | instance_name/inst/clkfbout_WCLK  |            50.0 |
-| clkfbout_WCLK_1  | instance_name/inst/clkfbout_WCLK  |            50.0 |
-| sys_clk_pin      | clk_100Mhz_pi                     |            10.0 |
-+------------------+-----------------------------------+-----------------+
++------------------+------------------------------------------+-----------------+
+| Clock            | Domain                                   | Constraint (ns) |
++------------------+------------------------------------------+-----------------+
+| CLK_10MHZ_WCLK   | generate_clock_10Mhz/inst/CLK_10MHZ_WCLK |           100.0 |
+| CLK_10MHZ_WCLK_1 | generate_clock_10Mhz/inst/CLK_10MHZ_WCLK |           100.0 |
+| clk_100Mhz_pi    | clk_100Mhz_pi                            |            10.0 |
+| clkfbout_WCLK    | generate_clock_10Mhz/inst/clkfbout_WCLK  |            50.0 |
+| clkfbout_WCLK_1  | generate_clock_10Mhz/inst/clkfbout_WCLK  |            50.0 |
+| sys_clk_pin      | clk_100Mhz_pi                            |            10.0 |
++------------------+------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -150,7 +148,7 @@ Table of Contents
 | Name                     | Power (W) |
 +--------------------------+-----------+
 | top_module_contador_7seg |     0.097 |
-|   instance_name          |     0.097 |
+|   generate_clock_10Mhz   |     0.097 |
 |     inst                 |     0.097 |
 +--------------------------+-----------+
 
