@@ -24,29 +24,26 @@ module top_module_contador_7seg(
 
     input   logic               clk_100Mhz_pi,
                                 reset_pi,
-    output  logic   [6 : 0]     display_po,
+    output  logic               locked,
+                    [6 : 0]     display_po,
                     [7 : 0]     display_select_po
     );
     
-    logic           clk_10Mhz;
-    logic           clock_catodo_en;
-    logic [2 : 0]   select_anodo;
+    logic               clk_10Mhz,
+                        clock_catodo_en;
+    logic   [2 : 0]     select_anodo;
+    logic   [31 : 0]    digitos;
     
-    logic [3 : 0]   unidades,
-                    decenas,
-                    centenas,
-                    uni_millar,
-                    dec_millar,
-                    cen_millar,
-                    uni_millon,
-                    dec_millon;
+
     
-     WCLK generate_clock_10Mhz(
+    WCLK generate_clock_10Mhz(
         // Clock out ports
-        .CLK_10MHZ      (clk_10Mhz),     // output CLK_10MHZ
+        .CLK_10MHZ(clk_10Mhz),          // output CLK_10MHZ
+        // Status and control signals
+        .locked(locked),                // output locked
         // Clock in ports
-        .CLK_100MHZ     (clk_100Mhz_pi)
-    ); 
+        .CLK_100MHZ(clk_100Mhz_pi)       // input CLK_100MHZ
+    );    
     
     
     //clock para control del catodo
@@ -59,19 +56,12 @@ module top_module_contador_7seg(
     );
     
     //control que mostrar en el catodo
-    module_digitos digitos(
+    module_digitos module_digitos(
         
         .clk_10Mhz_i          (clk_10Mhz),
         .clock_catodo_en_i    (clock_catodo_en),    
         .reset_i              (reset_pi),       
-        .unidades_i           (unidades),    
-        .decenas_i            (decenas),     
-        .centenas_i           (centenas),    
-        .uni_millar_i         (uni_millar),  
-        .dec_millar_i         (dec_millar),  
-        .cen_millar_i         (cen_millar),  
-        .uni_millon_i         (uni_millon),  
-        .dec_millon_i         (dec_millon)  
+        .digitos_o            (digitos)  
                  
     );
     
@@ -80,8 +70,7 @@ module top_module_contador_7seg(
               
         .clk_10Mhz_i            (clk_10Mhz),        
         .reset_i                (reset_pi),           
-        .display_i              ({dec_millon, uni_millon, cen_millar, dec_millar, 
-                                  uni_millar, centenas,   decenas,    unidades}),        
+        .display_i              (digitos),        
         .display_o              (display_po),         
         .display_select_o       (display_select_po)                    
     

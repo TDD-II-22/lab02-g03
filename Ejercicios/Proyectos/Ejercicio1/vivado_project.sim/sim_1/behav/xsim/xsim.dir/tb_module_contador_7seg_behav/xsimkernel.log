@@ -2,3 +2,6 @@ Running: xsim.dir/tb_module_contador_7seg_behav/xsimk.exe -simmode gui -wdb tb_m
 Design successfully loaded
 Design Loading Memory Usage: 6668 KB (Peak: 6668 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 7552 KB (Peak: 7552 KB)
+Simulation CPU Usage: 61 ms

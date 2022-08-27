@@ -25,27 +25,33 @@ module module_digitos(
     input   logic               clk_10Mhz_i,    
                                 clock_catodo_en_i,
                                 reset_i,
-    output  logic   [3 : 0]     unidades_i,
-                    [3 : 0]     decenas_i,
-                    [3 : 0]     centenas_i,
-                    [3 : 0]     uni_millar_i,
-                    [3 : 0]     dec_millar_i,
-                    [3 : 0]     cen_millar_i,
-                    [3 : 0]     uni_millon_i,
-                    [3 : 0]     dec_millon_i
+                                
+    output  logic   [31 : 0]    digitos_o
+    
     );
+    
+    
+    logic   [3 : 0]     unidades      = 0,
+                        decenas       = 0,
+                        centenas      = 0,
+                        uni_millar    = 0,
+                        dec_millar    = 0,
+                        cen_millar    = 0,
+                        uni_millon    = 0,
+                        dec_millon    = 0;
+    
     
     //control unidades   
     always_ff @(posedge clk_10Mhz_i)      
         if(reset_i)
-            unidades_i <= 0;
+            unidades <= 0;
         else
             if(clock_catodo_en_i) begin
             
-                if(unidades_i == 9)
-                    unidades_i <= 0;
+                if(unidades == 9)
+                    unidades <= 0;
                 else
-                    unidades_i <= unidades_i + 1;
+                    unidades <= unidades + 1;
 
             end
         
@@ -53,16 +59,16 @@ module module_digitos(
     //control decenas   
     always_ff @(posedge clk_10Mhz_i)      
         if(reset_i)
-            decenas_i <= 0;
+            decenas <= 0;
         else
         
             if(clock_catodo_en_i) begin
             
-                if (unidades_i == 9)
-                    if(decenas_i == 9)
-                        decenas_i <= 0;
+                if (unidades == 9)
+                    if(decenas == 9)
+                        decenas <= 0;
                     else    
-                        decenas_i <= decenas_i + 1;
+                        decenas <= decenas + 1;
 
             end
         
@@ -72,34 +78,34 @@ module module_digitos(
     //control centenas   
     always_ff @(posedge clk_10Mhz_i)      
         if(reset_i)
-            centenas_i  <= 0;
+            centenas  <= 0;
         else
         
             if(clock_catodo_en_i) begin
             
-                if (unidades_i == 9 && decenas_i == 9)
+                if (unidades == 9 && decenas == 9)
             
-                    if(centenas_i == 9)
-                        centenas_i <= 0;
+                    if(centenas == 9)
+                        centenas <= 0;
                     else    
-                        centenas_i <= centenas_i + 1;
+                        centenas <= centenas + 1;
          
             end
                        
     //control unidades de millar  
     always_ff @(posedge clk_10Mhz_i)      
         if(reset_i)
-            uni_millar_i  <= 0;
+            uni_millar  <= 0;
         else
         
             if(clock_catodo_en_i) begin
             
-                if (unidades_i == 9 && decenas_i == 9 && centenas_i == 9)
+                if (unidades == 9 && decenas == 9 && centenas == 9)
             
-                    if(uni_millar_i == 9)
-                        uni_millar_i <= 0;
+                    if(uni_millar == 9)
+                        uni_millar <= 0;
                     else    
-                        uni_millar_i <= uni_millar_i + 1;
+                        uni_millar <= uni_millar + 1;
 
             end
           
@@ -107,54 +113,54 @@ module module_digitos(
     //control decenas de millar  
     always_ff @(posedge clk_10Mhz_i)      
         if(reset_i)
-            dec_millar_i  <= 0;
+            dec_millar  <= 0;
         else
         
         if(clock_catodo_en_i) begin
             
-            if (unidades_i    == 9 && decenas_i == 9 && centenas_i == 9 &&
-                uni_millar_i  == 9)
+            if (unidades    == 9 && decenas == 9 && centenas == 9 &&
+                uni_millar  == 9)
             
-                if(dec_millar_i == 9)
-                    dec_millar_i <= 0;
+                if(dec_millar == 9)
+                    dec_millar <= 0;
                 else    
-                    dec_millar_i <= dec_millar_i + 1;
+                    dec_millar <= dec_millar + 1;
 
         end         
     
     //control centenas de millar  
     always_ff @(posedge clk_10Mhz_i)      
         if(reset_i)
-            cen_millar_i  <= 0;
+            cen_millar  <= 0;
         else
         
             if(clock_catodo_en_i) begin
             
-                if (unidades_i    == 9 && decenas_i     == 9 && centenas_i == 9 &&
-                    uni_millar_i  == 9 && dec_millar_i  == 9)
+                if (unidades    == 9 && decenas     == 9 && centenas == 9 &&
+                    uni_millar  == 9 && dec_millar  == 9)
             
-                    if(cen_millar_i == 9)
-                        cen_millar_i <= 0;
+                    if(cen_millar   == 9)
+                        cen_millar  <= 0;
                     else    
-                        cen_millar_i <= cen_millar_i + 1;
+                        cen_millar <= cen_millar + 1;
 
             end
              
     //control unidades de millon
     always_ff @(posedge clk_10Mhz_i)      
         if(reset_i)
-            uni_millon_i  <= 0;
+            uni_millon  <= 0;
         else
         
             if(clock_catodo_en_i) begin
             
-                if (unidades_i    == 9 && decenas_i     == 9 && centenas_i    == 9 &&
-                    uni_millar_i  == 9 && dec_millar_i  == 9 && cen_millar_i  == 9)
+                if (unidades    == 9 && decenas     == 9 && centenas    == 9 &&
+                    uni_millar  == 9 && dec_millar  == 9 && cen_millar  == 9)
             
-                    if(uni_millon_i == 9)
-                        uni_millon_i <= 0;
+                    if(uni_millon  == 9)
+                        uni_millon <= 0;
                     else    
-                        uni_millon_i <= uni_millon_i + 1;
+                        uni_millon <= uni_millon + 1;
 
             end
         
@@ -162,20 +168,22 @@ module module_digitos(
     //control unidades de millon
     always_ff @(posedge clk_10Mhz_i)      
         if(reset_i)
-            dec_millon_i  <= 0;
+            dec_millon  <= 0;
         else
         
         if(clock_catodo_en_i) begin
             
-          if (unidades_i    == 9 && decenas_i     == 9 && centenas_i    == 9 &&
-              uni_millar_i  == 9 && dec_millar_i  == 9 && cen_millar_i  == 9 &&
-              uni_millon_i  == 9)
+          if (unidades    == 9 && decenas     == 9 && centenas    == 9 &&
+              uni_millar  == 9 && dec_millar  == 9 && cen_millar  == 9 &&
+              uni_millon  == 9)
             
-              if(dec_millon_i == 9)
-                 dec_millon_i <= 0;
+              if(dec_millon == 9)
+                 dec_millon <= 0;
               else    
-                 dec_millon_i <= dec_millon_i + 1;
+                 dec_millon <= dec_millon + 1;
 
         end        
  
+    assign digitos_o = {dec_millon, uni_millon, cen_millar, dec_millar, 
+                        uni_millar, centenas,   decenas,    unidades};
 endmodule

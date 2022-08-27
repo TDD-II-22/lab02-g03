@@ -32,7 +32,6 @@ module tb_module_contador_7seg;
         
     logic [2 : 0]   counter;
     
-    logic clk_prueba;
     
     top_module_contador_7seg module_contador_7seg(
 
