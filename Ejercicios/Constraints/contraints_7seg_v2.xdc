@@ -108,8 +108,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports control_reg]
 #set_property PACKAGE_PIN R2 [get_ports {led[14]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {led[14]}]
 ##Bank = 34, Pin name = IO_L15P_T2_DQS_34,					Sch name = LED15
-set_property PACKAGE_PIN P2 [get_ports locked_po]
-set_property IOSTANDARD LVCMOS33 [get_ports locked_po]
+#set_property PACKAGE_PIN P2 [get_ports locked_po]
+#set_property IOSTANDARD LVCMOS33 [get_ports locked_po]
 
 ##Bank = 34, Pin name = IO_L5P_T0_34,						Sch name = LED16_R
 #set_property PACKAGE_PIN K5 [get_ports RGB1_Red]
