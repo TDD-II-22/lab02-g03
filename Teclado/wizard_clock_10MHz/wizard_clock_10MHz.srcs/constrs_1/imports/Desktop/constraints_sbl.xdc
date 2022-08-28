@@ -14,11 +14,11 @@ set_property PACKAGE_PIN E3 [get_ports clk]
 set_property PACKAGE_PIN U9 [get_ports {rst}]					
 	set_property IOSTANDARD LVCMOS33 [get_ports {rst}]
 ##Bank = 34, Pin name = IO_25_34,							Sch name = SW1
-##set_property PACKAGE_PIN U8 [get_ports {switch_pi[1]}]					
-	##set_property IOSTANDARD LVCMOS33 [get_ports {switch_pi[1]}]
+#set_property PACKAGE_PIN U8 [get_ports {rst}]					
+	#set_property IOSTANDARD LVCMOS33 [get_ports {rst}]
 ##Bank = 34, Pin name = IO_L23P_T3_34,						Sch name = SW2
-##set_property PACKAGE_PIN R7 [get_ports {switch_pi[2]}]					
-	##set_property IOSTANDARD LVCMOS33 [get_ports {switch_pi[2]}]
+set_property PACKAGE_PIN R7 [get_ports {bt1}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {bt1}]
 ##Bank = 34, Pin name = IO_L19P_T3_34,						Sch name = SW3
 ##set_property PACKAGE_PIN R6 [get_ports {switch_pi[3]}]					
 	##set_property IOSTANDARD LVCMOS33 [get_ports {switch_pi[3]}]
@@ -87,8 +87,8 @@ set_property PACKAGE_PIN U7 [get_ports {conta[6]}]
 set_property PACKAGE_PIN U6 [get_ports {conta[7]}]					
 	set_property IOSTANDARD LVCMOS33 [get_ports {conta[7]}]
 ##Bank = 34, Pin name = IO_L10N_T1_34,						Sch name = LED8
-#set_property PACKAGE_PIN V4 [get_ports {leds_po[8]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {leds_po[8]}]
+set_property PACKAGE_PIN V4 [get_ports {sal_tb}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sal_tb}]
 ##Bank = 34, Pin name = IO_L8N_T1_34,						Sch name = LED9
 ##set_property PACKAGE_PIN U3 [get_ports {leds_po[9]}]					
 	##set_property IOSTANDARD LVCMOS33 [get_ports {leds_po[9]}]
@@ -194,8 +194,8 @@ set_property PACKAGE_PIN U6 [get_ports {conta[7]}]
 #set_property PACKAGE_PIN E16 [get_ports rst]						
 	#set_property IOSTANDARD LVCMOS33 [get_ports rst]
 ##Bank = 15, Pin name = IO_L14P_T2_SRCC_15,					Sch name = BTNU
-set_property PACKAGE_PIN F15 [get_ports bt1]						
-	set_property IOSTANDARD LVCMOS33 [get_ports bt1]
+#set_property PACKAGE_PIN F15 [get_ports en_i]						
+	#set_property IOSTANDARD LVCMOS33 [get_ports en_i]
 ##Bank = CONFIG, Pin name = IO_L15N_T2_DQS_DOUT_CSO_B_14,	Sch name = BTNL
 #set_property PACKAGE_PIN T16 [get_ports rst_n_i]						
 	#set_property IOSTANDARD LVCMOS33 [get_ports rst_n_i]

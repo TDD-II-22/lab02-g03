@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Aug 26 20:44:48 2022
-# Process ID: 9656
+# Start of session at: Sat Aug 27 21:29:48 2022
+# Process ID: 3308
 # Current directory: C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.runs/impl_1
 # Command line: vivado.exe -log top_module_debouncer.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_module_debouncer.tcl -notrace
 # Log file: C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.runs/impl_1/top_module_debouncer.vdi

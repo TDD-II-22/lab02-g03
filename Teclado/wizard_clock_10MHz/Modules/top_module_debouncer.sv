@@ -30,7 +30,6 @@ module top_module_debouncer(
     
   logic clk_10MHz;
   logic signal;
-  logic clk_slw;
   
   module_debouncer db1(
       .clk_10MHz    (clk_10MHz),
@@ -42,8 +41,10 @@ module top_module_debouncer(
       .clk        (clk_10MHz),
       .rst_n_i    (rst),
       .en_i       (bt1),
-      .conta_o    (conta)  
+      .conta    (conta)  
       );
+  
+  
     
   clk_wiz_10MHZ inst
   (

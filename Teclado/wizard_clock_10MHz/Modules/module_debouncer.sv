@@ -67,7 +67,7 @@ module clk_div_4Hz (input logic clk_10MHz, output logic clk_4Hz);
     always @ (posedge clk_10MHz)
     begin
     count <= count +1;
-    if (count == 500000)
+    if (count == 1_250_000-1)
     begin
     count <=0;  
     clk_4Hz = ~clk_4Hz;
