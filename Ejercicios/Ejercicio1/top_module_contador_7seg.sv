@@ -28,16 +28,17 @@ module top_module_contador_7seg(
                     [7 : 0]     display_select_po
     );
     
-    logic               clk_10Mhz,
-                        clock_catodo_en;
-    logic   [2 : 0]     select_anodo;
-    logic   [31 : 0]    digitos;
+    logic                       clk_10Mhz,
+                                clock_catodo_en;
+    logic   [2 : 0]             select_anodo;
+    logic   [31 : 0]            digitos;
     
-    parameter           FREC_CATODO = 10;       //FRECUENCIA DEL CATODO DESEADA
-    parameter           BITS_CATODO = 20;       //BITS NECESARIOS PARA EL CONTADOR DE CATODO
+    parameter                   COUNT_CATODO    = 1_000_000;       //FRECUENCIA DEL CATODO DESEADA => clk_10Mhz / frecuencia
+    parameter                   BITS_CATODO     = 20;               //BITS NECESARIOS PARA EL CONTADOR DE CATODO
     
-    parameter           FREC_ANODO  = 1000;     //FRECUENCIA DEL ANODO DESEADA
-    parameter           BITS_ANODO  = 14;       //BITS NECESARIOS PARA EL CONTADOR DE ANODO
+    parameter                   COUNT_ANODO     = 10_000;           //FRECUENCIA DEL ANODO DESEADA => clk_10Mhz / frecuencia
+    parameter                   BITS_ANODO      = 14;               //BITS NECESARIOS PARA EL CONTADOR DE ANODO
+    
     
     /*
     
@@ -50,11 +51,11 @@ module top_module_contador_7seg(
     //generar reloj
     WCLK generate_clock_10Mhz(
         // Clock out ports
-        .CLK_10MHZ(clk_10Mhz),          // output CLK_10MHZ
+        .CLK_10MHZ              (clk_10Mhz),          // output CLK_10MHZ
         // Status and control signals
-        .locked(),                // output locked
+        .locked                 (),                // output locked
         // Clock in ports
-        .CLK_100MHZ(clk_100Mhz_pi)       // input CLK_100MHZ
+        .CLK_100MHZ             (clk_100Mhz_pi)       // input CLK_100MHZ
     );    
     
     
@@ -64,26 +65,26 @@ module top_module_contador_7seg(
     module_clock_catodo #(
                               
         //parametrizacion
-        .FREC_CATODO             (FREC_CATODO),       
+        .COUNT_CATODO            (COUNT_CATODO),       
         .BITS_CATODO             (BITS_CATODO))     
     
     //nombre de la instancia
     module_clock_catodo(  
         
         //entradas / salidas 
-        .clk_10Mhz_i        (clk_10Mhz),
-        .reset_i            (reset_pi),
-        .clock_catodo_o     (clock_catodo_en) 
+        .clk_10Mhz_i            (clk_10Mhz),
+        .reset_i                (reset_pi),
+        .clock_catodo_o         (clock_catodo_en) 
     
     );
     
     //control que mostrar en el catodo
     module_digitos module_digitos(
         
-        .clk_10Mhz_i          (clk_10Mhz),
-        .clock_catodo_en_i    (clock_catodo_en),    
-        .reset_i              (reset_pi),       
-        .digitos_o            (digitos)  
+        .clk_10Mhz_i            (clk_10Mhz),
+        .clock_catodo_en_i      (clock_catodo_en),    
+        .reset_i                (reset_pi),       
+        .digitos_o              (digitos)  
                  
     );
     
@@ -93,7 +94,7 @@ module top_module_contador_7seg(
     module_seg7_control #(
                               
         //parametrizacion
-        .FREC_ANODO             (FREC_ANODO),       
+        .COUNT_ANODO            (COUNT_ANODO),       
         .BITS_ANODO             (BITS_ANODO))     
     
     //nombre de la instancia

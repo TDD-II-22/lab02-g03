@@ -31,14 +31,14 @@ module module_digitos(
     );
     
     
-    logic   [3 : 0]     unidades      = 0,
-                        decenas       = 0,
-                        centenas      = 0,
-                        uni_millar    = 0,
-                        dec_millar    = 0,
-                        cen_millar    = 0,
-                        uni_millon    = 0,
-                        dec_millon    = 0;
+    logic   [3 : 0]             unidades      = 0,
+                                decenas       = 0,
+                                centenas      = 0,
+                                uni_millar    = 0,
+                                dec_millar    = 0,
+                                cen_millar    = 0,
+                                uni_millon    = 0,
+                                dec_millon    = 0;
     
     
     //control unidades   

@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module module_seg7_control #(parameter FREC_ANODO = 1_000, BITS_ANODO = 14)(
+module module_seg7_control #(parameter COUNT_ANODO = 10_000, BITS_ANODO = 14)(
     
     input   logic               clk_10Mhz_i,
                                 reset_i,
@@ -31,9 +31,8 @@ module module_seg7_control #(parameter FREC_ANODO = 1_000, BITS_ANODO = 14)(
     );
     
     
-    logic [2 : 0]   digit_select;   // 3 bits para seleccionar los 8 digitos
-    
-    logic [BITS_ANODO - 1 : 0]  digit_timer;        // contador para refrescar los digitos
+    logic [2 : 0]               digit_select;   // 3 bits para seleccionar los 8 digitos 
+    logic [BITS_ANODO - 1 : 0]  digit_timer;    // contador para refrescar los digitos
     
     
     //CLOCK DEL ANODO
@@ -41,7 +40,7 @@ module module_seg7_control #(parameter FREC_ANODO = 1_000, BITS_ANODO = 14)(
     always_ff @(posedge clk_10Mhz_i) begin
         if(reset_i) begin
             digit_select <= 0;
-            digit_timer <= 0;
+            digit_timer  <= 0;
         end else
             /*           
                 Son 8 display a un periodo de 1ms por perido, se tiene que:
@@ -54,11 +53,11 @@ module module_seg7_control #(parameter FREC_ANODO = 1_000, BITS_ANODO = 14)(
             */
             
             //logica para el periodo de refrescamiento
-            if(digit_timer == ((10_000_000 / FREC_ANODO) - 1)) begin
-                digit_timer <= 0;
+            if(digit_timer   == (COUNT_ANODO - 1)) begin
+                digit_timer  <= 0;
                 digit_select <= digit_select + 1;
             end else
-                digit_timer <= digit_timer + 1;   
+                digit_timer  <= digit_timer + 1;   
     end
     
     //logica para encender un adono determinado

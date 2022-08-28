@@ -21,10 +21,10 @@
 
 
 module top_module_debouncer(
-    input    logic             clk,
-    input    logic             bt1,
-    input    logic             rst,
-    output   logic    [7:0]    conta
+    input     logic             clk,
+    input     logic             bt1,
+    input     logic             rst,
+    output    logic    [7:0]    conta
                          
     );
     
@@ -49,7 +49,7 @@ module top_module_debouncer(
   (
   // Clock out ports  
   .clk_out10MHz(clk_10MHz),
- // Clock in ports
+  // Clock in ports
   .clk_in100MHz(clk)
   );
   

@@ -22,5 +22,27 @@
 
 module tb_contador;
 
-
+    logic             clk,
+                      bt1,
+                      rst,
+                      clk_10MHz,
+                      signal,
+                      clk_slw;
+    logic    [7:0]    conta;
+    
+    
+    top_module_debouncer DUT (
+        .clk (clk),
+        .bt1 (bt1),
+        .rst (rst),
+        .conta (conta)
+        );  
+    initial begin
+        
+            
+        #10;
+    
+        $finish;
+       
+    end
 endmodule

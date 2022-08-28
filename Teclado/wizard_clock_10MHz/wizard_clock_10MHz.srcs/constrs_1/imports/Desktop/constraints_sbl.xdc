@@ -11,8 +11,8 @@ set_property PACKAGE_PIN E3 [get_ports clk]
  
 ## Switches
 ##Bank = 34, Pin name = IO_L21P_T3_DQS_34,					Sch name = SW0
-#set_property PACKAGE_PIN U9 [get_ports {switch_pi[0]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {switch_pi[0]}]
+set_property PACKAGE_PIN U9 [get_ports {rst}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {rst}]
 ##Bank = 34, Pin name = IO_25_34,							Sch name = SW1
 ##set_property PACKAGE_PIN U8 [get_ports {switch_pi[1]}]					
 	##set_property IOSTANDARD LVCMOS33 [get_ports {switch_pi[1]}]
@@ -191,8 +191,8 @@ set_property PACKAGE_PIN U6 [get_ports {conta[7]}]
 #set_property PACKAGE_PIN C12 [get_ports btnCpuReset]				
 	#set_property IOSTANDARD LVCMOS33 [get_ports btnCpuReset]
 ##Bank = 15, Pin name = IO_L11N_T1_SRCC_15,					Sch name = BTNC
-set_property PACKAGE_PIN E16 [get_ports rst]						
-	set_property IOSTANDARD LVCMOS33 [get_ports rst]
+#set_property PACKAGE_PIN E16 [get_ports rst]						
+	#set_property IOSTANDARD LVCMOS33 [get_ports rst]
 ##Bank = 15, Pin name = IO_L14P_T2_SRCC_15,					Sch name = BTNU
 set_property PACKAGE_PIN F15 [get_ports bt1]						
 	set_property IOSTANDARD LVCMOS33 [get_ports bt1]
