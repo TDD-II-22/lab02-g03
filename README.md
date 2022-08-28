@@ -58,8 +58,7 @@ module top_module_memoria(
 
 
 ##### 2. Parámetros
-
--`BITS_WIDTH`: Es una constante númerica que almacena un número entero que representa el número de bits deseados.
+-`BITS_WIDTH`: Es una constante númerica que almacena un número entero que representa el número de bits deseados.\
 -`BITS_HEIGHT`: Es una constante númerica que almacena un número entero que si se eleva 2 a la este número representa la cantidad de filas en la matriz de memoria.
 ##### 3. Entradas y salidas
 - `clk_pi`: Entrada de reloj a 100MHz.
@@ -96,7 +95,7 @@ module module_memoria(
                      );
 ```
 ##### 2. Parámetros
--`BITS_WIDTH`: Es una constante númerica que almacena un número entero que representa el número de bits deseados.
+-`BITS_WIDTH`: Es una constante númerica que almacena un número entero que representa el número de bits deseados.\
 -`BITS_HEIGHT`: Es una constante númerica que almacena un número entero que si se eleva 2 a la este número representa la cantidad de filas en la matriz de memoria.
 
 ##### 3. Entradas y salidas
