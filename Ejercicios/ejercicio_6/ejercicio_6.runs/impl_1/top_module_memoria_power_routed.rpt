@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Thu Aug 25 13:57:01 2022
+| Date             : Sat Aug 27 16:49:14 2022
 | Host             : LAPTOP-UOLPLFOP running 64-bit major release  (build 9200)
 | Command          : report_power -file top_module_memoria_power_routed.rpt -pb top_module_memoria_power_summary_routed.pb -rpx top_module_memoria_power_routed.rpx
 | Design           : top_module_memoria
@@ -52,7 +52,7 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        8 |       --- |             --- |
+| Clocks         |    <0.001 |        9 |       --- |             --- |
 | Slice Logic    |    <0.001 |       46 |       --- |             --- |
 |   LUT as Logic |    <0.001 |       20 |     63400 |            0.03 |
 |   Register     |    <0.001 |       24 |    126800 |            0.02 |
@@ -127,12 +127,14 @@ Table of Contents
 +-----------------------+-------------------------------------+-----------------+
 | Clock                 | Domain                              | Constraint (ns) |
 +-----------------------+-------------------------------------+-----------------+
+| CLK_10MHZ_clk_wiz_0   | instance_1/inst/CLK_10MHZ           |           100.0 |
 | CLK_10MHZ_clk_wiz_0   | instance_1/inst/CLK_10MHZ_clk_wiz_0 |           100.0 |
+| CLK_10MHZ_clk_wiz_0_1 | instance_1/inst/CLK_10MHZ           |           100.0 |
 | CLK_10MHZ_clk_wiz_0_1 | instance_1/inst/CLK_10MHZ_clk_wiz_0 |           100.0 |
-| clk_i                 | clk_i                               |            10.0 |
+| clk_pi                | clk_pi                              |            10.0 |
 | clkfbout_clk_wiz_0    | instance_1/inst/clkfbout_clk_wiz_0  |            50.0 |
 | clkfbout_clk_wiz_0_1  | instance_1/inst/clkfbout_clk_wiz_0  |            50.0 |
-| sys_clk_pin           | clk_i                               |            10.0 |
+| sys_clk_pin           | clk_pi                              |            10.0 |
 +-----------------------+-------------------------------------+-----------------+
 
 

@@ -23,22 +23,22 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/Desktop/proyectito/project_1/project_1.cache/wt [current_project]
-set_property parent.project_path D:/Desktop/proyectito/project_1/project_1.xpr [current_project]
+set_property webtalk.parent_dir D:/Documentos/GitHub/lab02-g03/Ejercicios/ejercicio_6/ejercicio_6.cache/wt [current_project]
+set_property parent.project_path D:/Documentos/GitHub/lab02-g03/Ejercicios/ejercicio_6/ejercicio_6.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/Desktop/proyectito/project_1/project_1.cache/ip [current_project]
+set_property ip_output_repo d:/Documentos/GitHub/lab02-g03/Ejercicios/ejercicio_6/ejercicio_6.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib -sv {
-  D:/Desktop/proyectito/project_1/project_1.srcs/sources_1/imports/Desktop/package.sv
-  D:/Desktop/proyectito/project_1/project_1.srcs/sources_1/imports/new/module_memoria.sv
-  D:/Desktop/proyectito/project_1/project_1.srcs/sources_1/new/top_module_memoria.sv
+  D:/Documentos/GitHub/lab02-g03/Ejercicios/ejercicio_6/ejercicio_6.srcs/sources_1/imports/Desktop/package.sv
+  D:/Documentos/GitHub/lab02-g03/Ejercicios/ejercicio_6/ejercicio_6.srcs/sources_1/imports/new/module_memoria.sv
+  D:/Documentos/GitHub/lab02-g03/Ejercicios/ejercicio_6/ejercicio_6.srcs/sources_1/new/top_module_memoria.sv
 }
-read_ip -quiet D:/Desktop/proyectito/project_1/project_1.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all d:/Desktop/proyectito/project_1/project_1.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/Desktop/proyectito/project_1/project_1.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all d:/Desktop/proyectito/project_1/project_1.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0_ooc.xdc]
+read_ip -quiet D:/Documentos/GitHub/lab02-g03/Ejercicios/ejercicio_6/ejercicio_6.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all d:/Documentos/GitHub/lab02-g03/Ejercicios/ejercicio_6/ejercicio_6.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Documentos/GitHub/lab02-g03/Ejercicios/ejercicio_6/ejercicio_6.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Documentos/GitHub/lab02-g03/Ejercicios/ejercicio_6/ejercicio_6.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -48,8 +48,8 @@ set_property used_in_implementation false [get_files -all d:/Desktop/proyectito/
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/Desktop/proyectito/project_1/project_1.srcs/constrs_1/imports/c/constraints_memoria_4x8.xdc
-set_property used_in_implementation false [get_files D:/Desktop/proyectito/project_1/project_1.srcs/constrs_1/imports/c/constraints_memoria_4x8.xdc]
+read_xdc D:/Documentos/GitHub/lab02-g03/Ejercicios/ejercicio_6/ejercicio_6.srcs/constrs_1/imports/c/constraints_memoria_4x8.xdc
+set_property used_in_implementation false [get_files D:/Documentos/GitHub/lab02-g03/Ejercicios/ejercicio_6/ejercicio_6.srcs/constrs_1/imports/c/constraints_memoria_4x8.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

@@ -36,7 +36,7 @@ bits_t           rs2_o;
 
 
 logic                                                   self_check;
-logic [ BITS_WIDTH  - 1 : 0 ]                                    a;
+logic [ BITS_WIDTH     - 1 : 0 ]                                 a;
 logic [ 2**BITS_HEIGHT - 1 : 0 ][ BITS_WIDTH - 1 : 0 ]           b;
 
 // Reloj de 100 MHz
@@ -49,15 +49,15 @@ end
 
 top_module_memoria memoria__1(                
 
-                        .clk_i(        clk_i      ),
-                        .rst_i(        rst_i      ),
-                        .we_i(         we_i       ),
-                        .addr_rs1_i(   addr_rs1_i ),
-                        .addr_rs2_i(   addr_rs2_i ),
-                        .addr_rd_i(    addr_rd_i  ),
-                        .data_in_i(    data_in_i  ),
-                        .rs1_o(        rs1_o      ),
-                        .rs2_o(        rs2_o      )
+                        .clk_pi(        clk_i      ),
+                        .rst_pi(        rst_i      ),
+                        .we_pi(         we_i       ),
+                        .addr_rs1_pi(   addr_rs1_i ),
+                        .addr_rs2_pi(   addr_rs2_i ),
+                        .addr_rd_pi(    addr_rd_i  ),
+                        .data_in_pi(    data_in_i  ),
+                        .rs1_po(        rs1_o      ),
+                        .rs2_po(        rs2_o      )
                            );
 
     initial begin
@@ -80,7 +80,7 @@ top_module_memoria memoria__1(
         for ( int j = 0 ; j < ( 2**BITS_HEIGHT ) ; j++ ) begin
             addr_rs1_i = j;
             addr_rs2_i = j;
-            #5
+            #10
             if ( b [ j ] == rs2_o ) begin 
                 self_check = 1'b1;
             end
