@@ -117,11 +117,11 @@ Se seleccionó una lógica secuencial para la resolución del ejercicio.
 ##### 5. Testbench
 El testbench que corresponde a este archivo tb_memoria.sv
 
-#### 4.6.3 clk_wiz_0
+#### 4.6.3 WCLK
 Este modulo se encarga de generar un reloj de 10MHz a partir de un reloj de 100MHz.
 ##### 1. Encabezado del módulo
 ```SystemVerilog
-module clk_wiz_0 
+module WCLK
  (
   // Clock out ports
   output        CLK_10MHZ,
