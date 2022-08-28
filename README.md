@@ -76,9 +76,9 @@ module top_module_memoria(
 Se seleccionó una lógica secuencial para la resolución del ejercicio.
 
 ##### 5. Testbench
-El testbench que corresponde a este archivo tb_memoria.sv, ademas en la primera imagen se ve la simulación de comportamiento y en la segunda la post síntesis en donde se observan a detalle los retardos entre los relojes y en el momento que se dan los cambios en memoria.
-<img src="https://github.com/TDD-II-22/lab02-g03/blob/main/Images/simulacion_normal.png" width="300" >
-<img src="https://github.com/TDD-II-22/lab02-g03/blob/main/Images/simulacion_post_sintesis.png" width="300" >
+El testbench que corresponde a este archivo tb_memoria.sv, ademas en la primera imagen se ve la simulación de comportamiento y en la segunda la post síntesis en donde se observan a detalle los retardos entre los relojes y en el momento que se dan los cambios en memoria.\
+<img src="https://github.com/TDD-II-22/lab02-g03/blob/main/Images/simulacion_normal.png" width="600" >\
+<img src="https://github.com/TDD-II-22/lab02-g03/blob/main/Images/simulacion_post_sintesis.png" width="600" >\
 #### 4.6.2 module_memoria
 Este modulo se encarga de guardar en la memoria dependiendo de si el W/E se encuentre activo, si no, puede funcionara en modo lectura en donde se ven los valores almacenados en la memoria.
 ##### 1. Encabezado del módulo
