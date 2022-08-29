@@ -1,0 +1,81 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Aug 28 18:31:54 2022
+# Process ID: 12184
+# Current directory: C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9816 C:\TDD\lab02-g03\Ejercicios\Proyectos\Ejercicio2\vivado_project.xpr
+# Log file: C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado.log
+# Journal file: C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2\vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/USER/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+start_gui
+open_project C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_DFF.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/top_module_debouncer.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_clock_divider.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_key_encoding.sv'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Simulations/tb_contador.sv'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 652.172 ; gain = 59.254
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+import_files -norecurse {C:/TDD/lab02-g03/Ejercicios/Compartido/module_debouncer.sv C:/TDD/lab02-g03/Ejercicios/Ejercicio2/top_module_debouncer.sv C:/TDD/lab02-g03/Ejercicios/Compartido/module_clock_catodo.sv C:/TDD/lab02-g03/Ejercicios/Ejercicio2/clk_div_4Hz.sv C:/TDD/lab02-g03/Ejercicios/Compartido/module_clock_divider.sv C:/TDD/lab02-g03/Ejercicios/Compartido/module_DFF.sv}
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+export_ip_user_files -of_objects  [get_files C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_DFF.sv] -no_script -reset -force -quiet
+remove_files  C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_DFF.sv
+export_ip_user_files -of_objects  [get_files C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_clock_divider.sv] -no_script -reset -force -quiet
+remove_files  C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_clock_divider.sv
+export_ip_user_files -of_objects  [get_files C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sources_1/new/module_top_ej2.sv] -no_script -reset -force -quiet
+remove_files  C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sources_1/new/module_top_ej2.sv
+export_ip_user_files -of_objects  [get_files C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv] -no_script -reset -force -quiet
+remove_files  C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv
+export_ip_user_files -of_objects  [get_files C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_key_encoding.sv] -no_script -reset -force -quiet
+remove_files  C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_key_encoding.sv
+export_ip_user_files -of_objects  [get_files C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/top_module_debouncer.sv] -no_script -reset -force -quiet
+remove_files  C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/top_module_debouncer.sv
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sun Aug 28 18:39:13 2022] Launched synth_1...
+Run output will be captured here: C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Sun Aug 28 18:40:30 2022] Launched impl_1...
+Run output will be captured here: C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Sun Aug 28 18:42:09 2022] Launched impl_1...
+Run output will be captured here: C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 790.887 ; gain = 21.504
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210274663568A
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1909.148 ; gain = 1118.262
+set_property PROGRAM.FILE {C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/impl_1/top_module_debouncer.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.runs/impl_1/top_module_debouncer.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 28 18:45:23 2022...

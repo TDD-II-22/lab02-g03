@@ -1,9 +1,0 @@
-0.6
-2019.1
-May 24 2019
-15:06:07
-C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_DFF.sv,1661207031,systemVerilog,,C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv,,module_DFF,,,../../../../wizard_clock_10MHz.srcs/sources_1/ip/clk_wiz_0_1,,,,,
-C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_debouncer.sv,1661207040,systemVerilog,,C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Simulations/tb_contador.sv,,clock_enable;module_debouncer,,,../../../../wizard_clock_10MHz.srcs/sources_1/ip/clk_wiz_0_1,,,,,
-C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Simulations/tb_contador.sv,1661221454,systemVerilog,,,,tb_contador,,,../../../../wizard_clock_10MHz.srcs/sources_1/ip/clk_wiz_0_1,,,,,
-C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
-C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/wizard_clock_10MHz.srcs/sources_1/imports/Insumos/contador_prueba.sv,1661214997,systemVerilog,,C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Modules/module_DFF.sv,,contador_prueba,,,../../../../wizard_clock_10MHz.srcs/sources_1/ip/clk_wiz_0_1,,,,,
