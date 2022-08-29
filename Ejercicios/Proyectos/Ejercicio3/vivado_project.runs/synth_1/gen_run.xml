@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a12ticsg325-1L" LaunchTime="1661752197">
+<GenRun Id="synth_1" LaunchPart="xc7a12ticsg325-1L" LaunchTime="1661787953">
   <File Type="PA-TCL" Name="top_module_teclado.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="top_module_teclado_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_module_teclado_reports.tcl"/>
   <File Type="RDS-RDS" Name="top_module_teclado.vds"/>
   <File Type="RDS-UTIL" Name="top_module_teclado_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="top_module_teclado_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="top_module_teclado.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="top_module_teclado_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="top_module_teclado_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../Ejercicio3/key_detector.sv">
@@ -93,6 +90,14 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Desktop/constraints_sbl.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Users/USER/Desktop/constraints_sbl.xdc"/>
+        <Attr Name="ImportTime" Val="1660246856"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>

@@ -42,7 +42,7 @@ read_verilog -library xil_defaultlib -sv {
   C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Ejercicio3/module_key_encoding.sv
   C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Ejercicio3/top_module_teclado.sv
 }
-read_ip -quiet c:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK.xci
+read_ip -quiet C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK.xci
 set_property used_in_implementation false [get_files -all c:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK_board.xdc]
 set_property used_in_implementation false [get_files -all c:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK.xdc]
 set_property used_in_implementation false [get_files -all c:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK_ooc.xdc]
@@ -55,6 +55,9 @@ set_property used_in_implementation false [get_files -all c:/TDD/lab02-g03/Ejerc
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Desktop/constraints_sbl.xdc
+set_property used_in_implementation false [get_files C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Desktop/constraints_sbl.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

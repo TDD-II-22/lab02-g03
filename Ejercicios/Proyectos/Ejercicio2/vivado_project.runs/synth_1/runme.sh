@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log contador_prueba.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source contador_prueba.tcl
+EAStep vivado -log top_module_debouncer.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module_debouncer.tcl

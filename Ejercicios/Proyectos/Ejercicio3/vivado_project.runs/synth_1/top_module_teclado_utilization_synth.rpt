@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Aug 28 23:50:42 2022
+| Date         : Mon Aug 29 09:46:39 2022
 | Host         : DESKTOP-LUJVCA8 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_module_teclado_utilization_synth.rpt -pb top_module_teclado_utilization_synth.pb
 | Design       : top_module_teclado
@@ -153,11 +153,10 @@ Table of Contents
 | CARRY4   |   34 |          CarryLogic |
 | LUT2     |   33 |                 LUT |
 | LUT4     |   26 |                 LUT |
-| OBUF     |   10 |                  IO |
+| OBUF     |   14 |                  IO |
 | LUT1     |   10 |                 LUT |
 | LUT6     |    9 |                 LUT |
 | IBUF     |    5 |                  IO |
-| OBUFT    |    4 |                  IO |
 | LUT5     |    1 |                 LUT |
 | LUT3     |    1 |                 LUT |
 +----------+------+---------------------+

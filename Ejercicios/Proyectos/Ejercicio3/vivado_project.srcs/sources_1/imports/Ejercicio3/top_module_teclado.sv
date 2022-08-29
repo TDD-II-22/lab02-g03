@@ -46,27 +46,7 @@ module top_module_teclado(
              
     logic    [3:0]    deco_ins;
              
-    WCLK clk_wiz(
-    // Clock out ports
-        .clk_out1(clk_10Mhz),     // output CLK_10MHZ
-    // Status and control signals
-        .locked(locked),       // output locked
-   // Clock in ports
-        .clk_in1(clk)
-    );
-    
-    
-    module_clock_catodo clk_div(
-        .clk_10Mhz_i       (clk_10Mhz),
-        .reset_i           (rst),
-        .clock_catodo_o    (clk_10kHz)
-        );
-    
-    module_clock_leds clk_lds(
-        .clk_10Mhz_i       (clk_10Mhz),
-        .reset_i           (rst),
-        .clock_catodo_o    (clk_leds)
-        );    
+
     
     module_2bit_counter ctr1(
         .clk        (clk_10kHz),
@@ -107,6 +87,8 @@ module top_module_teclado(
         .det_o     (key_det)
         );    
         
+    assign led_det_o = key_det;
+        
     module_catodo c1 (
         .EN_i         (key_det),
         .D_i          (counter_o[1]),
@@ -143,4 +125,27 @@ module top_module_teclado(
         .entradas_in    (deco_ins),
         .salidas_o      (deco_o)
         );
+        
+        
+    WCLK clk_wiz(
+    // Clock out ports
+        .clk_out1(clk_10Mhz),     // output CLK_10MHZ
+    // Status and control signals
+        .locked(locked),       // output locked
+   // Clock in ports
+        .clk_in1(clk)
+    );
+    
+    
+    module_clock_catodo clk_div(
+        .clk_10Mhz_i       (clk_10Mhz),
+        .reset_i           (rst),
+        .clock_catodo_o    (clk_10kHz)
+        );
+    
+    module_clock_leds clk_lds(
+        .clk_10Mhz_i       (clk_10Mhz),
+        .reset_i           (rst),
+        .clock_catodo_o    (clk_leds)
+        );    
 endmodule
