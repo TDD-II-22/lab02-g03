@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../vivado_project.srcs/sources_1/ip/WCLK" \
+"../../../../vivado_project.srcs/sources_1/ip/WCLK/WCLK_clk_wiz.v" \
+"../../../../vivado_project.srcs/sources_1/ip/WCLK/WCLK.v" \
+
+sv xil_defaultlib  --include "../../../../vivado_project.srcs/sources_1/ip/WCLK" \
+"../../../../vivado_project.srcs/sources_1/imports/Ejercicio6/package.sv" \
+"../../../../vivado_project.srcs/sources_1/imports/Ejercicio6/module_memoria.sv" \
+"../../../../vivado_project.srcs/sources_1/imports/Ejercicio6/top_module_memoria.sv" \
+"../../../../vivado_project.srcs/sim_1/imports/Ejercicio6/tb_memoria.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

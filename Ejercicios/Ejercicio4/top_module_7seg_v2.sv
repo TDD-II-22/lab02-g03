@@ -3,9 +3,9 @@
 // Company: TEC 
 // Engineer: Carlos Andrey Morales Zamora
 // 
-// Create Date: 18.08.2022 09:38:45
+// Create Date: 27.08.2022 14:38:45
 // Design Name: 
-// Module Name: module_register_pp
+// Module Name: top_module_7seg_v2
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -35,7 +35,7 @@ module top_module_7seg_v2(
     logic [31 : 0]              display_r;
     logic [31 : 0]              display;
     
-    parameter                   COUNT_CATODO    = 20_000_000;       //FRECUENCIA DEL CATODO DESEADA => clk_10Mhz / frecuencia
+    parameter                   COUNT_CATODO    = 20_000_000;       //FRECUENCIA DEL CATODO DESEADA => clk_10Mhz / frecuencia (0.5Hz)
     parameter                   BITS_CATODO     = 25;               //BITS NECESARIOS PARA EL CONTADOR DE CATODO
     
     parameter                   COUNT_ANODO     = 10_000;           //FRECUENCIA DEL ANODO DESEADA => clk_10Mhz / frecuencia
