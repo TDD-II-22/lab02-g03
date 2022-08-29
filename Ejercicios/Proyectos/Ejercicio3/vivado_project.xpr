@@ -141,10 +141,10 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/imports/Desktop/constraints_sbl.xdc">
+      <File Path="$PSRCDIR/constrs_1/imports/Constraints/constraints_teclado.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Users/USER/Desktop/constraints_sbl.xdc"/>
-          <Attr Name="ImportTime" Val="1660246856"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Constraints/constraints_teclado.xdc"/>
+          <Attr Name="ImportTime" Val="1661785903"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
