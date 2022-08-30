@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../Compartido/xci/WCLK" \
+"tb_7seg_v2_func_synth.v" \
+
+sv xil_defaultlib  --include "../../../../../../../Compartido/xci/WCLK" \
+"../../../../../../../Compartido/module_seg7_control.sv" \
+"../../../../../vivido_project.srcs/sim_1/new/tb_7seg_v2.sv" \
+
+# Do not sort compile order
+nosort

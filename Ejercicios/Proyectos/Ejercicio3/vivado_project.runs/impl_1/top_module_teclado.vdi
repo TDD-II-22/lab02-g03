@@ -1,0 +1,223 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Aug 29 11:21:33 2022
+# Process ID: 2632
+# Current directory: C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.runs/impl_1
+# Command line: vivado.exe -log top_module_teclado.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_module_teclado.tcl -notrace
+# Log file: C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.runs/impl_1/top_module_teclado.vdi
+# Journal file: C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/USER/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source top_module_teclado.tcl -notrace
+Command: link_design -top top_module_teclado -part xc7a12ticsg325-1L
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a12ticsg325-1L
+INFO: [Project 1-454] Reading design checkpoint 'c:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK.dcp' for cell 'clk_wiz'
+INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [c:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [c:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK.xdc] for cell 'clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK.xdc:57]
+get_clocks: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1181.359 ; gain = 565.887
+Finished Parsing XDC File [c:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc]
+CRITICAL WARNING: [Vivado 12-1815] Setting property 'IOSTANDARD' is not allowed for GT terminals. [C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc:9]
+CRITICAL WARNING: [Common 17-69] Command failed: 'T8' is not a valid site or package pin name. [C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc:66]
+CRITICAL WARNING: [Common 17-69] Command failed: 'R8' is not a valid site or package pin name. [C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc:72]
+CRITICAL WARNING: [Common 17-69] Command failed: 'T6' is not a valid site or package pin name. [C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc:75]
+CRITICAL WARNING: [Common 17-69] Command failed: Site cannot be assigned to more than one port [C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc:78]
+CRITICAL WARNING: [Common 17-69] Command failed: 'B13' is not a valid site or package pin name. [C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc:213]
+CRITICAL WARNING: [Common 17-69] Command failed: 'D17' is not a valid site or package pin name. [C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc:219]
+CRITICAL WARNING: [Common 17-69] Command failed: 'G13' is not a valid site or package pin name. [C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc:225]
+Finished Parsing XDC File [C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1181.359 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+10 Infos, 0 Warnings, 8 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1181.359 ; gain = 890.047
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a12ti'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1181.359 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: 18995cae7
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1196.633 ; gain = 15.273
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 24a57775c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.178 . Memory (MB): peak = 1327.441 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 5 cells
+INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 24a57775c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.201 . Memory (MB): peak = 1327.441 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 195f9cd80
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.233 . Memory (MB): peak = 1327.441 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 195f9cd80
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.242 . Memory (MB): peak = 1327.441 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 195f9cd80
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.248 . Memory (MB): peak = 1327.441 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 195f9cd80
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.251 . Memory (MB): peak = 1327.441 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               5  |                                              1  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               1  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1327.441 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1fd5bac5c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.275 . Memory (MB): peak = 1327.441 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 1fd5bac5c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1327.441 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1fd5bac5c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1327.441 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1327.441 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1fd5bac5c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1327.441 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+29 Infos, 0 Warnings, 8 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1327.441 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1327.441 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.runs/impl_1/top_module_teclado_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_module_teclado_drc_opted.rpt -pb top_module_teclado_drc_opted.pb -rpx top_module_teclado_drc_opted.rpx
+Command: report_drc -file top_module_teclado_drc_opted.rpt -pb top_module_teclado_drc_opted.pb -rpx top_module_teclado_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.runs/impl_1/top_module_teclado_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a12ti'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1327.441 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 149fe7347
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1327.441 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1327.441 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+WARNING: [Place 30-87] Partially locked IO Bus is found. Following components of the IO Bus deco_o are not locked:  'deco_o[3]'  'deco_o[2]'  'deco_o[0]' 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+ERROR: [Place 30-172] Sub-optimal placement for a clock-capable IO pin and PLL pair. If this sub optimal condition is acceptable for this design, you may use the CLOCK_DEDICATED_ROUTE constraint in the .xdc file to demote this message to a WARNING. However, the use of this override is highly discouraged. These examples can be used directly in the .xdc file to override this clock rule.
+	< set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets clk_wiz/inst/clk_in1_WCLK] >
+
+	clk_wiz/inst/clkin1_ibufg (IBUF.O) is locked to IPAD_X1Y0
+	clk_wiz/inst/plle2_adv_inst (PLLE2_ADV.CLKIN1) is provisionally placed by clockplacer on PLLE2_ADV_X1Y0
+
+	The above error could possibly be related to other connected instances. Following is a list of 
+	all the related clock rules and their respective instances.
+
+	Clock Rule: rule_pll_bufg
+	Status: PASS 
+	Rule Description: A PLL driving a BUFG must be placed on the same half side (top/bottom) of the device
+	clk_wiz/inst/plle2_adv_inst (PLLE2_ADV.CLKFBOUT) is provisionally placed by clockplacer on PLLE2_ADV_X1Y0
+	clk_wiz/inst/clkf_buf (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y1
+
+Resolution: A dedicated routing path between the two can be used if: (a) The clock-capable IO (CCIO) is placed on a CCIO capable site (b) The PLL is placed in the same clock region as the CCIO pin. Both the above conditions must be met at the same time, else it may lead to longer and less predictable clock insertion delays.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: a5c260b6
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1327.441 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: a5c260b6
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1327.441 ; gain = 0.000
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: a5c260b6
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1327.441 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+45 Infos, 1 Warnings, 8 Critical Warnings and 3 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 29 11:22:07 2022...

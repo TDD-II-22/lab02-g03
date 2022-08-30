@@ -53,7 +53,7 @@ module module_seg7_control #(parameter COUNT_ANODO = 10_000, BITS_ANODO = 14)(
             */
             
             //logica para el periodo de refrescamiento
-            if(digit_timer   == (COUNT_ANODO - 1)) begin
+            if( digit_timer  == (COUNT_ANODO - 1)) begin
                 digit_timer  <= 0;
                 digit_select <= digit_select + 1;
             end else
@@ -62,7 +62,6 @@ module module_seg7_control #(parameter COUNT_ANODO = 10_000, BITS_ANODO = 14)(
     
     //logica para encender un adono determinado
     always @(digit_select) begin
-    
         case(digit_select)
             3'h0: display_select_o = 8'b1111_1110;
             3'h1: display_select_o = 8'b1111_1101;

@@ -25,14 +25,15 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 
-module module_pseudo_random #(parameter NUM_BITS = 32) //por defecto 4 BITS!
-(
+module module_pseudo_random #(parameter NUM_BITS = 32)( //por defecto 4 BITS!
+
     input logic i_Clk,
     input logic i_Rst,
     input logic i_Enable,
  
     output logic [NUM_BITS-1:0] o_LFSR_Data
-   );
+    
+    );
  
     logic [NUM_BITS:1]  r_LFSR;
     logic               r_XNOR;

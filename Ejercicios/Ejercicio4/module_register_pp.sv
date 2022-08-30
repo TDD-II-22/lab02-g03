@@ -23,7 +23,7 @@
 module module_register_pp(
     input   logic               clk_i,
     input   logic               rst_i,
-    input   logic               control,
+    input   logic               control_i,
     input   logic    [31 : 0]   entrada_i,
     output  logic    [31 : 0]   salida_o    
     );
@@ -34,15 +34,15 @@ module module_register_pp(
     //generar memoria
     always_ff @(posedge clk_i) begin   
         if(rst_i) state <= 0;
-        else state <= next_state;
+        else      state <= next_state;
     end 
     
     //SIGUIENTE ESTADO
     always@(*) begin
-        case(control)
-        0:next_state = entrada_i;
-        1:next_state = state;
-        default: next_state = entrada_i;
+        case(control_i)
+            0:next_state        = entrada_i;
+            1:next_state        = state;
+            default: next_state = entrada_i;
         endcase
     end
     

@@ -38,9 +38,9 @@ module module_clock_catodo #(parameter COUNT_CATODO = 20_000_000, BITS_CATODO = 
        Counter debe tener un tamaño igual o superior a este valor.       
     */ 
     
-    logic [BITS_CATODO - 1 : 0] counter = 0;
+    logic [BITS_CATODO - 1 : 0] counter;
     
-    logic                       clk_out = 0;
+    logic                       clk_out;
     
     always_ff @(posedge clk_10Mhz_i)
         
