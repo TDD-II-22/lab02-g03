@@ -554,8 +554,7 @@ module top_simulate_7seg_v2(
     output  logic               locked,
                                 clk_10Mhz                
     );
-Salida del módulo. Envia el dato de `7 bits` que se va a enviar al cátodo de los display de la FPGA.
-- `display_select_po`: Entrada del módulo. Envia el dato de `8 bits` que se va a enviar al ánodo de los display de la FPGA.
+	
 ```
 ##### 2. Parámetros
 Este módulo no posee parámetros.
