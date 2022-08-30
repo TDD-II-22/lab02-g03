@@ -23,7 +23,7 @@
 module module_register_pp(
     input   logic               clk_i,
     input   logic               rst_i,
-    input   logic               control,
+    input   logic               control_i,
     input   logic    [31 : 0]   entrada_i,
     output  logic    [31 : 0]   salida_o    
     );
@@ -39,7 +39,7 @@ module module_register_pp(
     
     //SIGUIENTE ESTADO
     always@(*) begin
-        case(control)
+        case(control_i)
             0:next_state        = entrada_i;
             1:next_state        = state;
             default: next_state = entrada_i;

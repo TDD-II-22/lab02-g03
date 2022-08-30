@@ -29,7 +29,8 @@ module tb_7seg_v2;
                             control_reg,
                             flag,
                             flag_control,
-                            flanco;
+                            flanco,
+                            delay;
                         
     logic       [2 : 0]     counter,
                             counter_digito;
@@ -67,7 +68,8 @@ module tb_7seg_v2;
         flag                = 0;
         display_select_ver  = 0;
         flag_control        = 0;
-        display             = 0;  
+        display             = 0;
+        delay               = 0;
         //generate clock
         forever #5 clk_100Mhz_i = ~clk_100Mhz_i; 
         
@@ -92,7 +94,7 @@ module tb_7seg_v2;
     end
     
     //generar numeros aleatorios
-    always @(posedge clk_100Mhz_i) begin
+    always @(posedge clk_10Mhz) begin
     
         if(locked) begin
 
@@ -101,11 +103,13 @@ module tb_7seg_v2;
                 display <= 32'hda1e_bebe;  
                 #10_000;
                 flag_control <= 1;
+                delay <= ~delay;
             
             end 
             
             repeat(50)begin
-               #10_000;     
+               #10_000;
+               delay <= ~delay;   
                if(control_reg) begin
                     display         <= display;
                     flag_control    <= 1; 

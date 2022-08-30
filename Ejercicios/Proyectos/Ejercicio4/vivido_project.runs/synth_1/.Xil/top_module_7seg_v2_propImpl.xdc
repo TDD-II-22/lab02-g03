@@ -2,7 +2,7 @@ set_property SRC_FILE_INFO {cfile:C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Tal
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN E3 [get_ports clk_100Mhz_pi]
 set_property src_info {type:XDC file:1 line:14 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN U9 [get_ports control_reg]
+set_property PACKAGE_PIN U9 [get_ports control_pi]
 set_property src_info {type:XDC file:1 line:137 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN L3 [get_ports {display_po[0]}]
 set_property src_info {type:XDC file:1 line:140 export:INPUT save:INPUT read:READ} [current_design]

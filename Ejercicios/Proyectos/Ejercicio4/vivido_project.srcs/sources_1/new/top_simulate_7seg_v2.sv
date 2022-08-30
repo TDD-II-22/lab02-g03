@@ -54,7 +54,7 @@ module top_simulate_7seg_v2(
                   
         .clk_i                  (clk_10Mhz),            
         .rst_i                  (reset_pi),            
-        .control                (control_reg), 
+        .control_i              (control_reg), 
         .entrada_i              (display),        
         .salida_o               (display_r)         
     

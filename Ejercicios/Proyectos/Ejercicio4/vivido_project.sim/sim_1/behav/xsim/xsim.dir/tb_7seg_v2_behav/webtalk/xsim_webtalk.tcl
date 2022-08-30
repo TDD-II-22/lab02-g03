@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.sim/sim_1/behav/xsim/xsim.dir/tb_7seg_v2_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Sun Aug 28 13:01:47 2022" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Tue Aug 30 11:11:06 2022" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2019.1 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2552052" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "3a63be75-2188-4835-9462-5448aaf58423" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "d78030db21144584b1ed9372a1b8debb" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "265" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "269" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Windows Server 2016 or Windows 10" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz" -context "user_environment"
@@ -22,11 +22,14 @@ webtalk_add_data -client project -key cpu_speed -value "2112 MHz" -context "user
 webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
 webtalk_add_data -client project -key system_ram -value "8.000 GB" -context "user_environment"
 webtalk_register_client -client xsim
+webtalk_add_data -client xsim -key runall -value "true" -context "xsim\\command_line_options"
+webtalk_add_data -client xsim -key runall -value "true" -context "xsim\\command_line_options"
+webtalk_add_data -client xsim -key runall -value "true" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
-webtalk_add_data -client xsim -key runtime -value "12 us" -context "xsim\\usage"
+webtalk_add_data -client xsim -key runtime -value "262940 ns" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "2" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "0.19_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "7748_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 3479286898 -regid "" -xml C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.sim/sim_1/behav/xsim/xsim.dir/tb_7seg_v2_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.sim/sim_1/behav/xsim/xsim.dir/tb_7seg_v2_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.sim/sim_1/behav/xsim/xsim.dir/tb_7seg_v2_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Time -value "3.90_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "9984_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 3857016470 -regid "" -xml C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.sim/sim_1/behav/xsim/xsim.dir/tb_7seg_v2_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.sim/sim_1/behav/xsim/xsim.dir/tb_7seg_v2_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.sim/sim_1/behav/xsim/xsim.dir/tb_7seg_v2_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate
