@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc rfile:../../../vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc rfile:../../../vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN E3 [get_ports clk]
 set_property src_info {type:XDC file:1 line:66 export:INPUT save:INPUT read:READ} [current_design]
