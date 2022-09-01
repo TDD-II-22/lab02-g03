@@ -65,18 +65,18 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 2
+  set_param chipscope.maxJobs 1
   create_project -in_memory -part xc7a12ticsg325-1L
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/wt [current_project]
-  set_property parent.project_path D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.xpr [current_project]
-  set_property ip_output_repo D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/wt [current_project]
+  set_property parent.project_path C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.xpr [current_project]
+  set_property ip_output_repo C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.runs/synth_1/top_module_teclado.dcp
-  read_ip -quiet D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK.xci
-  read_xdc D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc
+  add_files -quiet C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.runs/synth_1/top_module_teclado.dcp
+  read_ip -quiet C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK.xci
+  read_xdc C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc
   link_design -top top_module_teclado -part xc7a12ticsg325-1L
   close_msg_db -file init_design.pb
 } RESULT]

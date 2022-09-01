@@ -23,6 +23,7 @@
 module module_2bit_counter(
     input logic         clk,  
     input logic         en_i, 
+    input logic         rst_i,
     output logic [1:0]  conta_o);
     
   /*  logic clk_4Hz;
@@ -33,9 +34,9 @@ module module_2bit_counter(
  */   
 
 always_ff@(posedge clk) begin
-    if(!en_i) begin
+    if(en_i) begin
        //detectando s?lo el flanco positivo de en_i 
-       if(conta_o == 2'b11) conta_o <= 0;
+       if(conta_o == 2'b11 || rst_i) conta_o <= 0;
        else begin
        conta_o <= conta_o + 2'd1;
        end
@@ -44,17 +45,3 @@ end
 
 
 endmodule
-/*
-    module clk_div_4HZ (input logic clk_10MHz, output logic clk_4Hz);
-    logic [25:0] count = 0;
-    
-    always_ff @ (posedge clk_10MHz)
-    begin
-    count <= count +1;
-    if (count == 5_000_000-1)
-    begin
-    count <=0;  
-    clk_4Hz = ~clk_4Hz;
-    end
-    end
-endmodule */

@@ -23,28 +23,22 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/wt [current_project]
-set_property parent.project_path D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.xpr [current_project]
+set_property webtalk.parent_dir C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/wt [current_project]
+set_property parent.project_path C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/ip [current_project]
+set_property ip_output_repo c:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib -sv {
-  D:/Documentos/GitHub/lab02-g03/Ejercicios/Ejercicio3/key_detector.sv
-  D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Ejercicio3/module_2bit_counter.sv
-  D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Compartido/module_DFF.sv
-  D:/Documentos/GitHub/lab02-g03/Ejercicios/Ejercicio3/module_catodo.sv
-  D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Compartido/module_clock_catodo.sv
-  D:/Documentos/GitHub/lab02-g03/Ejercicios/Ejercicio3/module_clock_leds.sv
-  D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Compartido/module_debouncer.sv
-  D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Ejercicio3/module_key_encoding.sv
-  D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Ejercicio3/top_module_teclado.sv
+  C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Compartido/module_clock_catodo.sv
+  C:/TDD/lab02-g03/Ejercicios/Ejercicio3/module_clock_leds.sv
+  C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Ejercicio3/top_module_teclado.sv
 }
-read_ip -quiet D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK.xci
-set_property used_in_implementation false [get_files -all d:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK_board.xdc]
-set_property used_in_implementation false [get_files -all d:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK.xdc]
-set_property used_in_implementation false [get_files -all d:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK_ooc.xdc]
+read_ip -quiet C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK.xci
+set_property used_in_implementation false [get_files -all c:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK_board.xdc]
+set_property used_in_implementation false [get_files -all c:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK.xdc]
+set_property used_in_implementation false [get_files -all c:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -54,8 +48,8 @@ set_property used_in_implementation false [get_files -all d:/Documentos/GitHub/l
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc
-set_property used_in_implementation false [get_files D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc]
+read_xdc C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc
+set_property used_in_implementation false [get_files C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

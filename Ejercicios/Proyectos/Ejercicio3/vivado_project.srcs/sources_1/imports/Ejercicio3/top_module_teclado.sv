@@ -22,7 +22,7 @@
 
 module top_module_teclado(
     input    logic              clk,
-                                rst,
+                                rst_i,
                                 fila1_i,
                                 fila2_i,
                                 fila3_i,
@@ -31,13 +31,12 @@ module top_module_teclado(
                                 E2_i,
     output    logic    [1:0]    counter_o,
                        [3:0]    deco_o,
-                                led_det_o,
-                                locked
+                                led_det_o
     );
     
     logic    clk_10Mhz,
-             clk_10kHz,
-             clk_leds,
+             en_10kHz,
+             locked,
              key_det,
              deb1,
              deb2,
@@ -45,87 +44,7 @@ module top_module_teclado(
              deb4;
              
     logic    [3:0]    deco_ins;
-             
-
-    
-    module_2bit_counter ctr1(
-        .clk        (clk_10kHz),
-        .en_i       (key_det),
-        .conta_o    (counter_o)
-        );
-        
-    module_debouncer db1(
-        .clk_10MHz    (clk_10Mhz),
-        .bt1          (fila1_i),
-        .signal       (deb1)
-        );
-        
-    module_debouncer db2(
-        .clk_10MHz    (clk_10Mhz),
-        .bt1          (fila2_i),
-        .signal       (deb2)
-        );   
- 
-    module_debouncer db3(
-        .clk_10MHz    (clk_10Mhz),
-        .bt1          (fila3_i),
-        .signal       (deb3)
-        );   
-    
-    module_debouncer db4(
-        .clk_10MHz    (clk_10Mhz),
-        .bt1          (fila4_i),
-        .signal       (deb4)
-        ); 
-        
-    key_detector kd1(
-        .deb1_i    (deb1),
-        .deb2_i    (deb2),
-        .deb3_i    (deb3),
-        .deb4_i    (deb4),
-        .clk       (clk_10kHz),
-        .det_o     (key_det)
-        );    
-        
-    assign led_det_o = key_det;
-        
-    module_catodo c1 (
-        .EN_i         (key_det),
-        .D_i          (counter_o[1]),
-        .clk          (clk_10Mhz),
-        .clk_slw_i    (clk_leds),
-        .Q_o          (deco_ins[3])
-        );
-        
-    module_catodo c2 (
-        .EN_i         (key_det),
-        .D_i          (counter_o[0]),
-        .clk          (clk_10Mhz),
-        .clk_slw_i    (clk_leds),
-        .Q_o          (deco_ins[2])
-        );        
-
-    module_catodo E1 (
-        .EN_i         (key_det),
-        .D_i          (E1_i),
-        .clk          (clk_10Mhz),
-        .clk_slw_i    (clk_leds),
-        .Q_o          (deco_ins[1])
-        );               
-
-    module_catodo E2 (
-        .EN_i         (key_det),
-        .D_i          (E2_i),
-        .clk          (clk_10Mhz),
-        .clk_slw_i    (clk_leds),
-        .Q_o          (deco_ins[0])
-        );
-             
-    module_key_encoding (
-        .entradas_in    (deco_ins),
-        .salidas_o      (deco_o)
-        );
-        
+                  
         
     WCLK clk_wiz(
     // Clock out ports
@@ -136,16 +55,62 @@ module top_module_teclado(
         .clk_in1(clk)
     );
     
-    
-    module_clock_catodo clk_div(
-        .clk_10Mhz_i       (clk_10Mhz),
-        .reset_i           (rst),
-        .clock_catodo_o    (clk_10kHz)
+    module_clock_catodo #(5000, 25) en10kHz(
+        .clk_10MHz_i       (clk),
+        .reset_i           (rst_i),
+        .clock_catodo_o    (en_10kHz)
         );
     
-    module_clock_leds clk_lds(
-        .clk_10Mhz_i       (clk_10Mhz),
-        .reset_i           (rst),
-        .clock_catodo_o    (clk_leds)
-        );    
+    module_2bit_counter u1(
+        .clk        (clk_10Mhz),
+        .en_i       (en_10kHz),
+        .rst_i      (rst_i),
+        .conta_o    (counter_o)
+        );
+    
+    module_debouncer db1(
+        .clk         (clk_10Mhz),
+        .bt1_i       (fila1_i),
+        .rst_i       (rst_i),
+        .signal_o    (deb1)
+        );
+        
+    
+    module_debouncer db2(
+        .clk         (clk_10Mhz),
+        .bt1_i       (fila2_i),
+        .rst_i       (rst_i),
+        .signal_o    (deb2)
+        );
+        
+        
+    module_debouncer db3(
+        .clk         (clk_10Mhz),
+        .bt1_i       (fila3_i),
+        .rst_i       (rst_i),
+        .signal_o    (deb3)
+        );
+        
+    module_debouncer db4(
+        .clk         (clk_10Mhz),
+        .bt1_i       (fila4_i),
+        .rst_i       (rst_i),
+        .signal_o    (deb4)
+        );
+        
+        
+    key_detector(
+        .deb1_i    (db1),
+        .deb2_i    (db2),
+        .deb3_i    (db3),
+        .deb4_i    (db4),
+        .det_o     (key_det)
+        );
+    
+    assign led_det_o = key_det;
+    
+    
+        
+        
+    
 endmodule

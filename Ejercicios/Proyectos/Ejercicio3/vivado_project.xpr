@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.xpr">
+<Project Version="7" Minor="40" Path="C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="ae1d03a1b5374d43a9807f9ebfc5ceac"/>
@@ -84,24 +84,10 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../Ejercicio3/module_catodo.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/Compartido/module_clock_catodo.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../Compartido/module_clock_catodo.sv"/>
           <Attr Name="ImportTime" Val="1661640307"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Ejercicio3/module_clock_leds.sv">
-        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -116,19 +102,36 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/Ejercicio3/module_key_encoding.sv">
+      <File Path="$PSRCDIR/sources_1/imports/Ejercicio3/top_module_teclado.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Ejercicio3/module_key_encoding.sv"/>
-          <Attr Name="ImportTime" Val="1661199216"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Ejercicio3/top_module_teclado.sv"/>
+          <Attr Name="ImportTime" Val="1661726106"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/Ejercicio3/top_module_teclado.sv">
+      <File Path="$PPRDIR/../../Ejercicio3/module_clock_leds.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Ejercicio3/top_module_teclado.sv"/>
-          <Attr Name="ImportTime" Val="1661726106"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Ejercicio3/module_catodo.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Ejercicio3/module_key_encoding.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Ejercicio3/module_key_encoding.sv"/>
+          <Attr Name="ImportTime" Val="1661199216"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

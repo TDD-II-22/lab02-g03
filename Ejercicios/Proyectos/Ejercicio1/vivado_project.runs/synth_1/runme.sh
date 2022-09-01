@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.runs/synth_1'
+HD_PWD='C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log top_module_contador_7seg.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module_contador_7seg.tcl
+EAStep vivado -log top_simulate.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_simulate.tcl
