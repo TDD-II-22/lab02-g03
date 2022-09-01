@@ -94,7 +94,7 @@ module tb_7seg_v2;
     end
     
     //generar numeros aleatorios
-    always @(posedge clk_10Mhz) begin
+    always @(posedge clk_100Mhz_i) begin
     
         if(locked) begin
 

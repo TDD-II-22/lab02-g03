@@ -1,0 +1,212 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+<<<<<<<< HEAD:Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1/top_simulate_7seg_v2_power_routed.rpt
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date             : Thu Sep  1 16:47:09 2022
+| Host             : Andrey-PC running 64-bit major release  (build 9200)
+| Command          : report_power -file top_simulate_7seg_v2_power_routed.rpt -pb top_simulate_7seg_v2_power_summary_routed.pb -rpx top_simulate_7seg_v2_power_routed.rpx
+| Design           : top_simulate_7seg_v2
+========
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date             : Tue Aug 30 13:49:39 2022
+| Host             : DESKTOP-TV0ASU4 running 64-bit major release  (build 9200)
+| Command          : report_power -file top_module_program_counter_power_routed.rpt -pb top_module_program_counter_power_summary_routed.pb -rpx top_module_program_counter_power_routed.rpx
+| Design           : top_module_program_counter
+>>>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e:Ejercicios/Proyectos/Ejercicio5/vivado_project.runs/impl_1/top_module_program_counter_power_routed.rpt
+| Device           : xc7a100tcsg324-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+<<<<<<<< HEAD:Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1/top_simulate_7seg_v2_power_routed.rpt
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+========
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+>>>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e:Ejercicios/Proyectos/Ejercicio5/vivado_project.runs/impl_1/top_module_program_counter_power_routed.rpt
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.203        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+<<<<<<<< HEAD:Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1/top_simulate_7seg_v2_power_routed.rpt
+| Dynamic (W)              | 0.099        |
+| Device Static (W)        | 0.105        |
+========
+| Dynamic (W)              | 0.105        |
+| Device Static (W)        | 0.097        |
+>>>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e:Ejercicios/Proyectos/Ejercicio5/vivado_project.runs/impl_1/top_module_program_counter_power_routed.rpt
+| Effective TJA (C/W)      | 4.6          |
+| Max Ambient (C)          | 84.1         |
+| Junction Temperature (C) | 25.9         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+<<<<<<<< HEAD:Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1/top_simulate_7seg_v2_power_routed.rpt
+| Clocks         |    <0.001 |        8 |       --- |             --- |
+| Slice Logic    |    <0.001 |      149 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       73 |     63400 |            0.12 |
+|   F7/F8 Muxes  |    <0.001 |       28 |     63400 |            0.04 |
+|   Register     |    <0.001 |       38 |    126800 |            0.03 |
+|   Others       |     0.000 |        4 |       --- |             --- |
+| Signals        |    <0.001 |      120 |       --- |             --- |
+| PLL            |     0.097 |        1 |         6 |           16.67 |
+| I/O            |     0.002 |       52 |       210 |           24.76 |
+| Static Power   |     0.105 |          |           |                 |
+========
+| Clocks         |    <0.001 |        9 |       --- |             --- |
+| Slice Logic    |    <0.001 |       85 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       31 |     63400 |            0.05 |
+|   Register     |    <0.001 |       35 |    126800 |            0.03 |
+|   CARRY4       |    <0.001 |        6 |     15850 |            0.04 |
+|   F7/F8 Muxes  |    <0.001 |        2 |     63400 |           <0.01 |
+|   Others       |     0.000 |        8 |       --- |             --- |
+| Signals        |    <0.001 |       60 |       --- |             --- |
+| PLL            |     0.097 |        1 |         6 |           16.67 |
+| I/O            |     0.008 |       23 |       210 |           10.95 |
+| Static Power   |     0.097 |          |           |                 |
+>>>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e:Ejercicios/Proyectos/Ejercicio5/vivado_project.runs/impl_1/top_module_program_counter_power_routed.rpt
+| Total          |     0.203 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.024 |       0.009 |      0.015 |
+| Vccaux    |       1.800 |     0.068 |       0.049 |      0.018 |
+| Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.004 |       0.000 |      0.004 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
+<<<<<<<< HEAD:Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1/top_simulate_7seg_v2_power_routed.rpt
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+========
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+>>>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e:Ejercicios/Proyectos/Ejercicio5/vivado_project.runs/impl_1/top_module_program_counter_power_routed.rpt
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.6                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++------------------+-------------------------------+-----------------+
+| Clock            | Domain                        | Constraint (ns) |
++------------------+-------------------------------+-----------------+
+| CLK_10MHZ_WCLK   | clk_10mhz/inst/CLK_10MHZ      |           100.0 |
+| CLK_10MHZ_WCLK   | clk_10mhz/inst/CLK_10MHZ_WCLK |           100.0 |
+| CLK_10MHZ_WCLK_1 | clk_10mhz/inst/CLK_10MHZ      |           100.0 |
+| CLK_10MHZ_WCLK_1 | clk_10mhz/inst/CLK_10MHZ_WCLK |           100.0 |
+| clk              | clk                           |            10.0 |
+| clkfbout_WCLK    | clk_10mhz/inst/clkfbout_WCLK  |            50.0 |
+| clkfbout_WCLK_1  | clk_10mhz/inst/clkfbout_WCLK  |            50.0 |
+| sys_clk_pin      | clk                           |            10.0 |
++------------------+-------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
+<<<<<<<< HEAD:Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1/top_simulate_7seg_v2_power_routed.rpt
++------------------------+-----------+
+| Name                   | Power (W) |
++------------------------+-----------+
+| top_simulate_7seg_v2   |     0.099 |
+|   generate_clock_10Mhz |     0.097 |
+|     inst               |     0.097 |
++------------------------+-----------+
+========
++----------------------------+-----------+
+| Name                       | Power (W) |
++----------------------------+-----------+
+| top_module_program_counter |     0.105 |
+|   clk_10mhz                |     0.097 |
+|     inst                   |     0.097 |
++----------------------------+-----------+
+>>>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e:Ejercicios/Proyectos/Ejercicio5/vivado_project.runs/impl_1/top_module_program_counter_power_routed.rpt
+
+

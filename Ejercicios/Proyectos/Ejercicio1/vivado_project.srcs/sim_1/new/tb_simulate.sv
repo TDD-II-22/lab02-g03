@@ -70,8 +70,7 @@ module tb_simulate;
         
         if(locked_o) begin
         
-            if(flag_en) begin
-            
+            if(flag_en) begin                 
                 if(counter == 4) begin       
                     counter = 0;
                     flanco = ~flanco;
@@ -90,7 +89,7 @@ module tb_simulate;
     
         if(locked_o) begin
             if(flag_en) begin
-                #5;
+                #8;
                 flag_check = ~flag_check;       //muestra donde se genera la verificacion
                 if(clk_10Mhz_o != flanco) begin
                     $display ("ERROR!, el clock no esta sincronizado, time=%0t", $time);

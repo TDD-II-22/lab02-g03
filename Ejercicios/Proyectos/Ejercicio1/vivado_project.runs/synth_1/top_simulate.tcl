@@ -17,14 +17,31 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+<<<<<<< HEAD
+=======
 set_param chipscope.maxJobs 1
 set_msg_config -id {Common 17-41} -limit 10000000
+>>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
+<<<<<<< HEAD
+set_property webtalk.parent_dir C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.cache/wt [current_project]
+set_property parent.project_path C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.xpr [current_project]
+set_property XPM_LIBRARIES XPM_CDC [current_project]
+set_property default_lib xil_defaultlib [current_project]
+set_property target_language Verilog [current_project]
+set_property ip_output_repo c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.cache/ip [current_project]
+set_property ip_cache_permissions {read write} [current_project]
+read_verilog -library xil_defaultlib -sv C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.srcs/sources_1/new/top_simulate.sv
+read_ip -quiet C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/xci/WCLK/WCLK.xci
+set_property used_in_implementation false [get_files -all c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/xci/WCLK/WCLK_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/xci/WCLK/WCLK.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/xci/WCLK/WCLK_ooc.xdc]
+=======
 set_property webtalk.parent_dir C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.cache/wt [current_project]
 set_property parent.project_path C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
@@ -37,6 +54,7 @@ read_ip -quiet C:/TDD/lab02-g03/Ejercicios/Compartido/xci/WCLK/WCLK.xci
 set_property used_in_implementation false [get_files -all c:/TDD/lab02-g03/Ejercicios/Compartido/xci/WCLK/WCLK_board.xdc]
 set_property used_in_implementation false [get_files -all c:/TDD/lab02-g03/Ejercicios/Compartido/xci/WCLK/WCLK.xdc]
 set_property used_in_implementation false [get_files -all c:/TDD/lab02-g03/Ejercicios/Compartido/xci/WCLK/WCLK_ooc.xdc]
+>>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -46,8 +64,13 @@ set_property used_in_implementation false [get_files -all c:/TDD/lab02-g03/Ejerc
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+<<<<<<< HEAD
+read_xdc C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Constraints/constraints_contador_7seg.xdc
+set_property used_in_implementation false [get_files C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Constraints/constraints_contador_7seg.xdc]
+=======
 read_xdc C:/TDD/lab02-g03/Ejercicios/Constraints/constraints_contador_7seg.xdc
 set_property used_in_implementation false [get_files C:/TDD/lab02-g03/Ejercicios/Constraints/constraints_contador_7seg.xdc]
+>>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

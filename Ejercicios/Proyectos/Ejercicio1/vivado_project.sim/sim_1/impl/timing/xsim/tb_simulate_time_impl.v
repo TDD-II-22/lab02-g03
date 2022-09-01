@@ -1,10 +1,17 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+<<<<<<< HEAD
+// Date        : Thu Sep  1 15:44:32 2022
+// Host        : Andrey-PC running 64-bit major release  (build 9200)
+// Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
+//               C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.sim/sim_1/impl/timing/xsim/tb_simulate_time_impl.v
+=======
 // Date        : Thu Sep  1 20:41:36 2022
 // Host        : DESKTOP-07VUEC3 running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
 //               C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.sim/sim_1/impl/timing/xsim/tb_simulate_time_impl.v
+>>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e
 // Design      : top_simulate
 // Purpose     : This verilog netlist is a timing simulation representation of the design and should not be modified or
 //               synthesized. Please ensure that this netlist is used with the corresponding SDF file.

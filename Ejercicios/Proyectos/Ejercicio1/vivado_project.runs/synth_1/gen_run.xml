@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1662071123">
+=======
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1662057503">
+>>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e
   <File Type="PA-TCL" Name="top_simulate.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_simulate_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_simulate_reports.tcl"/>

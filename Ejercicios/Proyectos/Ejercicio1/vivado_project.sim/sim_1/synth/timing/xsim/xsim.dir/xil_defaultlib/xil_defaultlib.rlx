@@ -2,6 +2,5 @@
 2019.1
 May 24 2019
 15:06:07
-C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.sim/sim_1/synth/timing/xsim/tb_simulate_time_synth.v,1661719408,verilog,,,,WCLK;WCLK__WCLK_clk_wiz;glbl;module_clock_catodo;module_digitos;module_seg7_control;top_module_contador_7seg,,,../../../../../../../Compartido/xci/WCLK,,,,,
-C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.srcs/sim_1/new/tb_simulate.sv,1661719402,systemVerilog,,,,tb_simulate,,,../../../../../../../Compartido/xci/WCLK,,,,,
-C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.srcs/sources_1/new/top_simulate.sv,1661627924,systemVerilog,,C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.srcs/sim_1/new/tb_simulate.sv,,top_simulate,,,../../../../../../../Compartido/xci/WCLK,,,,,
+C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.sim/sim_1/synth/timing/xsim/tb_simulate_time_synth.v,1662071194,verilog,,,,WCLK;WCLK__WCLK_clk_wiz;glbl;top_simulate,,,../../../../../../../Compartido/xci/WCLK,,,,,
+C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.srcs/sim_1/new/tb_simulate.sv,1662068533,systemVerilog,,,,tb_simulate,,,../../../../../../../Compartido/xci/WCLK,,,,,

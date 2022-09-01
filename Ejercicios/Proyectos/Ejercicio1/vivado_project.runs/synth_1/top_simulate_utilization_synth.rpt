@@ -1,8 +1,13 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+<<<<<<< HEAD
+| Date         : Thu Sep  1 16:25:57 2022
+| Host         : Andrey-PC running 64-bit major release  (build 9200)
+=======
 | Date         : Thu Sep  1 20:39:04 2022
 | Host         : DESKTOP-07VUEC3 running 64-bit major release  (build 9200)
+>>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e
 | Command      : report_utilization -file top_simulate_utilization_synth.rpt -pb top_simulate_utilization_synth.pb
 | Design       : top_simulate
 | Device       : 7a100tcsg324-1

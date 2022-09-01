@@ -1,0 +1,27 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+<<<<<<<< HEAD:Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1/top_simulate_7seg_v2_bus_skew_routed.rpt
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Sep  1 16:47:09 2022
+| Host         : Andrey-PC running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file top_simulate_7seg_v2_bus_skew_routed.rpt -pb top_simulate_7seg_v2_bus_skew_routed.pb -rpx top_simulate_7seg_v2_bus_skew_routed.rpx
+| Design       : top_simulate_7seg_v2
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+========
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Aug 30 13:49:39 2022
+| Host         : DESKTOP-TV0ASU4 running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file top_module_program_counter_bus_skew_routed.rpt -pb top_module_program_counter_bus_skew_routed.pb -rpx top_module_program_counter_bus_skew_routed.rpx
+| Design       : top_module_program_counter
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+>>>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e:Ejercicios/Proyectos/Ejercicio5/vivado_project.runs/impl_1/top_module_program_counter_bus_skew_routed.rpt
+
+Bus Skew Report
+
+No bus skew constraints
+

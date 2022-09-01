@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+<<<<<<< HEAD:Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1/.init_design.begin.rst
+    <Process Command=".planAhead." Owner="Andrey" Host="ANDREY-PC" Pid="12580">
+=======
+    <Process Command=".planAhead." Owner="rjesu" Host="DESKTOP-07VUEC3" Pid="7692">
+>>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e:Ejercicios/Proyectos/Ejercicio1/vivado_project.runs/impl_1/.init_design.begin.rst
+    </Process>
+</ProcessHandle>
