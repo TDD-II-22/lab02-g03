@@ -75,7 +75,7 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
   add_files -quiet C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.runs/synth_1/top_module_teclado.dcp
-  read_ip -quiet C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/ip/WCLK_1/WCLK.xci
+  read_ip -quiet C:/TDD/lab02-g03/Ejercicios/Compartido/xci/WCLK/WCLK.xci
   read_xdc C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/constrs_1/imports/Constraints/constraints_teclado.xdc
   link_design -top top_module_teclado -part xc7a12ticsg325-1L
   close_msg_db -file init_design.pb

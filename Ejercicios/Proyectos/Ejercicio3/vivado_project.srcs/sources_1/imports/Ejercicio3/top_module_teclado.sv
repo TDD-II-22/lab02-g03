@@ -46,17 +46,17 @@ module top_module_teclado(
     logic    [3:0]    deco_ins;
                   
         
-    WCLK clk_wiz(
-    // Clock out ports
-        .clk_out1(clk_10Mhz),     // output CLK_10MHZ
-    // Status and control signals
-        .locked(locked),       // output locked
-   // Clock in ports
-        .clk_in1(clk)
-    );
+    WCLK generate_clock_10Mhz(
+        // Clock out ports
+        .CLK_10MHZ              (clk_10Mhz),            // output CLK_10MHZ
+        // Status and control signals
+        .locked                 (locked),                     // output locked
+        // Clock in ports
+        .CLK_100MHZ             (clk)         // input CLK_100MHZ
+    );    
     
     module_clock_catodo #(5000, 25) en10kHz(
-        .clk_10MHz_i       (clk),
+        .clk_10Mhz_i       (clk),
         .reset_i           (rst_i),
         .clock_catodo_o    (en_10kHz)
         );
@@ -100,14 +100,48 @@ module top_module_teclado(
         
         
     key_detector(
-        .deb1_i    (db1),
-        .deb2_i    (db2),
-        .deb3_i    (db3),
-        .deb4_i    (db4),
+        .deb1_i    (deb1),
+        .deb2_i    (deb2),
+        .deb3_i    (deb3),
+        .deb4_i    (deb4),
         .det_o     (key_det)
         );
     
     assign led_det_o = key_det;
+    
+    module_DFF ffc0(
+        .clk   (clk),
+        .D     (counter_o[0]),
+        .EN    (en_10kHz),
+        .Q     (deco_ins[0])
+        );
+        
+    module_DFF ffc1(
+        .clk   (clk),
+        .D     (counter_o[1]),
+        .EN    (en_10kHz),
+        .Q     (deco_ins[1])
+        );
+        
+    module_DFF ffe1(
+        .clk   (clk),
+        .D     (E1_i),
+        .EN    (en_10kHz),
+        .Q     (deco_ins[2])
+        );
+        
+    module_DFF ffe2(
+        .clk   (clk),
+        .D     (E2_i),
+        .EN    (en_10kHz),
+        .Q     (deco_ins[3])
+        );
+        
+    module_key_encoding KE(
+        .entradas_in    (deco_ins),
+        .salidas_o      (deco_o)
+        );
+        
     
     
         

@@ -13,6 +13,8 @@ set_property src_info {type:XDC file:1 line:78 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN T5 [get_ports {led_det_o}]
 set_property src_info {type:XDC file:1 line:197 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN F15 [get_ports rst]
+set_property src_info {type:XDC file:1 line:198 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS33 [get_ports rst]
 set_property src_info {type:XDC file:1 line:213 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN B13 [get_ports {counter_o[1]}]
 set_property src_info {type:XDC file:1 line:216 export:INPUT save:INPUT read:READ} [current_design]
