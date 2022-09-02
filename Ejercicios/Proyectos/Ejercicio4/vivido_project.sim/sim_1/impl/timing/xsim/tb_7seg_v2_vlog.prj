@@ -3,7 +3,7 @@ verilog xil_defaultlib  --include "../../../../../../../Compartido/xci/WCLK" \
 "tb_7seg_v2_time_impl.v" \
 
 sv xil_defaultlib  --include "../../../../../../../Compartido/xci/WCLK" \
-"../../../../../vivido_project.srcs/sim_1/new/tb_7seg_v2.sv" \
+"../../../../../../../Ejercicio4/tb_7seg_v2.sv" \
 
 # Do not sort compile order
 nosort
