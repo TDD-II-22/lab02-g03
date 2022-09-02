@@ -55,7 +55,7 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1____10.000______0.000______50.0______446.763____313.282
+// CLK_10MHZ____10.000______0.000______50.0______446.763____313.282
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -71,9 +71,9 @@
   WCLK instance_name
    (
     // Clock out ports
-    .clk_out1(clk_out1),     // output clk_out1
+    .CLK_10MHZ(CLK_10MHZ),     // output CLK_10MHZ
     // Status and control signals
     .locked(locked),       // output locked
    // Clock in ports
-    .clk_in1(clk_in1));      // input clk_in1
+    .CLK_100MHZ(CLK_100MHZ));      // input CLK_100MHZ
 // INST_TAG_END ------ End INSTANTIATION Template ---------

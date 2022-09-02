@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Thu Sep  1 19:30:54 2022
+| Date         : Fri Sep  2 01:37:01 2022
 | Host         : DESKTOP-07VUEC3 running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_module_teclado_drc_opted.rpt -pb top_module_teclado_drc_opted.pb -rpx top_module_teclado_drc_opted.rpx
 | Design       : top_module_teclado
@@ -24,26 +24,45 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 4
-+----------+------------------+-----------------------------------------------------+------------+
-| Rule     | Severity         | Description                                         | Violations |
-+----------+------------------+-----------------------------------------------------+------------+
-| NSTD-1   | Critical Warning | Unspecified I/O Standard                            | 1          |
-| UCIO-1   | Critical Warning | Unconstrained Logical Port                          | 1          |
-| CFGBVS-1 | Warning          | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PLIO-3   | Warning          | Placement Constraints Check for IO constraints      | 1          |
-+----------+------------------+-----------------------------------------------------+------------+
+             Violations found: 6
++-----------+------------------+-----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                         | Violations |
++-----------+------------------+-----------------------------------------------------+------------+
+| PLCK-12   | Error            | Clock Placer Checks                                 | 1          |
+| REQP-1712 | Error            | Input clock driver                                  | 1          |
+| NSTD-1    | Critical Warning | Unspecified I/O Standard                            | 1          |
+| UCIO-1    | Critical Warning | Unconstrained Logical Port                          | 1          |
+| CFGBVS-1  | Warning          | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| PLIO-3    | Warning          | Placement Constraints Check for IO constraints      | 1          |
++-----------+------------------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+PLCK-12#1 Error
+Clock Placer Checks  
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ If this sub optimal condition is acceptable for this design, you may use the CLOCK_DEDICATED_ROUTE constraint in the .xdc file to demote this message to a WARNING. However, the use of this override is highly discouraged. These examples can be used directly in the .xdc file to override this clock rule.
+	< set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets clk_IBUF] >
+
+	clk_IBUF_inst (IBUF.O) is locked to E3
+	clk_IBUF_BUFG_inst (BUFG.I) cannot be placed
+
+Related violations: <none>
+
+REQP-1712#1 Error
+Input clock driver  
+Unsupported PLLE2_ADV connectivity. The signal generate_clock_10Mhz/inst/CLK_100MHZ on the generate_clock_10Mhz/inst/plle2_adv_inst/CLKIN1 pin of generate_clock_10Mhz/inst/plle2_adv_inst with COMPENSATION mode ZHOLD must be driven by a clock capable IO.
+Related violations: <none>
+
 NSTD-1#1 Critical Warning
 Unspecified I/O Standard  
-1 out of 10 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: counter_o[0].
+2 out of 14 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: counter_o[0], rst_i.
 Related violations: <none>
 
 UCIO-1#1 Critical Warning
 Unconstrained Logical Port  
-9 out of 10 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: counter_o[1:0], deco_o[3], deco_o[2], deco_o[0], led_det_o[3:0].
+10 out of 14 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: counter_o[1:0], deco_o[3], deco_o[2], deco_o[0], led_det_o[3:0], rst_i.
 Related violations: <none>
 
 CFGBVS-1#1 Warning
