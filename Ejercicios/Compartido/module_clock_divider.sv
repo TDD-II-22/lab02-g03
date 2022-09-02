@@ -1,11 +1,11 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: TEC
+// Engineer: Carlos Andrey Morales Zamora
 // 
-// Create Date: 27.08.2022 13:07:15
+// Create Date: 15.08.2022 02:59:44
 // Design Name: 
-// Module Name: module_clock_divider
+// Module Name: module_clock_catodo
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,10 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module module_clock_divider(
-    input   logic       clk_10Mhz_i,
-                        reset_i,
-    output  logic       clock_catodo_o 
+module module_clock_divider #(parameter COUNT_CATODO = 20_000_000, BITS_CATODO = 14)(
+
+    input   logic   clk_10Mhz_i,
+                    reset_i,
+    output  logic   clock_catodo_o 
     
     );
     /*    
@@ -34,12 +35,12 @@ module module_clock_divider(
        
        Nota se divide entre dos, ya que hay dos flancos de reloj por periodo
             
-       Counter debe tener un tama?o igual o superior a este valor.       
+       Counter debe tener un tamaño igual o superior a este valor.       
     */ 
     
-    logic [19 : 0] counter = 0;
+    logic [BITS_CATODO - 1 : 0] counter;
     
-    logic clk_out = 0;
+    logic                       clk_out;
     
     always_ff @(posedge clk_10Mhz_i)
         
@@ -47,7 +48,7 @@ module module_clock_divider(
             counter <= 0;
             clk_out <= 0;        
         end else
-            if(counter == 999_999) begin //esto genera un flanco reloj, que se va a dar justo en el counter 50k
+            if(counter  == (COUNT_CATODO - 1)) begin //esto genera un flanco reloj, que se va a dar justo en el counter
                 counter <= 0;
                 clk_out <= 1; 
             end else begin
@@ -56,4 +57,5 @@ module module_clock_divider(
             end  
     
     assign clock_catodo_o = clk_out;
+    
 endmodule
