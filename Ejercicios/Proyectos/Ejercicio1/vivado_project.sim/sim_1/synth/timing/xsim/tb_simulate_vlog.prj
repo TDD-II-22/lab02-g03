@@ -1,9 +1,0 @@
-# compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../../../../Compartido/xci/WCLK" \
-"tb_simulate_time_synth.v" \
-
-sv xil_defaultlib  --include "../../../../../../../Compartido/xci/WCLK" \
-"../../../../../vivado_project.srcs/sim_1/new/tb_simulate.sv" \
-
-# Do not sort compile order
-nosort

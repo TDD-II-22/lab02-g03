@@ -24,11 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-<<<<<<< HEAD:Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1/runme.sh
 HD_PWD='C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1'
-=======
-HD_PWD='C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.runs/impl_1'
->>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e:Ejercicios/Proyectos/Ejercicio1/vivado_project.runs/impl_1/runme.sh
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -46,10 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-<<<<<<< HEAD:Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1/runme.sh
-EAStep vivado -log top_simulate_7seg_v2.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_simulate_7seg_v2.tcl -notrace
-=======
-EAStep vivado -log top_simulate.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_simulate.tcl -notrace
->>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e:Ejercicios/Proyectos/Ejercicio1/vivado_project.runs/impl_1/runme.sh
+EAStep vivado -log top_module_7seg_v2.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_module_7seg_v2.tcl -notrace
 
 

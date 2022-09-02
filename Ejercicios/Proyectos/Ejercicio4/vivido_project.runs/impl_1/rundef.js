@@ -25,11 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-<<<<<<< HEAD:Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1/rundef.js
-         "-log top_simulate_7seg_v2.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_simulate_7seg_v2.tcl -notrace" );
-=======
-         "-log top_simulate.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_simulate.tcl -notrace" );
->>>>>>> e82be317274dbddd999bc3e35a1cf024f72b017e:Ejercicios/Proyectos/Ejercicio1/vivado_project.runs/impl_1/rundef.js
+         "-log top_module_7seg_v2.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_module_7seg_v2.tcl -notrace" );
 
 
 
