@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Respaldo/Ejercicios_29_08_2022/Constraints/constraints_contador_7seg.xdc rfile:../../../../../Constraints/constraints_contador_7seg.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Constraints/constraints_contador_7seg.xdc rfile:../../../../../Constraints/constraints_contador_7seg.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN E3 [get_ports clk_100Mhz_pi]
 set_property src_info {type:XDC file:1 line:137 export:INPUT save:INPUT read:READ} [current_design]
