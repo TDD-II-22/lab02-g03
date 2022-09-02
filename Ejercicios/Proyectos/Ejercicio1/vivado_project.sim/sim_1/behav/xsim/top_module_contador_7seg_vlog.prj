@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../Compartido/xci/WCLK" \
+"../../../../../../Compartido/xci/WCLK/WCLK_sim_netlist.v" \
+
+sv xil_defaultlib  --include "../../../../../../Compartido/xci/WCLK" \
+"../../../../../../Ejercicio1/module_clock_catodo.sv" \
+"../../../../../../Ejercicio1/module_digitos.sv" \
+"../../../../../../Compartido/module_seg7_control.sv" \
+"../../../../../../Ejercicio1/top_module_contador_7seg.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

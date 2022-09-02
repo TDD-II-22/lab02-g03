@@ -1,0 +1,2 @@
+WCLK_sim_netlist.v,verilog,xil_defaultlib,../../../../../../Compartido/xci/WCLK_1/WCLK_sim_netlist.v,incdir="../../../../../../Compartido/xci/WCLK_1"
+glbl.v,Verilog,xil_defaultlib,glbl.v

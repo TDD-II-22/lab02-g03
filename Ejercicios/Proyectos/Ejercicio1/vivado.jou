@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Aug 30 08:45:39 2022
+# Process ID: 17980
+# Current directory: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Respaldo/Ejercicios_29_08_2022/Proyectos/Ejercicio1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20780 C:\Users\carlo\Andrey\TEC\Semestre_II_2022\Taller_Digitales\Laboratorios\Laboratorio_2\Respaldo\Ejercicios_29_08_2022\Proyectos\Ejercicio1\vivado_project.xpr
+# Log file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Respaldo/Ejercicios_29_08_2022/Proyectos/Ejercicio1/vivado.log
+# Journal file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Respaldo/Ejercicios_29_08_2022/Proyectos/Ejercicio1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Respaldo/Ejercicios_29_08_2022/Proyectos/Ejercicio1/vivado_project.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run impl_1
+set_property target_constrs_file C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Respaldo/Ejercicios_29_08_2022/Constraints/constraints_contador_7seg.xdc [current_fileset -constrset]
+launch_simulation -mode post-implementation -type timing
+source tb_simulate.tcl
+close_sim
+launch_simulation -mode post-synthesis -type timing
+source tb_simulate.tcl
+close_sim
+launch_simulation -mode post-synthesis -type timing

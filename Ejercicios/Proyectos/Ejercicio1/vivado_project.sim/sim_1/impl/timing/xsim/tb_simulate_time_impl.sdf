@@ -1,0 +1,114 @@
+(DELAYFILE 
+(SDFVERSION "3.0" )
+(DESIGN "top_simulate")
+(DATE "Thu Sep  1 18:20:28 2022")
+(VENDOR "XILINX")
+(PROGRAM "Vivado")
+(VERSION "2019.1")
+(DIVIDER /)
+(TIMESCALE 1ps)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE clk_10Mhz_o_OBUF_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2491.0:2647.5:2647.5) (2491.0:2647.5:2647.5))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "BUFG")
+  (INSTANCE generate_clock_10Mhz/inst/clkf_buf)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (91.0:96.0:96.0) (91.0:96.0:96.0))
+    )
+  )
+    (TIMINGCHECK
+      (PERIOD (posedge I) (2155.2:2155.2:2155.2))
+      (PERIOD (negedge I) (2155.2:2155.2:2155.2))
+    )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE generate_clock_10Mhz/inst/clkin1_ibufg)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (814.2:947.6:947.6) (814.2:947.6:947.6))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "BUFG")
+  (INSTANCE generate_clock_10Mhz/inst/clkout1_buf)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (91.0:96.0:96.0) (91.0:96.0:96.0))
+    )
+  )
+    (TIMINGCHECK
+      (PERIOD (posedge I) (2155.2:2155.2:2155.2))
+      (PERIOD (negedge I) (2155.2:2155.2:2155.2))
+    )
+)
+(CELL 
+  (CELLTYPE "PLLE2_ADV")
+  (INSTANCE generate_clock_10Mhz/inst/plle2_adv_inst)
+  (DELAY 
+    (ABSOLUTE 
+      (IOPATH (posedge RST) LOCKED (3000.0:3000.0:3000.0))
+    )
+  )
+    (TIMINGCHECK
+      (SETUPHOLD (posedge DEN) (posedge DCLK) (2156.0:2290.0:2290.0) (0.0:0.0:0.0))
+      (SETUPHOLD (negedge DEN) (posedge DCLK) (2156.0:2290.0:2290.0) (0.0:0.0:0.0))
+      (SETUPHOLD (posedge DWE) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
+      (SETUPHOLD (negedge DWE) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
+      (PERIOD (posedge CLKFBIN) (1249.0:1249.0:1249.0))
+      (PERIOD (negedge CLKFBIN) (1249.0:1249.0:1249.0))
+      (PERIOD (posedge CLKIN1) (1249.0:1249.0:1249.0))
+      (PERIOD (negedge CLKIN1) (1249.0:1249.0:1249.0))
+      (PERIOD (posedge CLKIN2) (1249.0:1249.0:1249.0))
+      (PERIOD (negedge CLKIN2) (1249.0:1249.0:1249.0))
+      (PERIOD (posedge DCLK) (4999.0:4999.0:4999.0))
+      (WIDTH (posedge CLKIN1) (2000.0:2000.0:2000.0))
+      (WIDTH (negedge CLKIN1) (2000.0:2000.0:2000.0))
+      (WIDTH (posedge DCLK) (2499.5:2499.5:2499.5))
+      (WIDTH (negedge DCLK) (2499.5:2499.5:2499.5))
+      (WIDTH (posedge PWRDWN) (5000.0:5000.0:5000.0))
+      (WIDTH (posedge RST) (5000.0:5000.0:5000.0))
+      (SETUPHOLD (posedge DADDR[6:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
+      (SETUPHOLD (negedge DADDR[6:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
+      (SETUPHOLD (posedge DI[15:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
+      (SETUPHOLD (negedge DI[15:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
+    )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE locked_o_OBUF_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2512.4:2669.0:2669.0) (2512.4:2669.0:2669.0))
+    )
+  )
+)
+(CELL 
+    (CELLTYPE "top_simulate")
+    (INSTANCE )
+    (DELAY
+      (ABSOLUTE
+      (INTERCONNECT generate_clock_10Mhz/inst/clkf_buf/O generate_clock_10Mhz/inst/plle2_adv_inst/CLKFBIN (1535.4:1657.4:1657.4) (1535.4:1657.4:1657.4))
+      (INTERCONNECT generate_clock_10Mhz/inst/clkin1_ibufg/O generate_clock_10Mhz/inst/plle2_adv_inst/CLKIN1 (1180.9:1253.1:1253.1) (1180.9:1253.1:1253.1))
+      (INTERCONNECT generate_clock_10Mhz/inst/clkout1_buf/O clk_10Mhz_o_OBUF_inst/I (2720.2:3029.2:3029.2) (2720.2:3029.2:3029.2))
+      (INTERCONNECT generate_clock_10Mhz/inst/plle2_adv_inst/CLKFBOUT generate_clock_10Mhz/inst/clkf_buf/I (1625.1:1704.4:1704.4) (1625.1:1704.4:1704.4))
+      (INTERCONNECT generate_clock_10Mhz/inst/plle2_adv_inst/CLKOUT0 generate_clock_10Mhz/inst/clkout1_buf/I (1625.1:1704.4:1704.4) (1625.1:1704.4:1704.4))
+      (INTERCONNECT generate_clock_10Mhz/inst/plle2_adv_inst/LOCKED locked_o_OBUF_inst/I (2964.2:3486.2:3486.2) (2964.2:3486.2:3486.2))
+      )
+    )
+)
+)
