@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1'
+HD_PWD='C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log top_module_7seg_v2.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_module_7seg_v2.tcl -notrace
 
 

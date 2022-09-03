@@ -23,12 +23,15 @@
 module module_DFF (
     input     logic    clk, // Data Input
     input     logic    D, // Clock Input
+  //  input     logic    det_i,
     input     logic    EN,
     output    logic    Q       // Q output
     );
 //-------------Code Starts Here---------
     always_ff @ ( posedge clk) begin
+    
         if (EN)  Q <= D;
+       
        end
 
 endmodule 

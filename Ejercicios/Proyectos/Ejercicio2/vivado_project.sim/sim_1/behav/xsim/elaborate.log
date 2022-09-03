@@ -1,7 +1,15 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d5ef3f09fff449e48187cb1f14ad3e06 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_contador_behav xil_defaultlib.tb_contador xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 44cb625bebc542d1952428894de562f3 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_debouncer_behav xil_defaultlib.tb_debouncer xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-ERROR: [VRFC 10-2989] 'debouncer' is not declared [C:/TDD/lab02-g03/Teclado/wizard_clock_10MHz/Simulations/tb_contador.sv:38]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.module_DFF
+Compiling module xil_defaultlib.module_clock_catodo(COUNT_CATODO...
+Compiling module xil_defaultlib.module_debouncer
+Compiling module xil_defaultlib.tb_debouncer
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_debouncer_behav

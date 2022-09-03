@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Sep  2 00:59:29 2022
-# Process ID: 9452
-# Current directory: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1
+# Start of session at: Sat Sep  3 02:40:44 2022
+# Process ID: 2612
+# Current directory: C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1
 # Command line: vivado.exe -log top_module_7seg_v2.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_module_7seg_v2.tcl -notrace
-# Log file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1/top_module_7seg_v2.vdi
-# Journal file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1\vivado.jou
+# Log file: C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1/top_module_7seg_v2.vdi
+# Journal file: C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source top_module_7seg_v2.tcl -notrace

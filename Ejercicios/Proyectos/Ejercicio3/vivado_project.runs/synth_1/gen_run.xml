@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a12ticsg325-1L" LaunchTime="1662075274">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1662247202">
   <File Type="PA-TCL" Name="top_module_teclado.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_module_teclado_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_module_teclado_reports.tcl"/>
   <File Type="RDS-RDS" Name="top_module_teclado.vds"/>
   <File Type="RDS-UTIL" Name="top_module_teclado_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="top_module_teclado_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="top_module_teclado.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_module_teclado_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_module_teclado_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../Compartido/xci/WCLK/WCLK.xci">
@@ -49,15 +52,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/Compartido/module_debouncer.sv">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Compartido/module_debouncer.sv"/>
-        <Attr Name="ImportTime" Val="1661658169"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/Ejercicio3/module_key_encoding.sv">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../Ejercicio3/module_key_encoding.sv"/>
@@ -71,6 +65,16 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../Ejercicio3/top_module_teclado.sv"/>
         <Attr Name="ImportTime" Val="1661726106"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Compartido/module_debouncer.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Compartido/module_debouncer.sv"/>
+        <Attr Name="ImportTime" Val="1661658169"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -92,6 +96,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/Constraints/constraints_teclado.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

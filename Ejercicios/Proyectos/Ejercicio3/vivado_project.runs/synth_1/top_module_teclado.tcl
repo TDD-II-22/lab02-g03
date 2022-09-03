@@ -18,7 +18,8 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 1
-create_project -in_memory -part xc7a12ticsg325-1L
+set_param xicom.use_bs_reader 1
+create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -36,7 +37,6 @@ read_verilog -library xil_defaultlib -sv {
   C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Ejercicio3/module_2bit_counter.sv
   C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Compartido/module_DFF.sv
   C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Compartido/module_clock_catodo.sv
-  C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Compartido/module_debouncer.sv
   C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Ejercicio3/module_key_encoding.sv
   C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Ejercicio3/top_module_teclado.sv
 }
@@ -61,7 +61,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top top_module_teclado -part xc7a12ticsg325-1L
+synth_design -top top_module_teclado -part xc7a100tcsg324-1
 
 
 # disable binary constraint mode for synth run checkpoints
