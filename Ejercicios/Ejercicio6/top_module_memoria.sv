@@ -35,7 +35,7 @@ module top_module_memoria(
     logic       clk_10MHz;
     logic       locked;
     
-    clk_wiz_0 instance_1(
+    WCLK instance_1(
                         // Clock out ports  
                         .CLK_10MHZ( clk_10MHz ),
                         // Status and control signals               
