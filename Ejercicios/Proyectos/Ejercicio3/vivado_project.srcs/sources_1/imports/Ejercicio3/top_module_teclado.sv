@@ -28,11 +28,11 @@ module top_module_teclado(
                                 fila3_i,
                                 fila4_i,
                                 E1_i,
-                                E2_i, 
-                      //          [1:0]    counter_o,                               
+                                E2_i,                              
     output    logic             led_det_o,
                        [1:0]    counter_o,
-                       [3:0]    deco_o
+                       [3:0]    deco_o,
+                       [3:0]    leds 
     );
     
     logic    clk_10Mhz,
@@ -56,7 +56,7 @@ module top_module_teclado(
         .CLK_100MHZ             (clk)         // input CLK_100MHZ
     );    
     
-    module_clock_catodo #(5_000, 25) en10kHz(
+    module_clock_catodo #(5_000_000, 25) en10kHz(
         .clk_10Mhz_i       (clk_10Mhz),
         .reset_i           (rst_i),
         .clock_catodo_o    (en_10kHz)
@@ -68,10 +68,11 @@ module top_module_teclado(
         .clk        (clk_10Mhz),
         .en_i       (en_10kHz),
         .rst_i      (rst_i),
+        .det_i      (key_det),
         .conta_o    (counter_o)
         );
-  /*
-    module_debouncer db1(
+  
+   /* module_debouncer db1(
         .clk         (clk_10Mhz),
         .bt1_i       (fila1_i),
         .rst_i       (rst_i),
@@ -109,14 +110,13 @@ module top_module_teclado(
         .clk       (clk_10Mhz),
         .det_o     (key_det)
         );
-    */
     
-        key_detector(
+    
+     */   key_detector(
         .deb1_i    (fila1_i),
         .deb2_i    (fila2_i),
         .deb3_i    (fila3_i),
         .deb4_i    (fila4_i),
-        .clk       (clk_10Mhz),
         .det_o     (key_det)
         );
     
@@ -127,7 +127,6 @@ module top_module_teclado(
         .clk   (clk_10Mhz),
         .D     (counter_o[0]),
         .EN    (en_10kHz),
-        //.det_i          (key_det),
         .Q     (deco_ins[0])
         );
         
@@ -135,14 +134,12 @@ module top_module_teclado(
         .clk   (clk_10Mhz),
         .D     (counter_o[1]),
         .EN    (en_10kHz),
-        //.det_i          (key_det),
         .Q     (deco_ins[1])
         );
         
     module_DFF ffe1(
         .clk   (clk_10Mhz),
         .D     (E1_i),
-        //.det_i          (key_det),
         .EN    (en_10kHz),
         .Q     (deco_ins[2])
         );
@@ -150,10 +147,11 @@ module top_module_teclado(
     module_DFF ffe2(
         .clk   (clk_10Mhz),
         .D     (E2_i),
-        //.det_i          (key_det),
         .EN    (en_10kHz),
         .Q     (deco_ins[3])
         );
+        
+    assign deco_ins = leds; 
         
     module_key_encoding KE(
         .entradas_in    (deco_ins),

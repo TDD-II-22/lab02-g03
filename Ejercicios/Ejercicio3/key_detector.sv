@@ -25,7 +25,6 @@ module key_detector(
                        deb2_i,
                        deb3_i,
                        deb4_i,
-                       clk,
     output    logic    det_o
     );
     

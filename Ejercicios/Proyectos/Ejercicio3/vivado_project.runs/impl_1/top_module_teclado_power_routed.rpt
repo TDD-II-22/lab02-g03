@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sun Sep  4 01:23:17 2022
+| Date             : Mon Sep  5 05:14:05 2022
 | Host             : DESKTOP-07VUEC3 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_module_teclado_power_routed.rpt -pb top_module_teclado_power_summary_routed.pb -rpx top_module_teclado_power_routed.rpx
 | Design           : top_module_teclado
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.195        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.098        |
+| Dynamic (W)              | 0.097        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.1         |
@@ -60,7 +60,7 @@ Table of Contents
 |   Others       |     0.000 |       12 |       --- |             --- |
 | Signals        |    <0.001 |       79 |       --- |             --- |
 | PLL            |     0.097 |        1 |         6 |           16.67 |
-| I/O            |    <0.001 |       15 |       210 |            7.14 |
+| I/O            |    <0.001 |       19 |       210 |            9.05 |
 | Static Power   |     0.097 |          |           |                 |
 | Total          |     0.195 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
@@ -146,7 +146,7 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| top_module_teclado     |     0.098 |
+| top_module_teclado     |     0.097 |
 |   generate_clock_10Mhz |     0.097 |
 |     inst               |     0.097 |
 +------------------------+-----------+
