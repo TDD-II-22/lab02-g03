@@ -622,8 +622,8 @@ module module_clock_divisor(
 Este modulo no posee parametros.
 
 ##### 3. Entradas y salidas:
--`clk`: Entrada de reloj de 10 MHz.
--`clk_2hz`: Salida de pulso de 2Hz.
+- `clk`: Entrada de reloj de 10 MHz.
+- `clk_2hz`: Salida de pulso de 2Hz.
 
 ##### 5. Testbench
 No se diseño un testbench para este bloque
@@ -648,16 +648,16 @@ module module_program_counter#(parameter W=6)(
 ```
 ##### 2. Parametros
 
--`W`: Define la cantidad de bits para el contador.
+- `W`: Define la cantidad de bits para el contador.
 
 ##### 3. Entradas y salidas:
--`en`: Entrada de pulso de 2Hz.
--`clk`: Entrada de reloj de 10MHz.
--`pc_i`: Entrada de `6 bits` para el numero que se quiere cargar en el contador.
--`pc_op_i`: Entrada de `2bits` para el selector de modos.
--`pc_o`: Salida de `6 bits` del contador.
--`pcinc_o`: Salida de `6 bits` del contador con una adicion de 4.
--`flag_ver`: Salida de `2 bits` de autoverificación.
+- `en`: Entrada de pulso de 2Hz.
+- `clk`: Entrada de reloj de 10MHz.
+- `pc_i`: Entrada de `6 bits` para el numero que se quiere cargar en el contador.
+- `pc_op_i`: Entrada de `2bits` para el selector de modos.
+- `pc_o`: Salida de `6 bits` del contador.
+- `pcinc_o`: Salida de `6 bits` del contador con una adicion de 4.
+- `flag_ver`: Salida de `2 bits` de autoverificación.
 
 ##### 5. Testbench
 No se diseño un testbench para este bloque
@@ -681,19 +681,22 @@ module top_module_program_counter #(parameter W=6)(
 ```
 ##### 2. Parametros
 
--`W`: Define la cantidad de bits para el contador.
+- `W`: Define la cantidad de bits para el contador.
 
 ##### 3. Entradas y salidas:
--`clk`: Entrada de reloj de 10MHz.
--`pc_i`: Entrada de `6 bits` para el numero que se quiere cargar en el contador.
--`pc_op_i`: Entrada de `2bits` para el selector de modos.
--`pc_o`: Salida de `6 bits` del contador.
--`pcinc_o`: Salida de `6 bits` del contador con una adicion de 4.
--`flag_ver`: Salida de `2 bits` de autoverificación.
+- `clk`: Entrada de reloj de 10MHz.
+- `pc_i`: Entrada de `6 bits` para el numero que se quiere cargar en el contador.
+- `pc_op_i`: Entrada de `2bits` para el selector de modos.
+- `pc_o`: Salida de `6 bits` del contador.
+- `pcinc_o`: Salida de `6 bits` del contador con una adicion de 4.
+- `flag_ver`: Salida de `2 bits` de autoverificación.
 
 ##### 5. Testbench
-No se diseño un testbench para este bloque
-
+Para el testbench se hizo un pulso mas rapido para lograr una mejor visualizacion del funcionamiento.
+<img src="https://github.com/TDD-II-22/lab02-g03/blob/main/Images/tb1.png"
+width="600" >\
+<img src="https://github.com/TDD-II-22/lab02-g03/blob/main/Images/tb2.png"
+width="600" >\
 
 
 ### 3.6 Ejercicio 6. Banco de registros
