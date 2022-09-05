@@ -27,12 +27,14 @@ module module_clock_divisor(
     logic [23:0]cont_clk = 0;
     
     always_ff@ (posedge clk) begin
-        if(cont_clk == 24'h2625A0)begin
+        if(cont_clk == 24'h4C4B40)begin
             cont_clk = 0;
             clk_2hz    = ~clk_2hz;
-            
         end
-        if(cont_clk != 24'h2625A0)begin
+        if(cont_clk == 24'h4C4B3F)begin
+            clk_2hz    = ~clk_2hz;
+        end    
+        if(cont_clk != 24'h4C4B40)begin
             cont_clk = cont_clk + 1;
         end
     end

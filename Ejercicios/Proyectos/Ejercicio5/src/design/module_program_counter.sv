@@ -21,6 +21,7 @@
 
 
 module module_program_counter#(parameter W=6)(
+    input  logic         en,
     input  logic         clk,
     input  logic [W-1:0] pc_i,
     input  logic [1:0]   pc_op_i,
@@ -37,31 +38,33 @@ module module_program_counter#(parameter W=6)(
        
     
     always_ff@ (posedge clk)begin
-        if(pc_op_i == 0) begin
-            pc_o = 0;
-            pcinc_o = pc_o + 4;
-        end
-        else if(pc_op_i == 1) begin
-            pc_o = pc_o;
-            pcinc_o = pc_o + 4;
-        end
-        else if(pc_op_i == 2) begin
-            pc_o = pc_o + 1;
-            pcinc_o = pc_o + 4;
-        end
-        else if(pc_op_i == 3) begin
-            pc_o = pc_i;
-            pcinc_o = pc_o + 4;
-        end 
+        if(en)begin
+            if(pc_op_i == 0) begin
+                pc_o = 0;
+                pcinc_o = pc_o + 4;
+            end
+            else if(pc_op_i == 1) begin
+                pc_o = pc_o;
+                pcinc_o = pc_o + 4;
+            end
+            else if(pc_op_i == 2) begin
+                pc_o = pc_o + 1;
+                pcinc_o = pc_o + 4;
+            end
+            else if(pc_op_i == 3) begin
+                pc_o = pc_i;
+                pcinc_o = pc_o + 4;
+            end 
         
-        salida_1_ver = pc_o;
-        salida_2_ver = salida_1_ver + 4;
+            salida_1_ver = pc_o;
+            salida_2_ver = salida_1_ver + 4;
         
-        if(salida_1_ver == pc_o & salida_2_ver == pcinc_o)begin
-            flag_ver = 2'b01;
-        end
-        if(salida_1_ver != pc_o & salida_2_ver != pcinc_o)begin
-            flag_ver = 2'b00;
+            if(salida_1_ver == pc_o & salida_2_ver == pcinc_o)begin
+                flag_ver = 2'b01;
+            end
+            if(salida_1_ver != pc_o & salida_2_ver != pcinc_o)begin
+                flag_ver = 2'b00;
+            end
         end
     end
 endmodule
