@@ -22,58 +22,42 @@
 
 module module_debouncer ( 
 
-    input     logic    clk_10MHz,
-    input     logic    bt1,
-    output    logic    signal
+    input     logic    clk,
+    input     logic    bt1_i,
+    input     logic    rst_i,
+    output    logic    signal_o
 
     );
     
-    logic clk_out;
+    logic en_out;
     logic Q1,Q1_neg, Q2, Q2_neg;
     
-    clk_div_4Hz  u1(//clk, clk_out
-        .clk_10MHz(clk_10MHz), 
-        .clk_4Hz(clk_out)
-        );
-    
-    module_DFF ff1(clk_out,bt1,Q1
-        //.D (bt1),
-        //.clk (clk_out),
-        //.EN (1'b1),
-        //.Q (Q1),
-        //.Q_neg (Q1_neg)
+    module_DFF ff1(
+        .clk   (clk),
+        .D     (bt1_i),
+        .EN    (en_out),
+        .Q     (Q1)
         );
         
-    module_DFF ff2(clk_out, Q1,Q2
-       // .D (Q1),
-       // .clk (clk_out),
-        //.EN (1'b1),
-       // .Q (Q2)
-       // .Q_neg (Q2_neg)
+    module_DFF ff2(
+        .clk   (clk),
+        .D     (Q1),
+        .EN    (en_out),
+        .Q     (Q2)
         );
     
     assign Q2_neg = ~Q2;    
-    assign signal = Q1 & Q2_neg; 
+    assign signal_o = Q1 & Q2_neg; 
         
-      
-
+    module_clock_catodo #(12_500_000, 25)(
+        .clk_10Mhz_i       (clk),
+        .reset_i           (rst_i),
+        .clock_catodo_o    (en_out)  
+        );
     
     
 endmodule 
 
-module clk_div_4Hz (input logic clk_10MHz, output logic clk_4Hz);
-    logic [25:0] count = 0;
-    
-    always @ (posedge clk_10MHz)
-    begin
-    count <= count +1;
-    if (count == 1_250_000-1)
-    begin
-    count <=0;  
-    clk_4Hz = ~clk_4Hz;
-    end
-    end
-endmodule 
 
 
 

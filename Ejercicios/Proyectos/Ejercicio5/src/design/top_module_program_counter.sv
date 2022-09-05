@@ -48,7 +48,8 @@ module top_module_program_counter #(parameter W=6)(
     );
     
     module_program_counter #(.W(W))program_counter_1(
-    .clk              (CLK_2HZ),
+    .en               (CLK_2HZ),
+    .clk              (CLK_10MHZ),
     .pc_i             (pc_i),
     .pc_op_i          (pc_op_i),
     .pc_o             (pc_o),

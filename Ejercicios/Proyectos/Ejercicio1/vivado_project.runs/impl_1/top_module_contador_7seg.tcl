@@ -152,3 +152,22 @@ if {$rc} {
   unset ACTIVE_STEP 
 }
 
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
+  catch { write_mem_info -force top_module_contador_7seg.mmi }
+  write_bitstream -force top_module_contador_7seg.bit 
+  catch {write_debug_probes -quiet -force top_module_contador_7seg}
+  catch {file copy -force top_module_contador_7seg.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
+  unset ACTIVE_STEP 
+}
+

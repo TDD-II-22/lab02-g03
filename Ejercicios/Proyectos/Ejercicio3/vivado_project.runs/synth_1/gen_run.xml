@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a12ticsg325-1L" LaunchTime="1661887305">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1662347329">
   <File Type="PA-TCL" Name="top_module_teclado.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_module_teclado_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_module_teclado_reports.tcl"/>
@@ -11,6 +11,13 @@
   <File Type="VDS-TIMING-PB" Name="top_module_teclado_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../Compartido/xci/WCLK/WCLK.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../Ejercicio3/key_detector.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -36,33 +43,10 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../Ejercicio3/module_catodo.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/Compartido/module_clock_catodo.sv">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../Compartido/module_clock_catodo.sv"/>
         <Attr Name="ImportTime" Val="1661640307"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../Ejercicio3/module_clock_leds.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Compartido/module_debouncer.sv">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Compartido/module_debouncer.sv"/>
-        <Attr Name="ImportTime" Val="1661658169"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -86,9 +70,20 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/Compartido/module_debouncer.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Compartido/module_debouncer.sv"/>
+        <Attr Name="ImportTime" Val="1661658169"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top_module_teclado"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -102,6 +97,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/Constraints/constraints_teclado.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -115,5 +111,4 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="WCLK"/>
 </GenRun>

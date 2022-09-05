@@ -25,18 +25,12 @@ module key_detector(
                        deb2_i,
                        deb3_i,
                        deb4_i,
-                       clk,
     output    logic    det_o
     );
     
     logic    [3:0]    registro;
-    
-    always_ff@(posedge clk) begin
-    registro <= {deb4_i,deb3_i,deb2_i,deb1_i};
-    end
-    
-    always_ff@(posedge clk) begin
-       //detectando s?lo el flanco positivo de en_i 
+    assign registro = {deb1_i,deb2_i,deb3_i,deb4_i};
+    always_comb begin
        if(registro == 4'b1111) det_o = 1'b0;
        else det_o = 1'b1;
     end

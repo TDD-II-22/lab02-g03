@@ -1,0 +1,6 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio5/src/simulation/tb_module_program_counter.sv,1661889555,systemVerilog,,,,tb_module_program_counter,,,../../../../../../../Compartido/xci/WCLK,,,,,
+D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio5/vivado_project.sim/sim_1/impl/timing/xsim/tb_module_program_counter_time_impl.v,1662338962,verilog,,,,WCLK;WCLK__WCLK_clk_wiz;glbl;module_clock_divisor;module_program_counter;top_module_program_counter,,,../../../../../../../Compartido/xci/WCLK,,,,,

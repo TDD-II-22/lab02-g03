@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio5/src/design/module_clock_divisor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_clock_divisor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio5/src/design/module_program_counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module module_program_counter
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'pc_op_i' is not allowed [D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio5/src/design/module_program_counter.sv:33]
+WARNING: [VRFC 10-3028] 'pc_op_i' was previously declared with a range [D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio5/src/design/module_program_counter.sv:33]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'pc_o' is not allowed [D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio5/src/design/module_program_counter.sv:34]
+WARNING: [VRFC 10-3028] 'pc_o' was previously declared with a range [D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio5/src/design/module_program_counter.sv:34]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'pcinc_o' is not allowed [D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio5/src/design/module_program_counter.sv:35]
+WARNING: [VRFC 10-3028] 'pcinc_o' was previously declared with a range [D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio5/src/design/module_program_counter.sv:35]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio5/src/design/top_module_program_counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module_program_counter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio5/src/simulation/tb_module_program_counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_module_program_counter

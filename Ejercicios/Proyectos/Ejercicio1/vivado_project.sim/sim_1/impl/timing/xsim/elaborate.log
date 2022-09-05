@@ -6,7 +6,10 @@ Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "tb_simulate_time_impl.sdf", for root module "tb_simulate/top_simulate".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "tb_simulate_time_impl.sdf", for root module "tb_simulate/top_simulate".
 Time Resolution for simulation is 1ps
+Compiling module simprims_ver.OBUF
 Compiling module simprims_ver.BUFG
 Compiling module simprims_ver.IBUF
 Compiling module simprims_ver.PLLE2_ADV(CLKFBOUT_MULT=41,CLKIN...

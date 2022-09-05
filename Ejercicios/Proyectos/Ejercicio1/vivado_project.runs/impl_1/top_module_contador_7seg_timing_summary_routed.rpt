@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Aug 30 08:41:16 2022
+| Date         : Fri Sep  2 00:53:12 2022
 | Host         : Andrey-PC running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file top_module_contador_7seg_timing_summary_routed.rpt -pb top_module_contador_7seg_timing_summary_routed.pb -rpx top_module_contador_7seg_timing_summary_routed.rpx -warn_on_violation
 | Design       : top_module_contador_7seg
@@ -1466,35 +1466,35 @@ Sources:            { generate_clock_10Mhz/inst/plle2_adv_inst/CLKOUT0 }
 Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
 Min Period        n/a     BUFG/I             n/a            2.155         100.000     97.845     BUFGCTRL_X0Y16  generate_clock_10Mhz/inst/clkout1_buf/I
 Min Period        n/a     PLLE2_ADV/CLKOUT0  n/a            1.249         100.000     98.751     PLLE2_ADV_X1Y2  generate_clock_10Mhz/inst/plle2_adv_inst/CLKOUT0
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X86Y95    module_clock_catodo/clk_out_reg/C
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y91    module_clock_catodo/counter_reg[0]/C
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y93    module_clock_catodo/counter_reg[10]/C
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y93    module_clock_catodo/counter_reg[11]/C
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X86Y93    module_clock_catodo/counter_reg[12]/C
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X86Y94    module_clock_catodo/counter_reg[13]/C
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y94    module_clock_catodo/counter_reg[14]/C
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y94    module_clock_catodo/counter_reg[15]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X86Y95    module_clock_divider/clk_out_reg/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y91    module_clock_divider/counter_reg[0]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y93    module_clock_divider/counter_reg[10]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y93    module_clock_divider/counter_reg[11]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X86Y93    module_clock_divider/counter_reg[12]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X86Y94    module_clock_divider/counter_reg[13]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y94    module_clock_divider/counter_reg[14]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y94    module_clock_divider/counter_reg[15]/C
 Max Period        n/a     PLLE2_ADV/CLKOUT0  n/a            160.000       100.000     60.000     PLLE2_ADV_X1Y2  generate_clock_10Mhz/inst/plle2_adv_inst/CLKOUT0
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_catodo/clk_out_reg/C
-Low Pulse Width   Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_catodo/clk_out_reg/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y91    module_clock_catodo/counter_reg[0]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_catodo/counter_reg[12]/C
-Low Pulse Width   Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_catodo/counter_reg[12]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y94    module_clock_catodo/counter_reg[13]/C
-Low Pulse Width   Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y94    module_clock_catodo/counter_reg[13]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y92    module_clock_catodo/counter_reg[1]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y92    module_clock_catodo/counter_reg[2]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_catodo/counter_reg[7]/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_catodo/clk_out_reg/C
-High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_catodo/clk_out_reg/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y91    module_clock_catodo/counter_reg[0]/C
-High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y91    module_clock_catodo/counter_reg[0]/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_catodo/counter_reg[10]/C
-High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_catodo/counter_reg[10]/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_catodo/counter_reg[11]/C
-High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_catodo/counter_reg[11]/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_catodo/counter_reg[12]/C
-High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_catodo/counter_reg[12]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_divider/clk_out_reg/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_divider/clk_out_reg/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y91    module_clock_divider/counter_reg[0]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_divider/counter_reg[12]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_divider/counter_reg[12]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y94    module_clock_divider/counter_reg[13]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y94    module_clock_divider/counter_reg[13]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y92    module_clock_divider/counter_reg[1]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y92    module_clock_divider/counter_reg[2]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_divider/counter_reg[7]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_divider/clk_out_reg/C
+High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_divider/clk_out_reg/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y91    module_clock_divider/counter_reg[0]/C
+High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y91    module_clock_divider/counter_reg[0]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_divider/counter_reg[10]/C
+High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_divider/counter_reg[10]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_divider/counter_reg[11]/C
+High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_divider/counter_reg[11]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_divider/counter_reg[12]/C
+High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_divider/counter_reg[12]/C
 
 
 
@@ -2801,35 +2801,35 @@ Sources:            { generate_clock_10Mhz/inst/plle2_adv_inst/CLKOUT0 }
 Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
 Min Period        n/a     BUFG/I             n/a            2.155         100.000     97.845     BUFGCTRL_X0Y16  generate_clock_10Mhz/inst/clkout1_buf/I
 Min Period        n/a     PLLE2_ADV/CLKOUT0  n/a            1.249         100.000     98.751     PLLE2_ADV_X1Y2  generate_clock_10Mhz/inst/plle2_adv_inst/CLKOUT0
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X86Y95    module_clock_catodo/clk_out_reg/C
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y91    module_clock_catodo/counter_reg[0]/C
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y93    module_clock_catodo/counter_reg[10]/C
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y93    module_clock_catodo/counter_reg[11]/C
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X86Y93    module_clock_catodo/counter_reg[12]/C
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X86Y94    module_clock_catodo/counter_reg[13]/C
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y94    module_clock_catodo/counter_reg[14]/C
-Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y94    module_clock_catodo/counter_reg[15]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X86Y95    module_clock_divider/clk_out_reg/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y91    module_clock_divider/counter_reg[0]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y93    module_clock_divider/counter_reg[10]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y93    module_clock_divider/counter_reg[11]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X86Y93    module_clock_divider/counter_reg[12]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X86Y94    module_clock_divider/counter_reg[13]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y94    module_clock_divider/counter_reg[14]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X84Y94    module_clock_divider/counter_reg[15]/C
 Max Period        n/a     PLLE2_ADV/CLKOUT0  n/a            160.000       100.000     60.000     PLLE2_ADV_X1Y2  generate_clock_10Mhz/inst/plle2_adv_inst/CLKOUT0
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_catodo/clk_out_reg/C
-Low Pulse Width   Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_catodo/clk_out_reg/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y91    module_clock_catodo/counter_reg[0]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_catodo/counter_reg[12]/C
-Low Pulse Width   Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_catodo/counter_reg[12]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y94    module_clock_catodo/counter_reg[13]/C
-Low Pulse Width   Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y94    module_clock_catodo/counter_reg[13]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y92    module_clock_catodo/counter_reg[1]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y92    module_clock_catodo/counter_reg[2]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_catodo/counter_reg[7]/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_catodo/clk_out_reg/C
-High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_catodo/clk_out_reg/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y91    module_clock_catodo/counter_reg[0]/C
-High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y91    module_clock_catodo/counter_reg[0]/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_catodo/counter_reg[10]/C
-High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_catodo/counter_reg[10]/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_catodo/counter_reg[11]/C
-High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_catodo/counter_reg[11]/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_catodo/counter_reg[12]/C
-High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_catodo/counter_reg[12]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_divider/clk_out_reg/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_divider/clk_out_reg/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y91    module_clock_divider/counter_reg[0]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_divider/counter_reg[12]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_divider/counter_reg[12]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y94    module_clock_divider/counter_reg[13]/C
+Low Pulse Width   Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y94    module_clock_divider/counter_reg[13]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y92    module_clock_divider/counter_reg[1]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y92    module_clock_divider/counter_reg[2]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_divider/counter_reg[7]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_divider/clk_out_reg/C
+High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y95    module_clock_divider/clk_out_reg/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y91    module_clock_divider/counter_reg[0]/C
+High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y91    module_clock_divider/counter_reg[0]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_divider/counter_reg[10]/C
+High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_divider/counter_reg[10]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_divider/counter_reg[11]/C
+High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X84Y93    module_clock_divider/counter_reg[11]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_divider/counter_reg[12]/C
+High Pulse Width  Fast    FDRE/C             n/a            0.500         50.000      49.500     SLICE_X86Y93    module_clock_divider/counter_reg[12]/C
 
 
 

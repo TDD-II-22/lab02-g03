@@ -64,14 +64,14 @@ module top_module_contador_7seg(
     //clock para control del catodo
     
     //modulo de la instancia   
-    module_clock_catodo #(
+    module_clock_divider #(
                               
         //parametrizacion
         .COUNT_CATODO            (COUNT_CATODO),       
         .BITS_CATODO             (BITS_CATODO))     
     
     //nombre de la instancia
-    module_clock_catodo(  
+    module_clock_divider(  
         
         //entradas / salidas 
         .clk_10Mhz_i            (clk_10Mhz),
