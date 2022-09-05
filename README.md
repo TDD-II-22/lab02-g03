@@ -602,6 +602,98 @@ También se aprecia el tiempo en que dura el número aleatorio en cambiar, así 
 
 <!--FINAL DEL EJERCICIO-->
 
+### 3.5 Ejercicio 5. Progeam Counter.
+
+#### 3.5.1 module_clock_divisor
+
+El modulo module_clock_divisor genera un pulso a una frecuancia de 2 Hz.
+
+##### 1. Encabezado del modulo
+
+```SystemVerilog
+
+module module_clock_divisor(
+    input logic  clk,
+    output logic clk_2hz = 0
+    );
+```
+##### 2. Parametros
+
+Este modulo no posee parametros.
+
+##### 3. Entradas y salidas:
+-`clk`: Entrada de reloj de 10 MHz.
+-`clk_2hz`: Salida de pulso de 2Hz.
+
+##### 5. Testbench
+No se diseño un testbench para este bloque
+
+#### 3.5.2 module_program_counter
+
+El modulo module_program_counter genera un contador basado en cuatro opciones de funcionamiento, dicho contador es de `6 bits`.
+
+##### 1. Encabezado del modulo
+
+```SystemVerilog
+
+module module_program_counter#(parameter W=6)(
+    input  logic         en,
+    input  logic         clk,
+    input  logic [W-1:0] pc_i,
+    input  logic [1:0]   pc_op_i,
+    output logic [W-1:0] pc_o,
+    output logic [W-1:0] pcinc_o,
+    output logic [1:0]   flag_ver
+    );
+```
+##### 2. Parametros
+
+-`W`: Define la cantidad de bits para el contador.
+
+##### 3. Entradas y salidas:
+-`en`: Entrada de pulso de 2Hz.
+-`clk`: Entrada de reloj de 10MHz.
+-`pc_i`: Entrada de `6 bits` para el numero que se quiere cargar en el contador.
+-`pc_op_i`: Entrada de `2bits` para el selector de modos.
+-`pc_o`: Salida de `6 bits` del contador.
+-`pcinc_o`: Salida de `6 bits` del contador con una adicion de 4.
+-`flag_ver`: Salida de `2 bits` de autoverificación.
+
+##### 5. Testbench
+No se diseño un testbench para este bloque
+
+#### 3.5.3 top_module_program_counter
+
+El modulo top_module_program_counter unifica el reloj de 10 MHz, el divisor de reloj y el program counter.
+
+##### 1. Encabezado del modulo
+
+```SystemVerilog
+
+module top_module_program_counter #(parameter W=6)(
+    input  logic         clk,
+    input  logic [W-1:0] pc_i,
+    input  logic [1:0]   pc_op_i,
+    output logic [W-1:0] pc_o,
+    output logic [W-1:0] pcinc_o,
+    output logic [1:0]   flag_ver
+    );
+```
+##### 2. Parametros
+
+-`W`: Define la cantidad de bits para el contador.
+
+##### 3. Entradas y salidas:
+-`clk`: Entrada de reloj de 10MHz.
+-`pc_i`: Entrada de `6 bits` para el numero que se quiere cargar en el contador.
+-`pc_op_i`: Entrada de `2bits` para el selector de modos.
+-`pc_o`: Salida de `6 bits` del contador.
+-`pcinc_o`: Salida de `6 bits` del contador con una adicion de 4.
+-`flag_ver`: Salida de `2 bits` de autoverificación.
+
+##### 5. Testbench
+No se diseño un testbench para este bloque
+
 
 
 ### 3.6 Ejercicio 6. Banco de registros
