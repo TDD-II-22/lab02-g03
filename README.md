@@ -694,9 +694,9 @@ module top_module_program_counter #(parameter W=6)(
 ##### 5. Testbench
 Para el testbench se hizo un pulso mas rapido para lograr una mejor visualizacion del funcionamiento.
 <img src="https://github.com/TDD-II-22/lab02-g03/blob/main/Images/tb1.png"
-width="700" >\
+width="900" >\
 <img src="https://github.com/TDD-II-22/lab02-g03/blob/main/Images/tb2.png"
-width="700" >\
+width="900" >\
 
 
 ### 3.6 Ejercicio 6. Banco de registros
