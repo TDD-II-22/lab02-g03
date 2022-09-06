@@ -24,11 +24,12 @@ module top_maquina_estado_calcu_con_teclado(
     input logic                                 clk_100Mhz_pi,
                                                 rst_pi,
                                                 sw_mode_pi,
-                                                en_tecla, //SE DEBE QUITAR A LA HORA DE INTRODUCIR EL TECLADO
-                    [3 : 0]                     teclado_pi,
-    output logic                                /*locked_po,*/     //PARA SIMULACION                 
-                                                led_error_po,
-    output logic    [6 : 0]                     display_po,
+                    [1 : 0]                     E1_i,
+                    [3 : 0]                     fila_i,
+    /*output logic                              locked_po,*/    //PARA SIMULACION                 
+    output logic                                led_error_po,
+                    [1 : 0]                     counter_o,
+                    [6 : 0]                     display_po,
                     [7 : 0]                     display_select_po,
                     [2 : 0]                     rgb_po    
                                       
@@ -73,14 +74,16 @@ module top_maquina_estado_calcu_con_teclado(
     
     //variables de un bit
     logic                                       clk_10Mhz,
-                                                /*en_tecla,*/ //SE DEBE descomentar a la hora de introducir el teclado
                                                 selec_mux,    
                                                 en_display,
                                                 en_registro,
-                                                desbloqueo_barrido;
+                                                desbloqueo_barrido,
+                                                en_tecla;
     
     //variables de 3 bits                                            
     logic               [2 : 0]                 control_save;
+    
+    logic               [3 : 0]                 teclado_pi;
     
     //variable definada por packege
     bits_t                                      data_reg,
@@ -194,6 +197,22 @@ module top_maquina_estado_calcu_con_teclado(
     
     );
     
+    
+    //TECLADO
+    
+    top_module_teclado teclado(
+        .clk_10Mhz              (clk_10Mhz),
+        .rst_i                  (rst_pi),                           
+        .fila1_i                (fila_i[0]),
+        .fila2_i                (fila_i[1]),
+        .fila3_i                (fila_i[2]),
+        .fila4_i                (fila_i[3]),
+        .E1_i                   (E1_i[0]),
+        .E2_i                   (E1_i[1]),                              
+        .led_det_o              (en_tecla),
+        .counter_o              (counter_o),
+        .deco_o                 (teclado_pi)
+    );
     
     //MEMORIA
     //--------------------------------------------------------------------------------------------------------

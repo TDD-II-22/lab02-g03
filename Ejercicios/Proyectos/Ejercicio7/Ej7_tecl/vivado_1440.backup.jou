@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Sep  6 02:47:14 2022
+# Process ID: 1440
+# Current directory: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_teclado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7768 C:\Users\carlo\Andrey\TEC\Semestre_II_2022\Taller_Digitales\Laboratorios\Laboratorio_2\Repositorio\lab02-g03\Ejercicios\Proyectos\Ejercicio7\Ej7_teclado\vivado_project.xpr
+# Log file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_teclado/vivado.log
+# Journal file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_teclado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_teclado/vivado_project.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1

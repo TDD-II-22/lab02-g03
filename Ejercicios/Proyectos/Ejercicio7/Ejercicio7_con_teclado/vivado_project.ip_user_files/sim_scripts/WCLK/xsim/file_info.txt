@@ -1,2 +1,0 @@
-WCLK_sim_netlist.v,verilog,xil_defaultlib,../../../../../../Compartido/xci/WCLK/WCLK_sim_netlist.v,incdir="../../../ipstatic"
-glbl.v,Verilog,xil_defaultlib,glbl.v
