@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1662442422">
   <File Type="PA-TCL" Name="top_module_debouncer.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="top_module_debouncer_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_module_debouncer_reports.tcl"/>
   <File Type="RDS-RDS" Name="top_module_debouncer.vds"/>
   <File Type="RDS-UTIL" Name="top_module_debouncer_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="top_module_debouncer_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="top_module_debouncer.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="top_module_debouncer_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="top_module_debouncer_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Ejercicios/Compartido/module_DFF.sv">

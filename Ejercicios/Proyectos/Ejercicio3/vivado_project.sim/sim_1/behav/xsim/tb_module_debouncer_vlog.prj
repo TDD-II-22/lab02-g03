@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../../../Compartido/xci/WCLK" \
+"../../../../vivado_project.srcs/sources_1/imports/Compartido/module_DFF.sv" \
+"../../../../vivado_project.srcs/sources_1/imports/Compartido/module_debouncer.sv" \
+"../../../../vivado_project.srcs/sim_1/new/tb_module_debouncer.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
