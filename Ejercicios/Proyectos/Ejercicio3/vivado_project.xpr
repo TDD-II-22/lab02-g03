@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.xpr">
+<Project Version="7" Minor="40" Path="C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="ae1d03a1b5374d43a9807f9ebfc5ceac"/>
@@ -59,10 +59,8 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/imports/Ejercicio3/module_key_encoding.sv">
+      <File Path="$PPRDIR/../../Compartido/xci/WCLK/WCLK.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Ejercicio3/module_key_encoding.sv"/>
-          <Attr Name="ImportTime" Val="1661199216"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -70,15 +68,6 @@
       </File>
       <File Path="$PPRDIR/../../Ejercicio3/key_detector.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Compartido/xci/WCLK/WCLK.xci">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -86,7 +75,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Ejercicio3/module_2bit_counter.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../Ejercicio3/module_2bit_counter.sv"/>
           <Attr Name="ImportTime" Val="1661737422"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -96,7 +84,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Compartido/module_DFF.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../Compartido/module_DFF.sv"/>
           <Attr Name="ImportTime" Val="1661357348"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -106,7 +93,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Compartido/module_clock_catodo.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../Compartido/module_clock_catodo.sv"/>
           <Attr Name="ImportTime" Val="1661640307"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -114,9 +100,17 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/Ejercicio3/module_key_encoding.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Ejercicio3/module_key_encoding.sv"/>
+          <Attr Name="ImportTime" Val="1661199216"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/Ejercicio3/top_module_teclado.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../Ejercicio3/top_module_teclado.sv"/>
           <Attr Name="ImportTime" Val="1661726106"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -136,7 +130,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="module_key_encoding"/>
+        <Option Name="TopModule" Val="top_module_teclado"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

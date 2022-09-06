@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Sep  6 02:57:48 2022
-# Process ID: 6508
-# Current directory: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_tecl/vivado_project.runs/synth_1
+# Start of session at: Tue Sep  6 15:33:31 2022
+# Process ID: 8700
+# Current directory: C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_tecl/vivado_project.runs/synth_1
 # Command line: vivado.exe -log top_maquina_estado_calcu_con_teclado.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_maquina_estado_calcu_con_teclado.tcl
-# Log file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_tecl/vivado_project.runs/synth_1/top_maquina_estado_calcu_con_teclado.vds
-# Journal file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_tecl/vivado_project.runs/synth_1\vivado.jou
+# Log file: C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_tecl/vivado_project.runs/synth_1/top_maquina_estado_calcu_con_teclado.vds
+# Journal file: C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_tecl/vivado_project.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source top_maquina_estado_calcu_con_teclado.tcl -notrace

@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 // pre-commands:
-ISETouchFile( "init_design", "begin" );
+ISETouchFile( "write_bitstream", "begin" );
 ISEStep( "vivado",
          "-log top_maquina_estado_calcu_con_teclado.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_maquina_estado_calcu_con_teclado.tcl -notrace" );
 

@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab02-g03/Ejercicios/Ejercicio2/tb_debouncer.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_debouncer
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sim_1/new/tb_top_debouncer.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_top_debouncer
