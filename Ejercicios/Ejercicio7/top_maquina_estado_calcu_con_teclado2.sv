@@ -207,7 +207,6 @@ module top_maquina_estado_calcu_con_teclado2(
     );
     
     
-    
     //TECLADO
     
     top_module_teclado teclado(
