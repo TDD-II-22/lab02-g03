@@ -24,8 +24,7 @@ module top_module_debouncer(
     input     logic             clk,
     input     logic             bt1_i,
     input     logic             rst_i,
-    output    logic    [7:0]    conta_o
-                         
+    output    logic    [7:0]    conta_o                         
     );
   
   logic clk_10MHz;  
@@ -37,7 +36,9 @@ module top_module_debouncer(
         .bt1_i       (bt1_i),
         .rst_i       (rst_i),
         .signal_o    (signal)
+        //.conta_o     (conta_o)
         );
+      
   
   contador_prueba c1(
       .clk        (clk_10MHz),

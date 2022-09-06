@@ -36,14 +36,14 @@ module tb_debouncer;
         );
     
     initial begin
-       // rst_i=0;
+        rst_i=0;
         //signal_o=0;
         clk= 0;
         forever #5 clk = ~clk;    
     end
     
      always begin
-     repeat (5) begin
+     repeat (10) 
      bt1_i = 0;
      #5;
      bt1_i=1;
@@ -63,7 +63,7 @@ module tb_debouncer;
      bt1_i = 0;
      #10;
      bt1_i=1; 
-     #1000; end
+     #1000; 
  end   
     
     
