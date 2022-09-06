@@ -1,0 +1,676 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Sep  6 09:48:43 2022
+# Process ID: 11280
+# Current directory: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_tecl2/vivado_project.runs/synth_1
+# Command line: vivado.exe -log top_maquina_estado_calcu_con_teclado2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_maquina_estado_calcu_con_teclado2.tcl
+# Log file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_tecl2/vivado_project.runs/synth_1/top_maquina_estado_calcu_con_teclado2.vds
+# Journal file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_tecl2/vivado_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/carlo/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source top_maquina_estado_calcu_con_teclado2.tcl -notrace
+Command: synth_design -top top_maquina_estado_calcu_con_teclado2 -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12116 
+WARNING: [Synth 8-2507] parameter declaration becomes local in module_leds_rgb with formal parameter declaration list [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_leds_rgb.sv:44]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 705.762 ; gain = 182.309
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_maquina_estado_calcu_con_teclado2' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/top_maquina_estado_calcu_con_teclado2.sv:23]
+	Parameter bits_codificacion bound to: 3 - type: integer 
+	Parameter WAIT_DIGIT bound to: 3'b000 
+	Parameter WAIT_OP bound to: 3'b001 
+	Parameter WAIT_DIGIT2 bound to: 3'b010 
+	Parameter WAIT_E bound to: 3'b011 
+	Parameter SAVE bound to: 3'b100 
+	Parameter SWEPT bound to: 3'b101 
+	Parameter RESET_SWEPT bound to: 3'b111 
+	Parameter COUNT_ANODO bound to: 10000 - type: integer 
+	Parameter BITS_ANODO bound to: 14 - type: integer 
+	Parameter COUNT_CATODO bound to: 10000000 - type: integer 
+	Parameter BITS_CATODO bound to: 24 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'WCLK' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_tecl2/vivado_project.runs/synth_1/.Xil/Vivado-11280-Andrey-PC/realtime/WCLK_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'WCLK' (1#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_tecl2/vivado_project.runs/synth_1/.Xil/Vivado-11280-Andrey-PC/realtime/WCLK_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'module_mode_calcu' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_mode_calcu.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_control' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_control.sv:23]
+	Parameter COUNT bound to: 10000 - type: integer 
+	Parameter BITS bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'module_leds_rgb' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_leds_rgb.sv:23]
+	Parameter COUNT bound to: 10000 - type: integer 
+	Parameter BITS bound to: 14 - type: integer 
+	Parameter OFF bound to: 0 - type: integer 
+	Parameter ROJO bound to: 1 - type: integer 
+	Parameter VERDE bound to: 2 - type: integer 
+	Parameter AZUL bound to: 3 - type: integer 
+	Parameter AMARILLO bound to: 4 - type: integer 
+	Parameter CIAN bound to: 5 - type: integer 
+	Parameter MAGENTA bound to: 6 - type: integer 
+	Parameter BLANCO bound to: 7 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_leds_rgb.sv:77]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_leds_rgb.sv:85]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_leds_rgb.sv:93]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_leds_rgb.sv:101]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_leds_rgb.sv:109]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_leds_rgb.sv:117]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_leds_rgb.sv:125]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_leds_rgb.sv:133]
+WARNING: [Synth 8-567] referenced signal 'color_i' should be on the sensitivity list [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_leds_rgb.sv:73]
+INFO: [Synth 8-6155] done synthesizing module 'module_leds_rgb' (2#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_leds_rgb.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_control.sv:95]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_control.sv:85]
+INFO: [Synth 8-6155] done synthesizing module 'module_control' (3#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_control.sv:23]
+WARNING: [Synth 8-6104] Input port 'led_error_o' has an internal driver [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_mode_calcu.sv:60]
+INFO: [Synth 8-6157] synthesizing module 'module_mux' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_mux.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_mux' (4#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_mux.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_alu' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_alu.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_alu' (5#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_alu.sv:23]
+WARNING: [Synth 8-689] width (16) of port connection 'dato1_i' does not match port width (4) of module 'module_alu' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_mode_calcu.sv:76]
+WARNING: [Synth 8-689] width (16) of port connection 'dato2_i' does not match port width (4) of module 'module_alu' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_mode_calcu.sv:77]
+WARNING: [Synth 8-689] width (5) of port connection 'operacion_i' does not match port width (4) of module 'module_alu' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_mode_calcu.sv:78]
+INFO: [Synth 8-6155] done synthesizing module 'module_mode_calcu' (6#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_mode_calcu.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_mode_swept' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_mode_swept.sv:23]
+	Parameter COUNT_CATODO bound to: 10000000 - type: integer 
+	Parameter BITS_CATODO bound to: 24 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'module_clock_divider' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/module_clock_divider.sv:23]
+	Parameter COUNT_CATODO bound to: 10000000 - type: integer 
+	Parameter BITS_CATODO bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'module_clock_divider' (7#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/module_clock_divider.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_barrido' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_barrido.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_barrido' (8#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_barrido.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_mode_swept' (9#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_mode_swept.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_memoria' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_memoria.sv:23]
+WARNING: [Synth 8-6014] Unused sequential element we_i_reg was removed.  [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_memoria.sv:63]
+WARNING: [Synth 8-6014] Unused sequential element addr_rd_i_reg was removed.  [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_memoria.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element data_in_i_reg was removed.  [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_memoria.sv:67]
+INFO: [Synth 8-6155] done synthesizing module 'module_memoria' (10#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_memoria.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_control7seg_calcu' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_control7seg_calcu.sv:23]
+	Parameter COUNT_ANODO bound to: 10000 - type: integer 
+	Parameter BITS_ANODO bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'module_register_pp' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio4/module_register_pp.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio4/module_register_pp.sv:42]
+INFO: [Synth 8-6155] done synthesizing module 'module_register_pp' (11#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio4/module_register_pp.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_seg7_control' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/module_seg7_control.sv:23]
+	Parameter COUNT_ANODO bound to: 10000 - type: integer 
+	Parameter BITS_ANODO bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'module_seg7_control' (12#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/module_seg7_control.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_control7seg_calcu' (13#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_control7seg_calcu.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_debounce' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/teclado/module_debounce.sv:23]
+	Parameter COUNT bound to: 2500000 - type: integer 
+	Parameter BITS bound to: 22 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'module_clock_divider__parameterized0' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/module_clock_divider.sv:23]
+	Parameter COUNT_CATODO bound to: 2500000 - type: integer 
+	Parameter BITS_CATODO bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'module_clock_divider__parameterized0' (13#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/module_clock_divider.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_debounce' (14#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/teclado/module_debounce.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'top_module_teclado' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/teclado/top_module_teclado.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_clock_divider__parameterized1' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/module_clock_divider.sv:23]
+	Parameter COUNT_CATODO bound to: 5000000 - type: integer 
+	Parameter BITS_CATODO bound to: 25 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'module_clock_divider__parameterized1' (14#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/module_clock_divider.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_2bit_counter' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/teclado/module_2bit_counter.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_2bit_counter' (15#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/teclado/module_2bit_counter.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'key_detector' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/teclado/key_detector.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'key_detector' (16#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/teclado/key_detector.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_DFF' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/teclado/module_DFF.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_DFF' (17#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/teclado/module_DFF.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'module_key_encoding' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/teclado/module_key_encoding.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'module_key_encoding' (18#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/teclado/module_key_encoding.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_teclado' (19#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/teclado/top_module_teclado.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/top_maquina_estado_calcu_con_teclado2.sv:248]
+WARNING: [Synth 8-3848] Net led_error_po in module/entity top_maquina_estado_calcu_con_teclado2 does not have driver. [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/top_maquina_estado_calcu_con_teclado2.sv:30]
+WARNING: [Synth 8-3848] Net addr_rs1_swep in module/entity top_maquina_estado_calcu_con_teclado2 does not have driver. [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/top_maquina_estado_calcu_con_teclado2.sv:102]
+INFO: [Synth 8-6155] done synthesizing module 'top_maquina_estado_calcu_con_teclado2' (20#1) [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/top_maquina_estado_calcu_con_teclado2.sv:23]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[15]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[14]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[13]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[12]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[11]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[10]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[9]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[8]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[7]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[6]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[5]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[4]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[15]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[14]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[13]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[12]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[11]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[10]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[9]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[8]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[7]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[6]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[5]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 749.922 ; gain = 226.469
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 749.922 ; gain = 226.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 749.922 ; gain = 226.469
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/xci/WCLK/WCLK/WCLK_in_context.xdc] for cell 'generate_clock_10Mhz'
+Finished Parsing XDC File [c:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/xci/WCLK/WCLK/WCLK_in_context.xdc] for cell 'generate_clock_10Mhz'
+Parsing XDC File [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Constraints/contraints_calculadora__con_teclado.xdc]
+WARNING: [Vivado 12-508] No pins matched 'generate_clock_10Mhz/clk_10Mhz'. [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Constraints/contraints_calculadora__con_teclado.xdc:724]
+WARNING: [Vivado 12-627] No clocks matched 'pllclk'. [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Constraints/contraints_calculadora__con_teclado.xdc:725]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Constraints/contraints_calculadora__con_teclado.xdc:725]
+Finished Parsing XDC File [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Constraints/contraints_calculadora__con_teclado.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Constraints/contraints_calculadora__con_teclado.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_maquina_estado_calcu_con_teclado2_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Constraints/contraints_calculadora__con_teclado.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_maquina_estado_calcu_con_teclado2_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_maquina_estado_calcu_con_teclado2_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_tecl2/vivado_project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_tecl2/vivado_project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 902.066 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+ERROR: [Common 17-680] Path length exceeds 260-Byte maximum allowed by Windows: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_tecl2/vivado_project.runs/synth_1/.Xil/Vivado-11280-Andrey-PC/realtime/top_maquina_estado_calcu_con_teclado2_synth.xdc
+Please consider using the OS subst command to shorten the path length by mapping part of the path to a virtual drive letter. See Answer Record AR52787 for more information.
+Resolution: In Windows 7 or later, the mklink command can also be used to create a symbolic link and shorten the path.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 902.066 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 902.066 ; gain = 378.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 902.066 ; gain = 378.613
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'top_maquina_estado_calcu_con_teclado2'
+WARNING: [Synth 8-327] inferring latch for variable 'rgb_o_reg' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/module_leds_rgb.sv:78]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/top_maquina_estado_calcu_con_teclado2.sv:254]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/top_maquina_estado_calcu_con_teclado2.sv:254]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              WAIT_DIGIT |                          0000001 |                              000
+                   SWEPT |                          0000010 |                              101
+             RESET_SWEPT |                          0000100 |                              111
+                 WAIT_OP |                          0001000 |                              001
+             WAIT_DIGIT2 |                          0010000 |                              010
+                  WAIT_E |                          0100000 |                              011
+                    SAVE |                          1000000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'top_maquina_estado_calcu_con_teclado2'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Ejercicio7/top_maquina_estado_calcu_con_teclado2.sv:254]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 902.066 ; gain = 378.613
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     22 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               25 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               22 Bit    Registers := 1     
+	               16 Bit    Registers := 32    
+	               14 Bit    Registers := 2     
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 6     
+	   2 Input     14 Bit        Muxes := 2     
+	   8 Input      8 Bit        Muxes := 1     
+	   7 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 9     
+	   7 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	  16 Input      4 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 4     
+	   7 Input      3 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 4     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 39    
+	  12 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top_maquina_estado_calcu_con_teclado2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   7 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 9     
+	   2 Input      3 Bit        Muxes := 3     
+	   7 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 5     
+Module module_leds_rgb 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 1     
+Module module_control 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   7 Input      5 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 1     
+Module module_mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module module_alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module module_clock_divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+Module module_barrido 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+Module module_memoria 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 32    
+	                5 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 31    
+Module module_register_pp 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module module_seg7_control 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+Module module_clock_divider__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
++---Registers : 
+	               22 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 1     
+Module module_debounce 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module module_clock_divider__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
++---Registers : 
+	               25 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module module_2bit_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+Module key_detector 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module module_DFF 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module module_key_encoding 
+Detailed RTL Component Info : 
++---Muxes : 
+	  16 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "p_0_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[15]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[14]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[13]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[12]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[11]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[10]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[9]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[8]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[7]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[6]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[5]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_a[4]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[15]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[14]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[13]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[12]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[11]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[10]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[9]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[8]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[7]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[6]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[5]
+WARNING: [Synth 8-3331] design module_mode_calcu has unconnected port ope_b[4]
+INFO: [Synth 8-3886] merging instance 'seg7_control_calcu/register_pp/state_reg[28]' (FDRE) to 'seg7_control_calcu/register_pp/state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'seg7_control_calcu/register_pp/state_reg[29]' (FDRE) to 'seg7_control_calcu/register_pp/state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'seg7_control_calcu/register_pp/state_reg[30]' (FDRE) to 'seg7_control_calcu/register_pp/state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'seg7_control_calcu/register_pp/state_reg[31]' (FDRE) to 'seg7_control_calcu/register_pp/state_reg[27]'
+INFO: [Synth 8-3886] merging instance 'seg7_control_calcu/register_pp/state_reg[24]' (FDRE) to 'seg7_control_calcu/register_pp/state_reg[27]'
+INFO: [Synth 8-3886] merging instance 'seg7_control_calcu/register_pp/state_reg[25]' (FDRE) to 'seg7_control_calcu/register_pp/state_reg[27]'
+INFO: [Synth 8-3886] merging instance 'seg7_control_calcu/register_pp/state_reg[26]' (FDRE) to 'seg7_control_calcu/register_pp/state_reg[27]'
+INFO: [Synth 8-3886] merging instance 'seg7_control_calcu/register_pp/state_reg[27]' (FDRE) to 'seg7_control_calcu/register_pp/state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'seg7_control_calcu/register_pp/state_reg[20]' (FDRE) to 'seg7_control_calcu/register_pp/state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'seg7_control_calcu/register_pp/state_reg[21]' (FDRE) to 'seg7_control_calcu/register_pp/state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'seg7_control_calcu/register_pp/state_reg[22]' (FDRE) to 'seg7_control_calcu/register_pp/state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'seg7_control_calcu/register_pp/state_reg[23]' (FDRE) to 'seg7_control_calcu/register_pp/state_reg[19]'
+INFO: [Synth 8-3886] merging instance 'seg7_control_calcu/register_pp/state_reg[16]' (FDRE) to 'seg7_control_calcu/register_pp/state_reg[19]'
+INFO: [Synth 8-3886] merging instance 'seg7_control_calcu/register_pp/state_reg[17]' (FDRE) to 'seg7_control_calcu/register_pp/state_reg[19]'
+INFO: [Synth 8-3886] merging instance 'seg7_control_calcu/register_pp/state_reg[18]' (FDRE) to 'seg7_control_calcu/register_pp/state_reg[19]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\seg7_control_calcu/register_pp/state_reg[19] )
+INFO: [Synth 8-3886] merging instance 'module_memoria_calcu/memoria_reg[0][3]' (FD) to 'module_memoria_calcu/memoria_reg[0][15]'
+INFO: [Synth 8-3886] merging instance 'module_memoria_calcu/memoria_reg[0][2]' (FD) to 'module_memoria_calcu/memoria_reg[0][15]'
+INFO: [Synth 8-3886] merging instance 'module_memoria_calcu/memoria_reg[0][1]' (FD) to 'module_memoria_calcu/memoria_reg[0][15]'
+INFO: [Synth 8-3886] merging instance 'module_memoria_calcu/memoria_reg[0][0]' (FD) to 'module_memoria_calcu/memoria_reg[0][15]'
+INFO: [Synth 8-3886] merging instance 'module_memoria_calcu/memoria_reg[0][15]' (FD) to 'module_memoria_calcu/memoria_reg[0][14]'
+INFO: [Synth 8-3886] merging instance 'module_memoria_calcu/memoria_reg[0][14]' (FD) to 'module_memoria_calcu/memoria_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'module_memoria_calcu/memoria_reg[0][13]' (FD) to 'module_memoria_calcu/memoria_reg[0][12]'
+INFO: [Synth 8-3886] merging instance 'module_memoria_calcu/memoria_reg[0][12]' (FD) to 'module_memoria_calcu/memoria_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'module_memoria_calcu/memoria_reg[0][7]' (FD) to 'module_memoria_calcu/memoria_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'module_memoria_calcu/memoria_reg[0][6]' (FD) to 'module_memoria_calcu/memoria_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'module_memoria_calcu/memoria_reg[0][5]' (FD) to 'module_memoria_calcu/memoria_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'module_memoria_calcu/memoria_reg[0][4]' (FD) to 'module_memoria_calcu/memoria_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'module_memoria_calcu/memoria_reg[0][11]' (FD) to 'module_memoria_calcu/memoria_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'module_memoria_calcu/memoria_reg[0][10]' (FD) to 'module_memoria_calcu/memoria_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'module_memoria_calcu/memoria_reg[0][9]' (FD) to 'module_memoria_calcu/memoria_reg[0][8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\module_memoria_calcu/memoria_reg[0][8] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 902.066 ; gain = 378.613
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 902.066 ; gain = 378.613
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 902.066 ; gain = 378.613
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 902.066 ; gain = 378.613
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 902.066 ; gain = 378.613
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 902.066 ; gain = 378.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 902.066 ; gain = 378.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 902.066 ; gain = 378.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 902.066 ; gain = 378.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |WCLK          |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |WCLK   |     1|
+|2     |CARRY4 |    26|
+|3     |LUT1   |    13|
+|4     |LUT2   |   120|
+|5     |LUT3   |    31|
+|6     |LUT4   |    43|
+|7     |LUT5   |    71|
+|8     |LUT6   |   270|
+|9     |MUXF7  |    80|
+|10    |FDRE   |   678|
+|11    |FDSE   |     6|
+|12    |LD     |    10|
+|13    |IBUF   |     9|
+|14    |OBUF   |    21|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------+-------------------------------------+------+
+|      |Instance                 |Module                               |Cells |
++------+-------------------------+-------------------------------------+------+
+|1     |top                      |                                     |  1380|
+|2     |  barrido                |module_mode_swept                    |    96|
+|3     |    barrido              |module_barrido                       |    33|
+|4     |    module_clock_divider |module_clock_divider                 |    63|
+|5     |  debounce               |module_debounce                      |    66|
+|6     |    module_clock_divider |module_clock_divider__parameterized0 |    59|
+|7     |  mode_calculadora       |module_mode_calcu                    |   151|
+|8     |    module_control       |module_control                       |   151|
+|9     |      leds_rgb_control   |module_leds_rgb                      |    46|
+|10    |  module_memoria_calcu   |module_memoria                       |   809|
+|11    |  seg7_control_calcu     |module_control7seg_calcu             |   101|
+|12    |    register_pp          |module_register_pp                   |    52|
+|13    |    seg7_control         |module_seg7_control                  |    49|
+|14    |  teclado                |top_module_teclado                   |   108|
+|15    |    en10kHz              |module_clock_divider__parameterized1 |    64|
+|16    |    ffc0                 |module_DFF                           |     2|
+|17    |    ffc1                 |module_DFF_0                         |     1|
+|18    |    ffe1                 |module_DFF_1                         |     5|
+|19    |    ffe2                 |module_DFF_2                         |    30|
+|20    |    u1                   |module_2bit_counter                  |     6|
++------+-------------------------+-------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 902.066 ; gain = 378.613
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 902.066 ; gain = 226.469
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 902.066 ; gain = 378.613
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 116 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 902.066 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  LD => LDCE: 10 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+104 Infos, 66 Warnings, 0 Critical Warnings and 1 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 902.066 ; gain = 611.203
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 902.066 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio7/Ej7_tecl2/vivado_project.runs/synth_1/top_maquina_estado_calcu_con_teclado2.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_maquina_estado_calcu_con_teclado2_utilization_synth.rpt -pb top_maquina_estado_calcu_con_teclado2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep  6 09:49:27 2022...
