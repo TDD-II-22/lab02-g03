@@ -1,7 +1,0 @@
-verilog xil_defaultlib --include "../../../ipstatic" \
-"../../../../../../Compartido/xci/WCLK/WCLK_clk_wiz.v" \
-"../../../../../../Compartido/xci/WCLK/WCLK.v" \
-
-verilog xil_defaultlib "glbl.v"
-
-nosort
