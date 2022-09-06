@@ -341,9 +341,205 @@ Cada pulso de la señal Flag_check se realiza una verificación entre el reloj d
 
 
 
-### 3.2 Ejercicio 4.Decodificador hex-to-7-segments
 
-#### 3.2.1 module_pseudo_random
+
+
+
+
+### 3.2 Ejercicio 2. Diseño Anto rebotes y Sincronizador
+
+#### Módulo top
+##### 1. Encabezado del módulo
+
+```SystemVerilog
+
+module top_module_debouncer(
+    input     logic             clk,
+    input     logic             bt1_i,
+    input     logic             rst_i,
+    output    logic    [7:0]    conta_o                         
+    );
+	
+```
+##### 2. Entradas y salidas
+- `clk`: Entrada de reloj del módulo.
+- `bt1_i`: Enyrada del módulo proveniente de un switch
+- `rst_i`: Botón de reset
+- `conta_o`: Salida del módulo. Envia el dato de `8 bits` representando el numero de veces que se activó un switch.
+
+
+#### Módulo debouncer
+
+##### 1. Encabezado del módulo
+
+```SystemVerilog
+
+module module_debouncer ( 
+
+    input     logic    clk,
+    input     logic    bt1_i,
+    input     logic    rst_i,
+    output    logic    signal_o
+    );
+	
+```
+##### 2. Entradas y salidas
+- `clk`: Entrada de reloj del módulo.
+- `bt1_i`: Enyrada del módulo proveniente de un switch
+- `rst_i`: Botón de reset
+- `signal_o`: Salida del módulo. Envia el dato de sin rebote.
+
+##### 3. Funconamiento
+
+Este bloque se basa en el accionar de dos flip flops en cascada con la finalidad de obtner a la salida la señal despues que se ha estabilizado luego de los rebotes, estos flip flops estan a una frecuencia lo sufcientemente lenta como para no detectar el rebote del switch.
+
+
+
+
+
+#### Módulo contador
+
+##### 1. Encabezado del módulo
+
+```SystemVerilog
+
+module contador_prueba(
+    input logic         clk, 
+    input logic         rst_n_i, 
+    input logic         en_i, 
+    output logic [7:0]  conta);
+
+	
+```
+##### 2. Entradas y salidas
+- `clk`: Entrada de reloj del módulo.
+- `en_i`: Entrada del módulo proveniente del debouncer.
+- `rst_n_i`: Botón de reset
+- `conta`: Salida del módulo. Envia el dato de sin rebote.
+
+##### 3. Funcionamiento
+
+Este bloque se basa en el accionar de un bloque que a una frecuencia de reloj cuando llega una señal de enable, hace una suma a la variable `conta` que almacena el resultado de la cantidad de veces que se ha pulsado el botón.
+
+
+
+
+
+
+
+
+
+
+
+### 3.3 Ejercicio 3. Interfaz del teclado hexadecimal
+
+#### Módulo top
+##### 1. Encabezado del módulo
+
+```SystemVerilog
+
+module top_module_teclado(
+    input    logic              clk,
+                                rst_i,
+                                fila1_i,
+                                fila2_i,
+                                fila3_i,
+                                fila4_i,
+                                E1_i,
+                                E2_i,                              
+    output    logic             led_det_o,
+                       [1:0]    counter_o,
+                       [3:0]    deco_o,
+                       [3:0]    leds 
+    );
+    
+```
+
+
+##### 2. Entradas y salidas
+- `clk`: Entrada de reloj del módulo.
+- `rst_i`: Botón de reset.
+- `fila1_i`: Entrada proveniente de la fila 1 del teclado hexadecimal.
+- `fila2_i`: Entrada proveniente de la fila 2 del teclado hexadecimal.
+- `fila3_i`: Entrada proveniente de la fila 3 del teclado hexadecimal.
+- `fila4_i`: Entrada proveniente de la fila 4 del teclado hexadecimal.
+- `E1_i`: Entrada bit .
+- `E2_i`: Entrada proveniente de la fila 1 del teclado hexadecimal.
+
+
+
+#### Módulo debouncer
+
+##### 1. Encabezado del módulo
+
+```SystemVerilog
+
+module module_debouncer ( 
+
+    input     logic    clk,
+    input     logic    bt1_i,
+    input     logic    rst_i,
+    output    logic    signal_o
+    );
+	
+```
+##### 2. Entradas y salidas
+- `clk`: Entrada de reloj del módulo.
+- `bt1_i`: Enyrada del módulo proveniente de un switch
+- `rst_i`: Botón de reset
+- `signal_o`: Salida del módulo. Envia el dato de sin rebote.
+
+##### 3. Funconamiento
+
+Este bloque se basa en el accionar de dos flip flops en cascada con la finalidad de obtner a la salida la señal despues que se ha estabilizado luego de los rebotes, estos flip flops estan a una frecuencia lo sufcientemente lenta como para no detectar el rebote del switch.
+
+
+
+
+
+#### Módulo contador
+
+##### 1. Encabezado del módulo
+
+```SystemVerilog
+
+module contador_prueba(
+    input logic         clk, 
+    input logic         rst_n_i, 
+    input logic         en_i, 
+    output logic [7:0]  conta);
+
+	
+```
+##### 2. Entradas y salidas
+- `clk`: Entrada de reloj del módulo.
+- `en_i`: Entrada del módulo proveniente del debouncer.
+- `rst_n_i`: Botón de reset
+- `conta`: Salida del módulo. Envia el dato de sin rebote.
+
+##### 3. Funcionamiento
+
+Este bloque se basa en el accionar de un bloque que a una frecuencia de reloj cuando llega una señal de enable, hace una suma a la variable `conta` que almacena el resultado de la cantidad de veces que se ha pulsado el botón.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 3.4 Ejercicio 4.Decodificador hex-to-7-segments
+
+#### 3.4.1 module_pseudo_random
 El módulo module_pseudo_random genera números pseudo-aleatorios de `32 bits`. 
 
 ##### 1. Encabezado del módulo
