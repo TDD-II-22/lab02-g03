@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_prueba_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="pkg_bits" />
+            <top_module name="tb_prueba" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="6063409309fs"></ZoomStartTime>
+      <ZoomEndTime time="7605378346fs"></ZoomEndTime>
+      <Cursor1Time time="6915100000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="215"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/tb_prueba/top_maquina_estado_calcu/clk_10Mhz" type="logic">
+      <obj_property name="ElementShortName">clk_10Mhz</obj_property>
+      <obj_property name="ObjectShortName">clk_10Mhz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_prueba/rst_pi" type="logic">
+      <obj_property name="ElementShortName">rst_pi</obj_property>
+      <obj_property name="ObjectShortName">rst_pi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_prueba/top_maquina_estado_calcu/sw_mode_pi" type="logic">
+      <obj_property name="ElementShortName">sw_mode_pi</obj_property>
+      <obj_property name="ObjectShortName">sw_mode_pi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_prueba/top_maquina_estado_calcu/teclado_pi" type="array">
+      <obj_property name="ElementShortName">teclado_pi[3:0]</obj_property>
+      <obj_property name="ObjectShortName">teclado_pi[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_prueba/display_po" type="array">
+      <obj_property name="ElementShortName">display_po[6:0]</obj_property>
+      <obj_property name="ObjectShortName">display_po[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_prueba/top_maquina_estado_calcu/module_memoria_calcu/memoria" type="array">
+      <obj_property name="ElementShortName">memoria[31:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">memoria[31:0][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_prueba/top_maquina_estado_calcu/mode_calculadora/module_control/leds_rgb/rgb_o" type="array">
+      <obj_property name="ElementShortName">rgb_o[2:0]</obj_property>
+      <obj_property name="ObjectShortName">rgb_o[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_prueba/top_maquina_estado_calcu/mode_calculadora/module_control/leds_rgb/digit_select" type="array">
+      <obj_property name="ElementShortName">digit_select[1:0]</obj_property>
+      <obj_property name="ObjectShortName">digit_select[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_prueba/top_maquina_estado_calcu/mode_calculadora/module_control/leds_rgb/clk_i" type="logic">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_prueba/top_maquina_estado_calcu/mode_calculadora/module_control/leds_rgb/digit_timer" type="array">
+      <obj_property name="ElementShortName">digit_timer[13:0]</obj_property>
+      <obj_property name="ObjectShortName">digit_timer[13:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_prueba/top_maquina_estado_calcu/state" type="array">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_prueba/top_maquina_estado_calcu/led_error_po" type="logic">
+      <obj_property name="ElementShortName">led_error_po</obj_property>
+      <obj_property name="ObjectShortName">led_error_po</obj_property>
+   </wvobject>
+</wave_config>
