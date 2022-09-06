@@ -1,9 +1,0 @@
-# compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../../../../Compartido/xci/WCLK" \
-"tb_module_program_counter_time_impl.v" \
-
-sv xil_defaultlib  --include "../../../../../../../Compartido/xci/WCLK" \
-"../../../../../src/simulation/tb_module_program_counter.sv" \
-
-# Do not sort compile order
-nosort

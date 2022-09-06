@@ -1,7 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio5/vivado_project.sim/sim_1/impl/timing/xsim/tb_module_program_counter_time_impl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module WCLK
-INFO: [VRFC 10-311] analyzing module WCLK__WCLK_clk_wiz
-INFO: [VRFC 10-311] analyzing module module_clock_divisor
-INFO: [VRFC 10-311] analyzing module module_program_counter
-INFO: [VRFC 10-311] analyzing module top_module_program_counter
-INFO: [VRFC 10-311] analyzing module glbl
