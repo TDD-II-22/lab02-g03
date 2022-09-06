@@ -1,0 +1,11 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/VIVADO/PROY2/lab02-g03/Ejercicios/Ejercicio3/key_detector.sv,1662357584,systemVerilog,,D:/VIVADO/PROY2/lab02-g03/Ejercicios/Ejercicio3/tb_module_key_detector.sv,,key_detector,,,../../../../../../Compartido/xci/WCLK,,,,,
+D:/VIVADO/PROY2/lab02-g03/Ejercicios/Ejercicio3/tb_module_2bit_counter.sv,1662424700,systemVerilog,,,,tb_module_2bit_counter,,,../../../../../../Compartido/xci/WCLK,,,,,
+D:/VIVADO/PROY2/lab02-g03/Ejercicios/Ejercicio3/tb_module_key_detector.sv,1662425935,systemVerilog,,,,tb_module_key_detector,,,../../../../../../Compartido/xci/WCLK,,,,,
+D:/VIVADO/PROY2/lab02-g03/Ejercicios/Ejercicio3/tb_module_key_encoding.sv,1662426639,systemVerilog,,,,tb_module_key_encoding,,,../../../../../../Compartido/xci/WCLK,,,,,
+D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Ejercicio3/module_2bit_counter.sv,1662357584,systemVerilog,,D:/VIVADO/PROY2/lab02-g03/Ejercicios/Ejercicio3/tb_module_2bit_counter.sv,,module_2bit_counter,,,../../../../../../Compartido/xci/WCLK,,,,,
+D:/VIVADO/PROY2/lab02-g03/Ejercicios/Proyectos/Ejercicio3/vivado_project.srcs/sources_1/imports/Ejercicio3/module_key_encoding.sv,1662357584,systemVerilog,,D:/VIVADO/PROY2/lab02-g03/Ejercicios/Ejercicio3/tb_module_key_encoding.sv,,module_key_encoding,,,../../../../../../Compartido/xci/WCLK,,,,,
