@@ -1,0 +1,26 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../ejercicio7.2.srcs/sources_1/ip/WCLK" \
+"../../../../ejercicio7.2.srcs/sources_1/ip/WCLK/WCLK_sim_netlist.v" \
+
+sv xil_defaultlib  --include "../../../../ejercicio7.2.srcs/sources_1/ip/WCLK" \
+"../../../../modulos/module_alu.sv" \
+"../../../../modulos/package.sv" \
+"../../../../modulos/module_barrido.sv" \
+"../../../../ejercicio7.2.srcs/sources_1/imports/Ejercicios/Compartido/module_clock_divider.sv" \
+"../../../../modulos/module_control.sv" \
+"../../../../modulos/module_control7seg_calcu.sv" \
+"../../../../modulos/module_leds_rgb.sv" \
+"../../../../modulos/module_memoria.sv" \
+"../../../../modulos/module_mode_calcu.sv" \
+"../../../../modulos/module_mode_swept.sv" \
+"../../../../modulos/module_mux.sv" \
+"../../../../ejercicio7.2.srcs/sources_1/imports/Ejercicios/Ejercicio4/module_register_pp.sv" \
+"../../../../ejercicio7.2.srcs/sources_1/imports/Ejercicios/Compartido/module_seg7_control.sv" \
+"../../../../modulos/top_maquina_estado_calcu.sv" \
+"../../../../modulos/tb_prueba.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
