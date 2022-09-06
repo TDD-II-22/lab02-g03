@@ -32,9 +32,14 @@ module module_2bit_counter(
 always_ff@(posedge clk) begin    
     if(en_i) begin
         //if (!det_i) begin 
-            if(conta_o == 2'b11 || rst_i) conta_o <= 0;
+        
+            if(conta_o == 2'b11 || rst_i) begin
+            if (!det_i)
+            conta_o <= 0;
+            end
             
-             if (!det_i) conta_o <= conta_o + 2'd1;
+            if (!det_i) conta_o <= conta_o + 2'd1;
+            
             
         end
       //  else sal_o <= conta_o;

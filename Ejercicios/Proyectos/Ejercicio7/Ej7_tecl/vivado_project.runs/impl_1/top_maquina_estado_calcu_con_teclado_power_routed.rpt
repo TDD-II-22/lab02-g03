@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Tue Sep  6 02:59:51 2022
-| Host             : Andrey-PC running 64-bit major release  (build 9200)
+| Date             : Tue Sep  6 15:37:38 2022
+| Host             : DESKTOP-07VUEC3 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_maquina_estado_calcu_con_teclado_power_routed.rpt -pb top_maquina_estado_calcu_con_teclado_power_summary_routed.pb -rpx top_maquina_estado_calcu_con_teclado_power_routed.rpx
 | Design           : top_maquina_estado_calcu_con_teclado
 | Device           : xc7a100tcsg324-1
@@ -52,14 +52,14 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |     1316 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      430 |     63400 |            0.68 |
-|   CARRY4       |    <0.001 |       20 |     15850 |            0.13 |
-|   Register     |    <0.001 |      669 |    126800 |            0.53 |
+| Clocks         |    <0.001 |        8 |       --- |             --- |
+| Slice Logic    |    <0.001 |     1373 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      446 |     63400 |            0.70 |
+|   CARRY4       |    <0.001 |       26 |     15850 |            0.16 |
+|   Register     |    <0.001 |      695 |    126800 |            0.55 |
 |   F7/F8 Muxes  |    <0.001 |       80 |     63400 |            0.13 |
-|   Others       |     0.000 |       27 |       --- |             --- |
-| Signals        |    <0.001 |     1078 |       --- |             --- |
+|   Others       |     0.000 |       29 |       --- |             --- |
+| Signals        |    <0.001 |     1132 |       --- |             --- |
 | PLL            |     0.097 |        1 |         6 |           16.67 |
 | I/O            |    <0.001 |       30 |       210 |           14.29 |
 | Static Power   |     0.097 |          |           |                 |
@@ -126,14 +126,16 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+----------------+------------------------------------------+-----------------+
-| Clock          | Domain                                   | Constraint (ns) |
-+----------------+------------------------------------------+-----------------+
-| CLK_10MHZ_WCLK | generate_clock_10Mhz/inst/CLK_10MHZ_WCLK |           100.0 |
-| clkfbout_WCLK  | generate_clock_10Mhz/inst/clkfbout_WCLK  |            50.0 |
-| sys_clk_pin    | clk_100Mhz_pi                            |            10.0 |
-| sys_clk_pin    | clk_100Mhz_pi_IBUF                       |            10.0 |
-+----------------+------------------------------------------+-----------------+
++------------------+------------------------------------------+-----------------+
+| Clock            | Domain                                   | Constraint (ns) |
++------------------+------------------------------------------+-----------------+
+| CLK_10MHZ_WCLK   | generate_clock_10Mhz/inst/CLK_10MHZ_WCLK |           100.0 |
+| CLK_10MHZ_WCLK_1 | generate_clock_10Mhz/inst/CLK_10MHZ_WCLK |           100.0 |
+| clk_100Mhz_pi    | clk_100Mhz_pi                            |            10.0 |
+| clkfbout_WCLK    | generate_clock_10Mhz/inst/clkfbout_WCLK  |            50.0 |
+| clkfbout_WCLK_1  | generate_clock_10Mhz/inst/clkfbout_WCLK  |            50.0 |
+| sys_clk_pin      | clk_100Mhz_pi                            |            10.0 |
++------------------+------------------------------------------+-----------------+
 
 
 3. Detailed Reports

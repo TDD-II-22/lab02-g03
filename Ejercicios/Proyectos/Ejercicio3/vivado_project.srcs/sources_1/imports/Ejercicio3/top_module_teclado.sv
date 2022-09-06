@@ -46,7 +46,7 @@ module top_module_teclado(
              deb4;
              
     logic    [3:0]    deco_ins;
-                  
+    
         
     WCLK generate_clock_10Mhz(
         // Clock out ports

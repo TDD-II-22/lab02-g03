@@ -35,6 +35,7 @@ module top_module_teclado(
     );
     
     logic    en_10kHz,
+             enkHz,
              locked,
              key_det,
              deb1,
@@ -45,16 +46,23 @@ module top_module_teclado(
     logic    [3:0]    deco_ins;
                      
     
-    module_clock_divider #(5_000_000, 25) en10kHz(
+    module_clock_divider #(5_000, 25) en10kHz(
         .clk_10Mhz_i       (clk_10Mhz),
         .reset_i           (rst_i),
         .clock_catodo_o    (en_10kHz)
         );
     
-
+    module_clock_divider #(500_000, 25) en_kHz(
+        .clk_10Mhz_i       (clk_10Mhz),
+        .reset_i           (rst_i),
+        .clock_catodo_o    (enkHz)
+        );
+    
+    
+    
     module_2bit_counter u1(
         .clk        (clk_10Mhz),
-        .en_i       (en_10kHz),
+        .en_i       (enkHz),
         .rst_i      (rst_i),
         .det_i      (key_det),
         .conta_o    (counter_o)
@@ -115,28 +123,28 @@ module top_module_teclado(
         .clk   (clk_10Mhz),
         .D     (counter_o[0]),
         .EN    (en_10kHz),
-        .Q     (deco_ins[0])
+        .Q     (deco_ins[3])
         );
         
     module_DFF ffc1(
         .clk   (clk_10Mhz),
         .D     (counter_o[1]),
         .EN    (en_10kHz),
-        .Q     (deco_ins[1])
+        .Q     (deco_ins[2])
         );
         
     module_DFF ffe1(
         .clk   (clk_10Mhz),
         .D     (E1_i),
         .EN    (en_10kHz),
-        .Q     (deco_ins[2])
+        .Q     (deco_ins[1])
         );
         
     module_DFF ffe2(
         .clk   (clk_10Mhz),
         .D     (E2_i),
         .EN    (en_10kHz),
-        .Q     (deco_ins[3])
+        .Q     (deco_ins[0])
         );
         
         
