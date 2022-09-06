@@ -1,0 +1,6 @@
+verilog xil_defaultlib --include "../../../ipstatic" \
+"../../../../../../Compartido/xci/WCLK/WCLK_sim_netlist.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
