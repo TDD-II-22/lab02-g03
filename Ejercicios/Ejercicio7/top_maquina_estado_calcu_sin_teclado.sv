@@ -20,13 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top_maquina_estado_calcu(
+module top_maquina_estado_calcu_sin_teclado(
     input logic                                 clk_100Mhz_pi,
                                                 rst_pi,
                                                 sw_mode_pi,
                                                 en_tecla, //SE DEBE QUITAR A LA HORA DE INTRODUCIR EL TECLADO
                     [3 : 0]                     teclado_pi,
-    output logic                                locked_po,     //PARA SIMULACION                 
+    output logic                               /* locked_po,*/     //PARA SIMULACION                 
                                                 led_error_po,
     output logic    [6 : 0]                     display_po,
                     [7 : 0]                     display_select_po,
@@ -58,12 +58,12 @@ module top_maquina_estado_calcu(
                                                 COUNT_ANODO         = 10_000,       //FRECUENCIA DEL ANODO DESEADA => clk_10Mhz / frecuencia(1KHz)
                                                 BITS_ANODO          = 14,
                                                 
-                                                /*COUNT_CATODO        = 10_000_000,
-                                                BITS_CATODO           = 24; */
+                                                COUNT_CATODO        = 10_000_000,
+                                                BITS_CATODO           = 24;
                                                 
                                                 //CLOCK PARA SIMULACION
-                                                COUNT_CATODO        = 10,
-                                                BITS_CATODO         = 4;
+                                               /*COUNT_CATODO        = 10,
+                                                BITS_CATODO         = 4; */
                                                            
     
     

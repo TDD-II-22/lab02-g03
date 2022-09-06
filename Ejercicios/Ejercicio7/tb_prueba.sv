@@ -34,7 +34,7 @@ module tb_prueba;
     logic               [7 : 0]                     display_select_po ; 
         
 
-    top_maquina_estado_calcu top_maquina_estado_calcu(
+    top_maquina_estado_calcu_sin_teclado top_maquina_estado_calcu(
     .clk_100Mhz_pi(clk_100Mhz_pi),
     .rst_pi(rst_pi),
     .sw_mode_pi(sw_mode_pi),
