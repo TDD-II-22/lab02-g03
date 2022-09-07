@@ -894,7 +894,7 @@ width="900" >\
 <img src="https://github.com/TDD-II-22/lab02-g03/blob/main/Images/tb2.png"
 width="900" >\
 
-
+<!--FINAL DEL EJERCICIO-->
 ### 3.6 Ejercicio 6. Banco de registros
 #### Constantes
 
@@ -927,7 +927,7 @@ module top_module_memoria(
 -`BITS_HEIGHT`: Es una constante númerica que almacena un número entero que si se eleva 2 a la este número representa la cantidad de filas en la matriz de memoria.
 ##### 3. Entradas y salidas
 - `clk_pi`: Entrada de reloj a 100MHz.
-- `rst_pi`: Entrada de 1 bit para el reset en bajo.
+- `rst_pi`: Entrada de 1 bit para el reset en alto.
 - `we_pi`: Entrada de 1 bit que determina si se puede escribir en memoria o no.
 - `addr_rs1_pi`: Entrada de bits dependiendo del parametro que se encarga de apuntar hacia una de las filas en la matriz de memoria.
 - `addr_rs2_pi`: Entrada de bits dependiendo del parametro que se encarga de apuntar hacia una de las filas en la matriz de memoria.
@@ -1159,6 +1159,8 @@ Se seleccionó una lógica secuencial para la resolución del ejercicio.
 ##### 5. Testbench
 Su funcionamiento se comprueba en el testbench tb_memoria.sv, revisar imágenes del comportamiento en post síntesis específicamente mostradas en el top_module_memoria.
 
+<!--FINAL DEL EJERCICIO-->
+
 ### 3.7 Ejercicio 7. Mini unidad de cálculo
 #### Constantes
 
@@ -1166,48 +1168,6 @@ Su funcionamiento se comprueba en el testbench tb_memoria.sv, revisar imágenes 
 - `bitsw_t`: Es una varible lógica parametrizada de tamaño BITS_WIDTH+1.
 - `bitsh_t`: Es una varible lógica parametrizada de tamaño BITS_WIDTH+1.
 - `matriz_2alaN_x_W_t`: Es una varible lógica parametrizada de tamaño 2**(BITS_HEIGHT)xBITS_WIDTH.\
-#### 3.7.1 toptop
-Este modulo se encarga de guardar en la memoria dependiendo de si el W/E se encuentre activo, si no, puede funcionara en modo lectura en donde se ven los valores almacenados en la memoria.
-
-##### 1. Encabezado del módulo
-```SystemVerilog
-module module_memoria(
-                        input                           clk_i,
-                        input                           rst_i,
-                        input                            we_i,
-                        input  pkg_bits:: bitsh_t  addr_rs1_i,
-                        input  pkg_bits:: bitsh_t  addr_rs2_i,
-                        input  pkg_bits:: bitsh_t   addr_rd_i,
-                        input  pkg_bits:: bits_t    data_in_i,
-                        output pkg_bits:: bits_t        rs1_o,
-                        output pkg_bits:: bits_t        rs2_o
-                         );
-```
-
-
-##### 2. Parámetros
-
--`BITS_WIDTH`: Es una constante númerica que almacena un número entero que representa el número de bits deseados.
--`BITS_HEIGHT`: Es una constante númerica que almacena un número entero que si se eleva 2 a la este número representa la cantidad de filas en la matriz de memoria.
-##### 3. Entradas y salidas
-- `clk_i`: Entrada de reloj a 100MHz.
-- `rst_i`: Entrada de 1 bit para el reset en bajo.
-- `we_i`: Entrada de 1 bit que determina si se puede escribir en memoria o no.
-- `addr_rs1_i`: Entrada de bits dependiendo del parametro que se encarga de apuntar hacia una de las filas en la matriz de memoria.
-- `addr_rs2_i`: Entrada de bits dependiendo del parametro que se encarga de apuntar hacia una de las filas en la matriz de memoria.
-- `addr_rd_i`: Entrada de bits dependiendo del parametro que se encarga de apuntar hacia una la fila que se va a escribir en la matriz de memoria.
-- `data_in_i`: Entrada de bits dependiendo del parametro que indica el valor que se guardará en memoria.
-- `rs1_o`: Salida de bits dependiendo del parametro que se encarga de sacar el valor en memoria del espacio que apuntaba addr_rs1_pi.
-- `rs2_o`: Salida de bits dependiendo del parametro que se encarga de sacar el valor en memoria del espacio que apuntaba addr_rs2_pi.
-
-##### 4. Criterios de diseño
-Se seleccionó una lógica secuencial para la resolución del ejercicio.
-
-##### 5. Testbench
-El testbench que corresponde a este archivo tb_memoria.sv, ademas en la primera imagen se ve la simulación de comportamiento y en la segunda la post síntesis en donde se observan a detalle los retardos entre los relojes y en el momento que se dan los cambios en memoria.
-<img src="https://github.com/TDD-II-22/lab1-g03/blob/main/Images/modo0normal.png" width="300" >
-<img src="https://github.com/TDD-II-22/lab1-g03/blob/main/Images/demoregisterfull.png" width="300" >
-<img src="https://github.com/TDD-II-22/lab1-g03/blob/main/Images/modosweep.png" width="300" >
 
 #### 3.7.2 module_memoria
 Este modulo se encarga de guardar en la memoria dependiendo de si el W/E se encuentre activo, si no, puede funcionara en modo lectura en donde se ven los valores almacenados en la memoria.
@@ -1252,65 +1212,7 @@ El testbench que corresponde a este archivo tb_memoria.sv, ademas en la primera 
 <img src="https://github.com/TDD-II-22/lab1-g03/blob/main/Images/simulacion_post_sintesis.png" width="300" >
 
 
-#### 3.7.3 WCLK
-Este modulo se encarga de generar un reloj de 10MHz a partir de un reloj de 100MHz.
-##### 1. Encabezado del módulo
-```SystemVerilog
-module WCLK
- (
-  // Clock out ports
-  output        CLK_10MHZ,
-  // Status and control signals
-  output        locked,
- // Clock in ports
-  input         CLK_100MHZ
- );
-```
-
-##### 2. Parámetros
-No posee parámetros.
-##### 3. Entradas y salidas
-- `CLK_100MHZ`:Entrada de reloj a 100MHz.
-- `CLK_10MHZ`:Salida de reloj a 10MHz.
-- `locked`: Salida de 1 bit que indica cuando el reloj se estabilizó.
-
-
-##### 4. Criterios de diseño
-Se seleccionó una lógica secuencial para la resolución del ejercicio.
-
-
-##### 5. Testbench
-Su funcionamiento se comprueba en el testbench tb_memoria.sv, imagenes en primer modulo.
-
-
-#### 3.7.4 module_mux
-Este modulo se encarga de crear un multiplexor.
-##### 1. Encabezado del módulo
-```SystemVerilog
-module module_mux(
-                    input  logic  [ 15 : 0 ]            tecla_i,
-                    input  logic  [ 15 : 0 ]    resultado_ALU_i,
-                    input                           seleccion_i,
-                    output logic [ 15 : 0 ]          data_reg_o
-    );
-```
-
-##### 2. Parámetros
-No posee parámetros.
-##### 3. Entradas y salidas
-- `tecla_i`:Entrada para cuando la selección esté en cero, representa la entrada del teclado.
-- `resultado_ALU_i`: Entrada para cuando la selección esté en uno, representa el resultado de la ALU.
-- `seleccion_i`: Entrada de 1 bit que selecciona cual entrada se mostrará a la salida.
-- `data_reg_o`: Salida que depende de la selección respecto a cual entrada es.
-
-##### 4. Criterios de diseño
-Se seleccionó una lógica combinacional para la resolución del ejercicio.
-
-
-##### 5. Testbench
-Su funcionamiento se comprueba en el testbench tb_prueba.sv, imagenes en primer modulo.
-
-
+<!--FINAL DE MODULO-->
 #### 3.7.3 module_barrido
 Este modulo se encarga de realizar el barrido en memoria.
 ##### 1. Encabezado del módulo
@@ -1335,11 +1237,122 @@ No posee parámetros.
 ##### 4. Criterios de diseño
 Se seleccionó una lógica secuencial para la resolución del ejercicio.
 
+##### 5. Testbench
+Su funcionamiento se comprueba en el testbench tb_prueba.sv, imagenes en primer modulo.
+
+
+
+<!--FINAL DE MODULO-->
+#### 3.7.4 module_control
+Este modulo se encarga de controlar principalmente los direcciones de memoria donde se van a almacenar los datos, asi como indicadores de error. Hace instancia del modulo module_leds_rgb.l
+##### 1. Encabezado del módulo
+```SystemVerilog
+module module_mode_calcu(
+
+    input logic                                 clk_i,
+                                                rst_i,
+                                                selec_mux_i,
+                    [2 : 0]                     control_save_i,
+                    [3 : 0]                     teclado_i,
+    pkg_bits:: bits_t                           ope_a,
+                                                ope_b,
+    output logic                                led_error_o,
+					[2 : 0]                     rgb_o,
+                    [4 : 0]                     addr_rs1,
+                                                addr_rs2,
+                                                contador_r,
+    pkg_bits:: bits_t                           data_reg                        
+    );
+```
+
+##### 2. Parámetros
+No posee parámetros.
+
+##### 3. Entradas y salidas
+- `clk_pi`: Entrada de reloj a 100MHz.
+- `rst_pi`: Entrada de 1 bit para el reset en bajo.
+- `selec_mux_i`: Entrada de 1 bit que selecciona cual entrada se mostrará a la salida.
+- `control_save_i`: Entrada de 3 bits direcciona que puntero a seleccionar.
+- `teclado_i`: Entrada de 3 bits de la entrada del teclado
+- `ope_a`: Dato a utilizado para el calculo de operaciones
+- `ope_b`: Dato b utilizado para el calculo de operaciones
+- `rgb_o`: Salida de 3 bits utilizada para encender un led rgb dependiendo de la operacion de calculo seleccinada.
+- `addr_rs1`: Salida que indica la posicion del registro a mostrar
+- `addr_rs2`: Salida que indica la posicion del registro a mostrar
+- `contador_r`: Salida que indica la posision donde se va a almacenar el dato en el registro
+- `data_reg`: Salida que contiene el dato o el resultado operacional.
+- `led_error_o`: Salida de 1 bit, enciende un led cuando una operacion de calculo se digito incorrectamente.
+
+
+##### 4. Criterios de diseño
+Se seleccionó una lógica secuencial para la resolución del ejercicio.
 
 ##### 5. Testbench
 Su funcionamiento se comprueba en el testbench tb_prueba.sv, imagenes en primer modulo.
 
 
+<!--FINAL DE MODULO-->
+#### 3.7.1 module_leds_rgb
+El modulo realiza el proceso de muestreo de los leds RGB.
+
+##### 1. Encabezado del módulo
+```SystemVerilog
+module module_leds_rgb #(parameter COUNT = 10_000, BITS = 14)(
+    
+    input   logic               clk_i,
+                                rst_i,
+                    [2 : 0]     color_i,
+    output  logic   [2 : 0]     rgb_o
+    
+    );
+```
+
+##### 2. Parámetros
+Tiene los parametros:
+- `COUNT`: define cantidad a contar para realizar un periodo de dado.
+- `BITS`: define la cantidad de bits que necesita el `COUNT`.
+
+##### 3. Entradas y salidas
+- `clk_i`:Entrada de señal de reloj.
+- `rst_i`: Entrada para reiniciar el sistema.
+- `color_i`: Salida de 3 bits que indica el color del led a encender
+- `rgb_o`: Salida que mostrara el color determinado en la FPGA.
+##### 4. Criterios de diseño
+Se seleccionó una lógica secuencial para la resolución del ejercicio.
+
+
+##### 5. Testbench
+No se diseño un testbench para este bloque.
+
+<!--FINAL DE MODULO-->
+#### 3.7.4 module_mux
+Este modulo se encarga de crear un multiplexor.
+##### 1. Encabezado del módulo
+```SystemVerilog
+module module_mux(
+                    input  logic  [ 15 : 0 ]            tecla_i,
+                    input  logic  [ 15 : 0 ]    resultado_ALU_i,
+                    input                           seleccion_i,
+                    output logic [ 15 : 0 ]          data_reg_o
+    );
+```
+
+##### 2. Parámetros
+No posee parámetros.
+##### 3. Entradas y salidas
+- `tecla_i`:Entrada para cuando la selección esté en cero, representa la entrada del teclado.
+- `resultado_ALU_i`: Entrada para cuando la selección esté en uno, representa el resultado de la ALU.
+- `seleccion_i`: Entrada de 1 bit que selecciona cual entrada se mostrará a la salida.
+- `data_reg_o`: Salida que depende de la selección respecto a cual entrada es.
+
+##### 4. Criterios de diseño
+Se seleccionó una lógica combinacional para la resolución del ejercicio.
+
+##### 5. Testbench
+No se diseño un testbench para este bloque.
+
+
+<!--FINAL DE MODULO-->
 #### 3.7.5 module_alu
 Este modulo se encarga de llamar a la función que genera el ALU.
 ##### 1. Encabezado del módulo
@@ -1361,11 +1374,314 @@ No posee parámetros.
 - `resultado_o`: Salida representa el resultado de la operación.
 
 ##### 4. Criterios de diseño
+Se seleccionó una lógica secuencial para la resolución del ejercicio.
+
+
+##### 5. Testbench
+No se diseño un testbench para este bloque.
+
+<!--FINAL DE MODULO-->
+#### 3.7.1 module_mode_calcu
+Es el módulo subTOP del sistema. Se hace instancia a los modulos module_control, module_mux, module_alu.
+
+##### 1. Encabezado del módulo
+```SystemVerilog
+module module_barrido(
+    input logic                                 clk_i,
+                                                clock_1s,
+                                                rst_i,
+                                                desbloqueo_barrido_i,
+    output          pkg_bits:: bitsh_t          contador_r 
+    );
+```
+
+##### 2. Parámetros
+No posee parámetros.
+##### 3. Entradas y salidas
+- `clk_i`:Entrada de señal de reloj.
+- `clock_1s`: Entrada de habilitador para habilitar los cambios cada segundo y no cada ciclo.
+- `rst_i`: Entrada para reiniciar el sistema.
+- `desbloqueo_barrido_i`: Entrada que habilita o deshabilita el barrido del registro.
+- `contador_r``: Salida que saca el valor de un contador
+##### 4. Criterios de diseño
 Se seleccionó una lógica combinacional para la resolución del ejercicio.
 
 
 ##### 5. Testbench
-Su funcionamiento se comprueba en el testbench tb_prueba.sv, imagenes en primer modulo.
+No se diseño un testbench para este bloque.
+
+<!--FINAL DE MODULO-->
+
+#### 3.7.1 module_control7seg_calcu
+Es el módulo subTOP del sistema. Se hace instancia a los modulos module_register_pp, module_seg7_control.
+
+##### 1. Encabezado del módulo
+```SystemVerilog
+module module_control7seg_calcu #(parameter COUNT_ANODO = 10_000, BITS_ANODO = 14)(
+
+    input   logic               clk_i,
+                                rst_i,
+                                control_reg_i,
+                    [31 : 0]    display_i,
+    output  logic   [6 : 0]     display_o,
+                    [7 : 0]     display_select_o            
+    );
+```
+
+##### 2. Parámetros
+- `COUNT_ANODO`: define cantidad a contar para realizar un periodo de dado.
+- `BITS_ANODO`: define la cantidad de bits que necesita el `COUNT_ANODO`.
+##### 3. Entradas y salidas
+- `clk_i`:Entrada de señal de reloj.
+- `rst_i`: Entrada para reiniciar el sistema.
+- `control_reg_i`: Entrada que habilita el write enable del registro y permite escritura.
+- `display_i`: Entrada del módulo. Recibe el dato de `32 bits`  que se va a mostrar en el display.
+- `display_o`: Salida del módulo. Envia el dato de `7 bits` que se va a enviar al cátodo de los display.
+- `display_select_o`: Entrada del módulo. Envia el dato de `8 bits` que se va a enviar al ánodo de los display.
+##### 4. Criterios de diseño
+Se seleccionó una lógica combinacional para la resolución del ejercicio.
+
+
+##### 5. Testbench
+No se diseño un testbench para este bloque.
+
+<!--FINAL DE MODULO-->
+
+#### 3.7.1 top_module_teclado
+Es el módulo subTOP del sistema. Se hace instancia a los modulos module_clock_divider, module_2bit_counter, key_detector, module_DFF, module_key_encoding.
+
+##### 1. Encabezado del módulo
+```SystemVerilog
+    input    logic              clk_10Mhz,
+                                rst_i,                           
+                                fila1_i,
+                                fila2_i,
+                                fila3_i,
+                                fila4_i,
+                                E1_i,
+                                E2_i,                              
+    output    logic             led_det_o,
+                       [1:0]    counter_o,
+                       [3:0]    deco_o
+    );
+```
+
+##### 2. Parámetros
+- `COUNT_ANODO`: define cantidad a contar para realizar un periodo de dado.
+- `BITS_ANODO`: define la cantidad de bits que necesita el `COUNT_ANODO`.
+##### 3. Entradas y salidas
+- `clk_i`:Entrada de señal de reloj.
+- `rst_i`: Entrada para reiniciar el sistema.
+- `fila1_i`: Entrada de 1 bits. Obtiene mediante entrada analogica la fila de la tecla seleccionada.
+- `fila2_i`: Entrada de 1 bits. Obtiene mediante entrada analogica la fila de la tecla seleccionada.
+- `fila3_i`: Entrada de 1 bits. Obtiene mediante entrada analogica la fila de la tecla seleccionada.
+- `fila4_i`: Entrada de 1 bits. Obtiene mediante entrada analogica la fila de la tecla presionada.
+- `E1_i`: Entrada de 1 bit que determina cuando se esta oprimiendo una tecla
+- `E2_i`: Entrada de 1 bit que determina cuando se esta oprimiendo una tecla
+- `led_det_o`: Salida de 1 bit, envia un pulso de una vez presionado la tecla.
+- `counter_o`: Salida analogica que es enviada al teclado.
+
+##### 4. Criterios de diseño
+Se seleccionó una lógica combinacional para la resolución del ejercicio.
+
+
+##### 5. Testbench
+No se diseño un testbench para este bloque.
+
+
+#### 3.7.1 top_maquina_estado_calcu_con_teclado2
+Es el módulo TOP del sistema. Se hace instancia a los modulos WCLK, module_mode_calcu, module_mode_swept, module_control7seg_calcu, module_debounce, top_module_teclado y la maquina de estados.
+
+##### 1. Encabezado del módulo
+```SystemVerilog
+module top_maquina_estado_calcu_con_teclado2(
+    input logic                                 clk_100Mhz_pi,
+                                                rst_pi,
+                                                sw_mode_pi,
+                    [1 : 0]                     E1_i,
+                    [3 : 0]                     fila_i,
+    /*output logic                              locked_po,*/    //PARA SIMULACION                 
+    output logic                                led_error_po,
+                    [1 : 0]                     counter_o,
+                    [6 : 0]                     display_po,
+                    [7 : 0]                     display_select_po,
+                    [2 : 0]                     rgb_po    
+                                      
+    );
+```
+
+
+##### 2. Parámetros
+
+Este módulo no posee parámetros.
+
+
+##### 3. Entradas y salidas
+- `clk_100Mhz_pi`: Entrada de reloj a 100MHz.
+- `rst_pi`: Entrada de 1 bit para el reset en bajo.
+- `sw_mode_pi`: Entrada de 1 bit que determina el modo de operaciond de la unidad.
+- `E1_i`: Entrada de 2 bit que determina cuando se esta oprimiendo una tecla
+- `fila_i`: Entrada de 4 bits. Obtiene mediante entrada analogica la fila de la tecla presionada.
+- `locked_po`: Entrada de 1 bit que se activa en unica una vez que el wizard clock se estabiliza (unicamente simulación)
+- `led_error_po`: Salida de 1 bit, enciende un led cuando una operacion de calculo se digito incorrectamente.
+- `counter_o`: Salida analogica que es enviada al teclado
+- `display_po`: Salida del módulo. Envia el dato de `7 bits` que se va a enviar al cátodo de los display de la FPGA.
+- `display_select_po`: Entrada del módulo. Envia el dato de `8 bits` que se va a enviar al ánodo de los display de la FPGA.
+- `rgb_po`: Salida de 3 bits utilizada para encender un led rgb dependiendo de la operacion de calculo seleccinada.
+
+##### 4. Criterios de diseño
+a. Se seleccionó una lógica cambinacional para la resolución del ejercicio.
+
+b. Se definieron los parámetros -`WAIT_DIGIT`, `WAIT_OP`, `WAIT_DIGIT2`, `WAIT_E`, `SAVE`, `SWEPT`, `RESET_SWEPT`, `COUNT_ANODO`, `BITS_ANODO`, `COUNT_CATODO`, `BITS_CATODO` para permitir que el sistema pueda adaptarse a 
+diferentes requerimientos aparte del mostrado en la figura anterior.
+
+##### 5. Constraints
+
+Los pines asignados son:
+
+| Señal         		| Pin   | En tarjeta    |
+| ----------------------|:-----:| -------------:|
+| clk_100Mhz_pi        	| E3    | CLK100MHZ     |
+| reset_pi        		| V10   | BTND          |
+| control_pi      		| U9    | SW0           |
+| sw_mode_pi			| P4    | SW15			|
+| rgb_po[2]				| K5    | LED16_R    	|
+| rgb_po[|]				| F13   | LED16_G    	|
+| rgb_po[0]				| F6    | LED16_B    	|
+| led_error_po			| H6    | LED17_G    	|
+| display_po[0]     	| L3	| CA            |
+| display_po[1]     	| N1	| CB            |
+| display_po[2]     	| L5	| CC            |
+| display_po[3]     	| L4	| CD            |
+| display_po[4]     	| K3	| CE            |
+| display_po[5]     	| M2	| CF            |
+| display_po[6]     	| L6	| CG            |
+| display_select_po[0]  | N6	| AN0           |
+| display_select_po[1]  | M6	| AN1           |
+| display_select_po[2]  | M3	| AN2           |
+| display_select_po[3]  | N5	| AN3           |
+| display_select_po[4]  | N2	| AN4           |
+| display_select_po[5]  | N4	| AN5           |
+| display_select_po[6]  | L1	| AN6           |
+| display_select_po[7]  | M1	| AN7           |
+| counter_o[0]			| G13	| JA7           |
+| counter_o[1]			| B13	| JA1           |
+| fila_i[0]				| F14	| JA2           |
+| fila_i[1]				| C17	| JA8           |
+| fila_i[2]				| D17	| JA3           |
+| fila_i[3]				| D18	| JA9           |
+| E1_i[0]				| E17	| JA4           |
+| E1_i[1]				| G13	| JA8           |
+
+Se definieron las siguientes constraints:
+
+```sdc
+
+set_property PACKAGE_PIN E3 [get_ports clk_pi]
+set_property IOSTANDARD LVCMOS33 [get_ports clk_pi]
+create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_pi]
+
+set_property PACKAGE_PIN P4 [get_ports {sw_mode_pi}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sw_mode_pi}]
+
+set_property PACKAGE_PIN K5 [get_ports rgb_po[2]]
+set_property IOSTANDARD LVCMOS33 [get_ports rgb_po[2]]
+
+set_property PACKAGE_PIN F13 [get_ports rgb_po[1]]    
+set_property IOSTANDARD LVCMOS33 [get_ports rgb_po[1]]
+
+set_property PACKAGE_PIN F6 [get_ports rgb_po[0]]
+set_property IOSTANDARD LVCMOS33 [get_ports rgb_po[0]]
+
+set_property PACKAGE_PIN H6 [get_ports led_error_po]
+set_property IOSTANDARD LVCMOS33 [get_ports led_error_po]
+
+set_property PACKAGE_PIN L3 [get_ports {display_po[0]}]
+	set_property IOSTANDARD LVCMOS33 [get_ports {display_po[0]}]
+	
+set_property PACKAGE_PIN N1 [get_ports {display_po[1]}]
+	set_property IOSTANDARD LVCMOS33 [get_ports {display_po[1]}]	
+	
+set_property PACKAGE_PIN L5 [get_ports {display_po[2]}]
+	set_property IOSTANDARD LVCMOS33 [get_ports {display_po[2]}]	
+	
+set_property PACKAGE_PIN L4 [get_ports {display_po[3]}]
+	set_property IOSTANDARD LVCMOS33 [get_ports {display_po[3]}]
+
+set_property PACKAGE_PIN K3 [get_ports {display_po[4]}]
+	set_property IOSTANDARD LVCMOS33 [get_ports {display_po[4]}]
+
+set_property PACKAGE_PIN M2 [get_ports {display_po[5]}]
+	set_property IOSTANDARD LVCMOS33 [get_ports {display_po[5]}]
+
+set_property PACKAGE_PIN L6 [get_ports {display_po[6]}]
+	set_property IOSTANDARD LVCMOS33 [get_ports {display_po[6]}]
+
+set_property PACKAGE_PIN N6 [get_ports {display_select_po[0]}]
+	set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[0]}]
+
+set_property PACKAGE_PIN M6 [get_ports {display_select_po[1]}]
+	set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[1]}]
+
+set_property PACKAGE_PIN M3 [get_ports {display_select_po[2]}]
+	set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[2]}]
+
+set_property PACKAGE_PIN N5 [get_ports {display_select_po[3]}]
+	set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[3]}]
+	
+set_property PACKAGE_PIN N2 [get_ports {display_select_po[4]}]
+	set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[4]}]	
+	
+set_property PACKAGE_PIN N4 [get_ports {display_select_po[5]}]
+	set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[5]}]	
+	
+set_property PACKAGE_PIN L1 [get_ports {display_select_po[6]}]
+	set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[6]}]	
+	
+set_property PACKAGE_PIN M1 [get_ports {display_select_po[7]}]
+	set_property IOSTANDARD LVCMOS33 [get_ports {display_select_po[7]}]
+
+set_property PACKAGE_PIN V10 [get_ports rst_pi]
+set_property IOSTANDARD LVCMOS33 [get_ports rst_pi]
+
+set_property PACKAGE_PIN B13 [get_ports {counter_o[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {counter_o[1]}]
+
+set_property PACKAGE_PIN F14 [get_ports fila_i[0]]
+set_property IOSTANDARD LVCMOS33 [get_ports fila_i[0]]
+
+set_property PACKAGE_PIN D17 [get_ports {fila_i[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports fila_i[2]]
+
+set_property PACKAGE_PIN E17 [get_ports E1_i[0]]
+set_property IOSTANDARD LVCMOS33 [get_ports E1_i[0]]
+
+set_property PACKAGE_PIN G13 [get_ports {counter_o[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {counter_o[0]}]
+
+set_property PACKAGE_PIN C17 [get_ports fila_i[1]]
+set_property IOSTANDARD LVCMOS33 [get_ports fila_i[1]]
+
+set_property PACKAGE_PIN D18 [get_ports fila_i[3]]
+set_property IOSTANDARD LVCMOS33 [get_ports fila_i[3]]
+
+set_property PACKAGE_PIN E18 [get_ports E1_i[1]]
+set_property IOSTANDARD LVCMOS33 [get_ports E1_i[1]]
+
+````
+
+
+##### 5. Testbench
+El testbench que corresponde a este archivo tb_memoria.sv, ademas en la primera imagen se ve la simulación de comportamiento y en la segunda la post síntesis en donde se observan a detalle los retardos entre los relojes y en el momento que se dan los cambios en memoria.
+<img src="https://github.com/TDD-II-22/lab1-g03/blob/main/Images/modo0normal.png" width="300" >
+<img src="https://github.com/TDD-II-22/lab1-g03/blob/main/Images/demoregisterfull.png" width="300" >
+<img src="https://github.com/TDD-II-22/lab1-g03/blob/main/Images/modosweep.png" width="300" >
+
+
+
+
+
+
 
 
 ## Apendices:
