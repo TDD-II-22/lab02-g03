@@ -1169,7 +1169,7 @@ Su funcionamiento se comprueba en el testbench tb_memoria.sv, revisar imágenes 
 - `bitsh_t`: Es una varible lógica parametrizada de tamaño BITS_WIDTH+1.
 - `matriz_2alaN_x_W_t`: Es una varible lógica parametrizada de tamaño 2**(BITS_HEIGHT)xBITS_WIDTH.\
 
-#### 3.7.2 module_memoria
+#### 3.7.1 module_memoria
 Este modulo se encarga de guardar en la memoria dependiendo de si el W/E se encuentre activo, si no, puede funcionara en modo lectura en donde se ven los valores almacenados en la memoria.
 
 ##### 1. Encabezado del módulo
@@ -1213,7 +1213,7 @@ El testbench que corresponde a este archivo tb_memoria.sv, ademas en la primera 
 
 
 <!--FINAL DE MODULO-->
-#### 3.7.3 module_barrido
+#### 3.7.2 module_barrido
 Este modulo se encarga de realizar el barrido en memoria.
 ##### 1. Encabezado del módulo
 ```SystemVerilog
@@ -1243,7 +1243,7 @@ Su funcionamiento se comprueba en el testbench tb_prueba.sv, imagenes en primer 
 
 
 <!--FINAL DE MODULO-->
-#### 3.7.4 module_control
+#### 3.7.3 module_control
 Este modulo se encarga de controlar principalmente los direcciones de memoria donde se van a almacenar los datos, asi como indicadores de error. Hace instancia del modulo module_leds_rgb.l
 ##### 1. Encabezado del módulo
 ```SystemVerilog
@@ -1292,7 +1292,7 @@ Su funcionamiento se comprueba en el testbench tb_prueba.sv, imagenes en primer 
 
 
 <!--FINAL DE MODULO-->
-#### 3.7.1 module_leds_rgb
+#### 3.7.4 module_leds_rgb
 El modulo realiza el proceso de muestreo de los leds RGB.
 
 ##### 1. Encabezado del módulo
@@ -1325,7 +1325,7 @@ Se seleccionó una lógica secuencial para la resolución del ejercicio.
 No se diseño un testbench para este bloque.
 
 <!--FINAL DE MODULO-->
-#### 3.7.4 module_mux
+#### 3.7.5 module_mux
 Este modulo se encarga de crear un multiplexor.
 ##### 1. Encabezado del módulo
 ```SystemVerilog
@@ -1353,7 +1353,7 @@ No se diseño un testbench para este bloque.
 
 
 <!--FINAL DE MODULO-->
-#### 3.7.5 module_alu
+#### 3.7.6 module_alu
 Este modulo se encarga de llamar a la función que genera el ALU.
 ##### 1. Encabezado del módulo
 ```SystemVerilog
@@ -1381,7 +1381,7 @@ Se seleccionó una lógica secuencial para la resolución del ejercicio.
 No se diseño un testbench para este bloque.
 
 <!--FINAL DE MODULO-->
-#### 3.7.1 module_mode_calcu
+#### 3.7.7 module_mode_calcu
 Es el módulo subTOP del sistema. Se hace instancia a los modulos module_control, module_mux, module_alu.
 
 ##### 1. Encabezado del módulo
@@ -1412,7 +1412,7 @@ No se diseño un testbench para este bloque.
 
 <!--FINAL DE MODULO-->
 
-#### 3.7.1 module_control7seg_calcu
+#### 3.7.8 module_control7seg_calcu
 Es el módulo subTOP del sistema. Se hace instancia a los modulos module_register_pp, module_seg7_control.
 
 ##### 1. Encabezado del módulo
@@ -1447,7 +1447,7 @@ No se diseño un testbench para este bloque.
 
 <!--FINAL DE MODULO-->
 
-#### 3.7.1 top_module_teclado
+#### 3.7.9 top_module_teclado
 Es el módulo subTOP del sistema. Se hace instancia a los modulos module_clock_divider, module_2bit_counter, key_detector, module_DFF, module_key_encoding.
 
 ##### 1. Encabezado del módulo
@@ -1489,7 +1489,7 @@ Se seleccionó una lógica combinacional para la resolución del ejercicio.
 No se diseño un testbench para este bloque.
 
 
-#### 3.7.1 top_maquina_estado_calcu_con_teclado2
+#### 3.7.10 top_maquina_estado_calcu_con_teclado2
 Es el módulo TOP del sistema. Se hace instancia a los modulos WCLK, module_mode_calcu, module_mode_swept, module_control7seg_calcu, module_debounce, top_module_teclado y la maquina de estados.
 
 ##### 1. Encabezado del módulo
