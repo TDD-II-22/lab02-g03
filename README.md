@@ -1546,7 +1546,7 @@ Los pines asignados son:
 | control_pi      		| U9    | SW0           |
 | sw_mode_pi			| P4    | SW15			|
 | rgb_po[2]				| K5    | LED16_R    	|
-| rgb_po[|]				| F13   | LED16_G    	|
+| rgb_po[1]				| F13   | LED16_G    	|
 | rgb_po[0]				| F6    | LED16_B    	|
 | led_error_po			| H6    | LED17_G    	|
 | display_po[0]     	| L3	| CA            |
