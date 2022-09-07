@@ -1675,7 +1675,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports E1_i[1]]
 El testbench que corresponde a este archivo tb_memoria.sv, ademas en la primera imagen se ve la simulación de comportamiento y en la segunda la post síntesis en donde se observan a detalle los retardos entre los relojes y en el momento que se dan los cambios en memoria.
 <img src="https://github.com/TDD-II-22/lab02-g03/blob/main/Images/modo0normal.png" width="300" >
 <img src="https://github.com/TDD-II-22/lab02-g03/blob/main/Images/demoregisterfull.png" width="300" >
-<img src="https://github.com/TDD-II-22/lab02-g03/blob/main/Images/modosweep.png" width="300" >
+<img src="https://github.com/TDD-II-22/lab02-g03/blob/main/Images/modosweep.png" width="600" >\
+
 
 
 
