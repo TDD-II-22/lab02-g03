@@ -1257,7 +1257,7 @@ module module_mode_calcu(
     pkg_bits:: bits_t                           ope_a,
                                                 ope_b,
     output logic                                led_error_o,
-					[2 : 0]                     rgb_o,
+		    [2 : 0]                     rgb_o,
                     [4 : 0]                     addr_rs1,
                                                 addr_rs2,
                                                 contador_r,
@@ -1673,9 +1673,9 @@ set_property IOSTANDARD LVCMOS33 [get_ports E1_i[1]]
 
 ##### 5. Testbench
 El testbench que corresponde a este archivo tb_memoria.sv, ademas en la primera imagen se ve la simulación de comportamiento y en la segunda la post síntesis en donde se observan a detalle los retardos entre los relojes y en el momento que se dan los cambios en memoria.
-<img src="https://github.com/TDD-II-22/lab1-g03/blob/main/Images/modo0normal.png" width="300" >
-<img src="https://github.com/TDD-II-22/lab1-g03/blob/main/Images/demoregisterfull.png" width="300" >
-<img src="https://github.com/TDD-II-22/lab1-g03/blob/main/Images/modosweep.png" width="300" >
+<img src="https://github.com/TDD-II-22/lab2-g03/blob/main/Images/modo0normal.png" width="300" >
+<img src="https://github.com/TDD-II-22/lab2-g03/blob/main/Images/demoregisterfull.png" width="300" >
+<img src="https://github.com/TDD-II-22/lab2-g03/blob/main/Images/modosweep.png" width="300" >
 
 
 
