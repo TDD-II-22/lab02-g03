@@ -54,7 +54,7 @@ module module_debouncer (
         .clock_catodo_o    (en_out)  
         );
     */
-    clock_enable(
+    clock_enable clkEN(
         .Clk_10M (clk),
         .slow_clk_en (en_out) 
     );

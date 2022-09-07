@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../Compartido/xci/WCLK" \
+"../../../../../../Compartido/xci/WCLK/WCLK_clk_wiz.v" \
+"../../../../../../Compartido/xci/WCLK/WCLK.v" \
+
+sv xil_defaultlib  --include "../../../../../../Compartido/xci/WCLK" \
+"../../../../../../Ejercicio3/key_detector.sv" \
+"../../../../vivado_project.srcs/sources_1/imports/Compartido/module_DFF.sv" \
+"../../../../vivado_project.srcs/sources_1/imports/Compartido/module_clock_catodo.sv" \
+"../../../../vivado_project.srcs/sources_1/imports/Ejercicio3/module_key_encoding.sv" \
+"../../../../../../Ejercicio3/top_tb_teclado.sv" \
+"../../../../../../Ejercicio3/tb_teclado.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
