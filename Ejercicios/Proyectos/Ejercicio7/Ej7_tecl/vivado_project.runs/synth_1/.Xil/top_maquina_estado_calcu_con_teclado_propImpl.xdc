@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/TDD/lab02-g03/Ejercicios/Constraints/contraints_calculadora__con_teclado.xdc rfile:../../../../../../Constraints/contraints_calculadora__con_teclado.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Constraints/contraints_calculadora__con_teclado.xdc rfile:../../../../../../Constraints/contraints_calculadora__con_teclado.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN E3 [get_ports clk_100Mhz_pi]
 set_property src_info {type:XDC file:1 line:59 export:INPUT save:INPUT read:READ} [current_design]

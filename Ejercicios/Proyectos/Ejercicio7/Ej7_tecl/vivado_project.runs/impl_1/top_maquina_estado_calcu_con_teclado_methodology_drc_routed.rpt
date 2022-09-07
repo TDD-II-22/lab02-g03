@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Sep  6 15:37:38 2022
-| Host         : DESKTOP-07VUEC3 running 64-bit major release  (build 9200)
+| Date         : Tue Sep  6 14:20:05 2022
+| Host         : Andrey-PC running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_maquina_estado_calcu_con_teclado_methodology_drc_routed.rpt -pb top_maquina_estado_calcu_con_teclado_methodology_drc_routed.pb -rpx top_maquina_estado_calcu_con_teclado_methodology_drc_routed.rpx
 | Design       : top_maquina_estado_calcu_con_teclado
 | Device       : xc7a100tcsg324-1
@@ -24,23 +24,24 @@ Table of Contents
       Design limits: <entire design considered>
              Max violations: <unlimited>
              Violations found: 12
-+-----------+------------------+------------------------------------------------+------------+
-| Rule      | Severity         | Description                                    | Violations |
-+-----------+------------------+------------------------------------------------+------------+
-| TIMING-6  | Critical Warning | No common primary clock between related clocks | 2          |
-| TIMING-20 | Warning          | Non-clocked latch                              | 10         |
-+-----------+------------------+------------------------------------------------+------------+
++-----------+------------------+----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                        | Violations |
++-----------+------------------+----------------------------------------------------+------------+
+| TIMING-2  | Critical Warning | Invalid primary clock source pin                   | 1          |
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
+| TIMING-20 | Warning          | Non-clocked latch                                  | 10         |
++-----------+------------------+----------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-TIMING-6#1 Critical Warning
-No common primary clock between related clocks  
-The clocks CLK_10MHZ_WCLK and CLK_10MHZ_WCLK_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK_10MHZ_WCLK] -to [get_clocks CLK_10MHZ_WCLK_1]
+TIMING-2#1 Critical Warning
+Invalid primary clock source pin  
+A primary clock generate_clock_10Mhz/inst/CLK_100MHZ is created on an inappropriate pin generate_clock_10Mhz/inst/CLK_100MHZ. It is recommended to create a primary clock only on a proper clock source (input port or primitive output pin with no timing arc)
 Related violations: <none>
 
-TIMING-6#2 Critical Warning
-No common primary clock between related clocks  
-The clocks CLK_10MHZ_WCLK_1 and CLK_10MHZ_WCLK are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK_10MHZ_WCLK_1] -to [get_clocks CLK_10MHZ_WCLK]
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock generate_clock_10Mhz/inst/CLK_100MHZ is defined downstream of clock sys_clk_pin and overrides its insertion delay and/or waveform definition
 Related violations: <none>
 
 TIMING-20#1 Warning

@@ -1,7 +1,7 @@
 (DELAYFILE 
 (SDFVERSION "3.0" )
 (DESIGN "top_simulate")
-(DATE "Thu Sep  1 18:19:49 2022")
+(DATE "Tue Sep  6 14:32:52 2022")
 (VENDOR "XILINX")
 (PROGRAM "Vivado")
 (VERSION "2019.1")
@@ -60,10 +60,10 @@
       (SETUPHOLD (negedge DEN) (posedge DCLK) (2156.0:2290.0:2290.0) (0.0:0.0:0.0))
       (SETUPHOLD (posedge DWE) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
       (SETUPHOLD (negedge DWE) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
-      (SETUPHOLD (posedge DI[15:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
-      (SETUPHOLD (negedge DI[15:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
       (SETUPHOLD (posedge DADDR[6:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
       (SETUPHOLD (negedge DADDR[6:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
+      (SETUPHOLD (posedge DI[15:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
+      (SETUPHOLD (negedge DI[15:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
     )
 )
 (CELL 

@@ -1,7 +1,5 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Respaldo/Ejercicios_29_08_2022/Proyectos/Ejercicio1/vivado_project.sim/sim_1/synth/timing/xsim/tb_simulate_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Proyectos/Ejercicio1/vivado_project.sim/sim_1/synth/timing/xsim/tb_simulate_time_synth.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module WCLK
 INFO: [VRFC 10-311] analyzing module WCLK__WCLK_clk_wiz
 INFO: [VRFC 10-311] analyzing module top_simulate
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Respaldo/Ejercicios_29_08_2022/Proyectos/Ejercicio1/vivado_project.srcs/sim_1/new/tb_simulate.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_simulate

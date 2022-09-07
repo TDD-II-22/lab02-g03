@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1662455636">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1662496899">
   <File Type="PA-TCL" Name="top_maquina_estado_calcu_sin_teclado.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_maquina_estado_calcu_sin_teclado_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_maquina_estado_calcu_sin_teclado_reports.tcl"/>

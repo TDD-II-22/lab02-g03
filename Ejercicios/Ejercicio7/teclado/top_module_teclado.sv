@@ -52,7 +52,7 @@ module top_module_teclado(
         .clock_catodo_o    (en_10kHz)
         );
     
-    module_clock_divider #(500_000, 25) en_kHz(
+    module_clock_divider #(200_000, 25) en_kHz(
         .clk_10Mhz_i       (clk_10Mhz),
         .reset_i           (rst_i),
         .clock_catodo_o    (enkHz)

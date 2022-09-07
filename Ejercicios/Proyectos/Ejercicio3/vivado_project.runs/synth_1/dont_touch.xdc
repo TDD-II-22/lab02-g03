@@ -3,5 +3,5 @@
 
 # XDC: imports/Constraints/constraints_teclado.xdc
 
-# IP: C:/TDD/lab02-g03/Ejercicios/Compartido/xci/WCLK/WCLK.xci
+# IP: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Repositorio/lab02-g03/Ejercicios/Compartido/xci/WCLK/WCLK.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==WCLK || ORIG_REF_NAME==WCLK} -quiet] -quiet
