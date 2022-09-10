@@ -1,0 +1,15 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/TDD/lab02-g03/Ejercicios/Compartido/xci/WCLK/WCLK_sim_netlist.v,1662052814,verilog,,C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sources_1/bd/design_1/sim/design_1.v,,WCLK;WCLK_WCLK_clk_wiz,,,../../../../../../Compartido/xci/WCLK,,,,,
+C:/TDD/lab02-g03/Ejercicios/Ejercicio2/tb_debouncer.sv,1662437344,systemVerilog,,C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sim_1/new/tb_top_debouncer.sv,,tb_debouncer,,,../../../../../../Compartido/xci/WCLK,,,,,
+C:/TDD/lab02-g03/Ejercicios/Ejercicio2/tb_module_debouncer.sv,1662483349,systemVerilog,,,,tb_module_debouncer,,,../../../../../../Compartido/xci/WCLK,,,,,
+C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sim_1/new/tb_top_debouncer.sv,1662166430,systemVerilog,,,,tb_top_debouncer,,,../../../../../../Compartido/xci/WCLK,,,,,
+C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sources_1/bd/design_1/sim/design_1.v,1662442263,verilog,,,,design_1,,,../../../../../../Compartido/xci/WCLK,,,,,
+C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sources_1/imports/Ejercicios/Compartido/module_DFF.sv,1662436375,systemVerilog,,C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sources_1/imports/Ejercicios/Ejercicio2/top_module_debouncer.sv,,module_DFF,,,../../../../../../Compartido/xci/WCLK,,,,,
+C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sources_1/imports/Ejercicios/Compartido/module_clock_catodo.sv,1662052815,systemVerilog,,C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sources_1/imports/Insumos/contador_prueba.sv,,module_clock_catodo,,,../../../../../../Compartido/xci/WCLK,,,,,
+C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sources_1/imports/Ejercicios/Compartido/module_debouncer.sv,1662483418,systemVerilog,,C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sources_1/imports/Ejercicios/Compartido/module_clock_catodo.sv,,clock_enable;module_debouncer,,,../../../../../../Compartido/xci/WCLK,,,,,
+C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sources_1/imports/Ejercicios/Ejercicio2/top_module_debouncer.sv,1662442865,systemVerilog,,C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sources_1/imports/Ejercicios/Compartido/module_debouncer.sv,,top_module_debouncer,,,../../../../../../Compartido/xci/WCLK,,,,,
+C:/TDD/lab02-g03/Ejercicios/Proyectos/Ejercicio2/vivado_project.srcs/sources_1/imports/Insumos/contador_prueba.sv,1662164676,systemVerilog,,,,contador_prueba,,,../../../../../../Compartido/xci/WCLK,,,,,

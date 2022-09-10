@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../Compartido/xci/WCLK" \
+"tb_7seg_v2_time_impl.v" \
+
+sv xil_defaultlib  --include "../../../../../../../Compartido/xci/WCLK" \
+"../../../../../../../Ejercicio4/tb_7seg_v2.sv" \
+
+# Do not sort compile order
+nosort

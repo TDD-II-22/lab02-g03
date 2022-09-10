@@ -1,0 +1,10 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/Documentos/GitHub/lab02-g03/Ejercicios/Compartido/module_seg7_control.sv,1661914281,systemVerilog,,D:/Documentos/GitHub/lab02-g03/Ejercicios/Ejercicio4/top_simulate_7seg_v2.sv,,module_seg7_control,,,../../../../../../Compartido/xci/WCLK,,,,,
+D:/Documentos/GitHub/lab02-g03/Ejercicios/Compartido/xci/WCLK/WCLK_sim_netlist.v,1661914281,verilog,,,,WCLK;WCLK_WCLK_clk_wiz,,,../../../../../../Compartido/xci/WCLK,,,,,
+D:/Documentos/GitHub/lab02-g03/Ejercicios/Ejercicio4/module_register_pp.sv,1661914282,systemVerilog,,D:/Documentos/GitHub/lab02-g03/Ejercicios/Compartido/module_seg7_control.sv,,module_register_pp,,,../../../../../../Compartido/xci/WCLK,,,,,
+D:/Documentos/GitHub/lab02-g03/Ejercicios/Ejercicio4/tb_7seg_v2.sv,1662409561,systemVerilog,,,,tb_7seg_v2,,,../../../../../../Compartido/xci/WCLK,,,,,
+D:/Documentos/GitHub/lab02-g03/Ejercicios/Ejercicio4/top_simulate_7seg_v2.sv,1662409561,systemVerilog,,D:/Documentos/GitHub/lab02-g03/Ejercicios/Ejercicio4/tb_7seg_v2.sv,,top_simulate_7seg_v2,,,../../../../../../Compartido/xci/WCLK,,,,,
+D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio4/vivido_project.sim/sim_1/behav/xsim/glbl.v,1661914283,verilog,,,,glbl,,,,,,,,

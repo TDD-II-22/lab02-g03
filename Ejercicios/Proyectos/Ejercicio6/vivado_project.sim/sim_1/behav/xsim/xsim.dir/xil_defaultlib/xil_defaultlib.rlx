@@ -1,0 +1,11 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio6/vivado_project.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio6/vivado_project.srcs/sim_1/imports/Ejercicio6/tb_memoria.sv,1661640358,systemVerilog,,,,tb_memoria,,,../../../../vivado_project.srcs/sources_1/ip/WCLK,,,,,
+D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio6/vivado_project.srcs/sources_1/imports/Ejercicio6/module_memoria.sv,1661403441,systemVerilog,,D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio6/vivado_project.srcs/sources_1/imports/Ejercicio6/top_module_memoria.sv,,module_memoria,,,../../../../vivado_project.srcs/sources_1/ip/WCLK,,,,,
+D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio6/vivado_project.srcs/sources_1/imports/Ejercicio6/package.sv,1661099812,systemVerilog,D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio6/vivado_project.srcs/sim_1/imports/Ejercicio6/tb_memoria.sv;D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio6/vivado_project.srcs/sources_1/imports/Ejercicio6/module_memoria.sv;D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio6/vivado_project.srcs/sources_1/imports/Ejercicio6/top_module_memoria.sv,D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio6/vivado_project.srcs/sources_1/imports/Ejercicio6/module_memoria.sv,,pkg_bits,,,../../../../vivado_project.srcs/sources_1/ip/WCLK,,,,,
+D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio6/vivado_project.srcs/sources_1/imports/Ejercicio6/top_module_memoria.sv,1661655608,systemVerilog,,D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio6/vivado_project.srcs/sim_1/imports/Ejercicio6/tb_memoria.sv,,top_module_memoria,,,../../../../vivado_project.srcs/sources_1/ip/WCLK,,,,,
+D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio6/vivado_project.srcs/sources_1/ip/WCLK/WCLK.v,1661655613,verilog,,,,WCLK,,,../../../../vivado_project.srcs/sources_1/ip/WCLK,,,,,
+D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio6/vivado_project.srcs/sources_1/ip/WCLK/WCLK_clk_wiz.v,1661655613,verilog,,D:/Documentos/GitHub/lab02-g03/Ejercicios/Proyectos/Ejercicio6/vivado_project.srcs/sources_1/ip/WCLK/WCLK.v,,WCLK_clk_wiz,,,../../../../vivado_project.srcs/sources_1/ip/WCLK,,,,,

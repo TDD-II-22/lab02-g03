@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Sep  5 22:26:09 2022
+# Process ID: 3156
+# Current directory: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Respaldo/Respaldo_ejercicio7/Ejercicio7.4/ejercicio7.2.runs/synth_1
+# Command line: vivado.exe -log top_maquina_estado_calcu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_maquina_estado_calcu.tcl
+# Log file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Respaldo/Respaldo_ejercicio7/Ejercicio7.4/ejercicio7.2.runs/synth_1/top_maquina_estado_calcu.vds
+# Journal file: C:/Users/carlo/Andrey/TEC/Semestre_II_2022/Taller_Digitales/Laboratorios/Laboratorio_2/Respaldo/Respaldo_ejercicio7/Ejercicio7.4/ejercicio7.2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_maquina_estado_calcu.tcl -notrace
